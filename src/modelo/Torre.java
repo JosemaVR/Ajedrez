@@ -4,10 +4,17 @@ import modelo.Pieza;
 
 public class Torre {
 	
-	private Pieza torreBlancaIzq = new Pieza(new int [0][7], 5, 1);
-	private Pieza torreBlancaDer = new Pieza(new int [7][7], 5, 1);
-	private Pieza torreNegraIzq = new Pieza(new int [0][0], 5, 0);
-	private Pieza torreNegraDer = new Pieza(new int [7][0], 5, 0);
+	private String nombre;
+	private int valor;
+	
+	
+	
+	public Pieza torreBlancaIzq = new Pieza("Torre", 0, 7, 5, Color.blanca);
+	public Pieza torreBlancaDer = new Pieza("Torre", 7, 7, 5, Color.blanca);
+	public Pieza torreNegraIzq = new Pieza("Torre", 0, 0, 5, Color.negra);
+	public Pieza torreNegraDer = new Pieza("Torre", 7, 0, 5, Color.negra);
+	
+	
 	
 	//Como se mueve
 	//4 Torres iniciales

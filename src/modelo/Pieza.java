@@ -2,28 +2,48 @@ package modelo;
 
 public class Pieza {
 	
-	private int posicion[][] = new int[8][8];
-	private int valor;
-	private int color;
+	private String nombre;
+	private int x, y, valor;
+	private Color color;
 	
 	public Pieza() {
-		this.posicion = new int [0][0];
+		this.nombre = "";
+		this.x = 0;
+		this.y = 0;
 		this.valor = 0;
-		this.color = 0;
+		this.color = null;
 	}
 	
-	public Pieza(int posicion[][], int valor, int color) {
-		this.posicion = posicion;
+	public Pieza(String nombre, int x, int y, int valor, Color color) {
+		this.nombre = nombre;
+		this.x = x;
+		this.y = y;
 		this.valor = valor;
 		this.color = color;
 	}
 
-	public int[][] getPosicion() {
-		return posicion;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setPosicion(int[][] posicion) {
-		this.posicion = posicion;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
 	}
 
 	public int getValor() {
@@ -34,11 +54,11 @@ public class Pieza {
 		this.valor = valor;
 	}
 
-	public int getColor() {
+	public Color getColor() {
 		return color;
 	}
 
-	public void setColor(int color) {
+	public void setColor(Color color) {
 		this.color = color;
 	}
 }
