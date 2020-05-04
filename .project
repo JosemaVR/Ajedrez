@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>PRACTICA_3T_Ajedrez</name>
+=======
+	<name>Ajedrez_Practica_3Tri</name>
+>>>>>>> branch 'master' of https://github.com/JosemaVR/Ajedrez.git
 	<comment></comment>
 	<projects>
 	</projects>

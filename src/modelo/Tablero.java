@@ -1,26 +1,27 @@
 package modelo;
 
 public class Tablero {
-	private String tablero[][]=new String[8][8];
+	private String[][] tablero;
 	
 	public Tablero() {
-		int i,j;
-		for (i=0;i<8;i++) {
-			for(j=0;j<8;j++) {
-				if(0 == 1 - (i+j) % 2) {
-					tablero[i][j] = "N";
-				} else {
-					tablero[i][j] = "B";
-				}
-			}
-		}
+		tablero = new String[8][8];
+		añadirPieza(new Pieza("Torre", 7, 7, 5, Color.blanca));
+		añadirPieza(new Pieza("Torre", 7, 0, 5, Color.blanca));
+		añadirPieza(new Pieza("Torre", 0, 0, 5, Color.negra));
+		//añadirPieza(new Pieza(new Torre(), 0, 7, Color.negra));
 	}
 
 	public String[][] getTablero() {
 		return tablero;
 	}
 
-	public void setTablero(String tablero[][]) {
+	public void setTablero(String[][] tablero) {
 		this.tablero = tablero;
+	}
+	
+	public void añadirPieza(Pieza pieza) {
+		int x = pieza.getX();
+		int y = pieza.getY();
+		tablero[x][y] = pieza.getNombre() + " " + pieza.getColor();
 	}
 }
