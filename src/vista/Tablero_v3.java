@@ -183,7 +183,6 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		int lineaPosicion = Math.abs(i - lineaCBa2);
 		int columnaPosicion = Math.abs(j - columnaCBa2);
 
-
 		if ((lineaPosicion == 1) && (columnaPosicion == 2))
 		{
 
