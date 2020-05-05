@@ -88,7 +88,7 @@ public class PanelContenedores extends JFrame
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
-	private void setFonts() {
+	public void setFonts() {
 		UIManager.put("Label.font", fuenteEtiquetas);
 	}
 	public static void main(String[] args)

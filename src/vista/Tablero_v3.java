@@ -20,76 +20,76 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 
 	private static final long serialVersionUID = 1L;
 
-	private JPanel contenedores;
+	 JPanel contenedores;
 
 	// Componentes
 
-	private JButton[][] casillas = new JButton[8][8];
+	 JButton[][] casillas = new JButton[8][8];
 
 	// Colores
-	private Color colorNegro =  new Color(173, 113, 0); // Casillas marron oscuro
-	private Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
+	 Color colorNegro =  new Color(173, 113, 0); // Casillas marron oscuro
+	 Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
 	
 	// Posición actual:Caballos
 	// Esquina superior izquierda en el tablero es (0,0).
 
-	private int lineaCBa2 = 7;
-	private int columnaCBa2 = 1;
+	 int lineaCBa2 = 7;
+	 int columnaCBa2 = 1;
 	
-	private int lineaCBa7 = 7;
-	private int columnaCBa7 = 6;
+	 int lineaCBa7 = 7;
+	 int columnaCBa7 = 6;
 	
-	private int lineaCNh2 = 0;
-	private int columnaCNh2 = 1;
+	 int lineaCNh2 = 0;
+	 int columnaCNh2 = 1;
 	
-	private int lineaCNh7 = 0;
-	private int columnaCNh7 = 6;
+	 int lineaCNh7 = 0;
+	 int columnaCNh7 = 6;
 	
 	// Posición actual:Torres
 	// Esquina superior izquierda en el tablero es (0,0).
 	
-	private int lineaTBa1 = 7;
-	private int columnaTBa1 = 0;
+	 int lineaTBa1 = 7;
+	 int columnaTBa1 = 0;
 	
-	private int lineaTBa8 = 7;
-	private int columnaTBa8 = 7;
+	 int lineaTBa8 = 7;
+	 int columnaTBa8 = 7;
 	
-	private int lineaTNh1 = 0;
-	private int columnaTNh1 = 0;
+	 int lineaTNh1 = 0;
+	 int columnaTNh1 = 0;
 	
-	private int lineaTNh8 = 0;
-	private int columnaTNh8 = 7;
+	 int lineaTNh8 = 0;
+	 int columnaTNh8 = 7;
 	
 	// Posición actual:Alfiles
 	// Esquina superior izquierda en el tablero es (0,0).
 	
-	private int lineaABa3 = 7;
-	private int columnaABa3 = 2;
+	 int lineaABa3 = 7;
+	 int columnaABa3 = 2;
 	
-	private int lineaABa6 = 7;
-	private int columnaABa6 = 5;
+	 int lineaABa6 = 7;
+	 int columnaABa6 = 5;
 	
-	private int lineaANh3 = 0;
-	private int columnaANh3 = 2;
+	 int lineaANh3 = 0;
+	 int columnaANh3 = 2;
 	
-	private int lineaANh6 = 0;
-	private int columnaANh6 = 5;
+	 int lineaANh6 = 0;
+	 int columnaANh6 = 5;
 	// Imagenes:
 	//Caballos
-	private ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
-	private ImageIcon caballoBa7 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
-	private ImageIcon caballoNh2 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
-	private ImageIcon caballoNh7 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	 ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	 ImageIcon caballoBa7 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	 ImageIcon caballoNh2 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	 ImageIcon caballoNh7 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
 	//Torres
-	private ImageIcon torreTBa0 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
-	private ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
-	private ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
-	private ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	 ImageIcon torreTBa0 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	 ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	 ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	 ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
 	//Alfiles
-	private ImageIcon AlfilABa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
-	private ImageIcon AlfilABa6 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
-	private ImageIcon AlfilANa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
-	private ImageIcon AlfilANh6 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
+	 ImageIcon AlfilABa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	 ImageIcon AlfilABa6 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	 ImageIcon AlfilANa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
+	 ImageIcon AlfilANh6 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
 
 	public Tablero_v3(int x, int y)
 	{
