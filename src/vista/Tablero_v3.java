@@ -19,58 +19,101 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 
 	private static final long serialVersionUID = 1L;
 
-	private JPanel contenedores;
+	JPanel contenedores;
 
 	// Componentes
 
-	private JButton[][] casillas = new JButton[8][8];
+	JButton[][] casillas = new JButton[8][8];
 
 	// Colores
-	private Color colorNegro =  new Color(173, 113, 0); // Casillas marron oscuro
-	private Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
-	
-	// Posición actual:Caballos
+	Color colorNegro =  new Color(173, 113, 0); // Casillas marron oscuro
+	Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
+
+	// Posición Inicial:Caballos
 	// Esquina superior izquierda en el tablero es (0,0).
 
-	private int lineaCBa2 = 7;
-	private int columnaCBa2 = 1;
-	
-	private int lineaCBa7 = 7;
-	private int columnaCBa7 = 6;
-	
-	private int lineaCNh2 = 0;
-	private int columnaCNh2 = 1;
-	
-	private int lineaCNh7 = 0;
-	private int columnaCNh7 = 6;
-	
-	// Posición actual:Torres
+	int lineaCBa2 = 7;
+	int columnaCBa2 = 1;
+
+	int lineaCBa7 = 7;
+	int columnaCBa7 = 6;
+
+	int lineaCNh2 = 0;
+	int columnaCNh2 = 1;
+
+	int lineaCNh7 = 0;
+	int columnaCNh7 = 6;
+
+	// Posición Inicial:Torres
 	// Esquina superior izquierda en el tablero es (0,0).
+
+	int lineaTBa1 = 7;
+	int columnaTBa1 = 0;
+
+	int lineaTBa8 = 7;
+	int columnaTBa8 = 7;
+
+	int lineaTNh1 = 0;
+	int columnaTNh1 = 0;
+
+	int lineaTNh8 = 0;
+	int columnaTNh8 = 7;
+
+	// Posición Inicial:Alfiles
+	// Esquina superior izquierda en el tablero es (0,0).
+
+	int lineaABa3 = 7;
+	int columnaABa3 = 2;
+
+	int lineaABa6 = 7;
+	int columnaABa6 = 5;
+
+	int lineaANh3 = 0;
+	int columnaANh3 = 2;
+
+	int lineaANh6 = 0;
+	int columnaANh6 = 5;
+
+	// Posición Inicial:Reinas
+	// Esquina superior izquierda en el tablero es (0,0).
+
+	int lineaQBa4 = 7;
+	int columnaQBa4 = 3;
+
+	int lineaQNh4 = 0;
+	int columnaQNh4 = 3;
 	
-	private int lineaTBa1 = 7;
-	private int columnaTBa1 = 0;
-	
-	private int lineaTBa8 = 7;
-	private int columnaTBa8 = 7;
-	
-	private int lineaTNh1 = 0;
-	private int columnaTNh1 = 0;
-	
-	private int lineaTNh8 = 0;
-	private int columnaTNh8 = 7;
-	
+	// Posición Inicial:Reyess
+		// Esquina superior izquierda en el tablero es (0,0).
+
+		int lineaRBa5 = 7;
+		int columnaRBa5 = 4;
+
+		int lineaRNh5 = 0;
+		int columnaRNh5 = 4;
 
 	// Imagenes:
 	//Caballos
-	private ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
-	private ImageIcon caballoBa7 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
-	private ImageIcon caballoNh2 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
-	private ImageIcon caballoNh7 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	ImageIcon caballoBa7 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	ImageIcon caballoNh2 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	ImageIcon caballoNh7 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
 	//Torres
-	private ImageIcon torreTBa0 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
-	private ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
-	private ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
-	private ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	ImageIcon torreTBa0 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	//Alfiles
+	ImageIcon AlfilABa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	ImageIcon AlfilABa6 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	ImageIcon AlfilANa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
+	ImageIcon AlfilANh6 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
+	//Reinas
+	ImageIcon ReinaQBa4 = new ImageIcon("./imagenes/con_fondo/Reina1_blanca.png");
+	ImageIcon ReinaQNh4 = new ImageIcon("./imagenes/con_fondo/Reina1_negra.png");
+	//Reyes
+	ImageIcon ReyRBa5 = new ImageIcon("./imagenes/sin_fondo/Rey_blanco.png");
+	ImageIcon ReyRNh5 = new ImageIcon("./imagenes/sin_fondo/Rey_negro.png");
 
 	public Tablero_v3(int x, int y)
 	{
@@ -115,6 +158,17 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		casillas[lineaTBa8][columnaTBa8].setIcon(torreTBa8);
 		casillas[lineaTNh1][columnaTNh1].setIcon(torreTNh0);
 		casillas[lineaTNh8][columnaTNh8].setIcon(torreTNh8);
+		//Alfiles
+		casillas[lineaABa3][columnaABa3].setIcon(AlfilABa2);
+		casillas[lineaABa6][columnaABa6].setIcon(AlfilABa6);
+		casillas[lineaANh3][columnaANh3].setIcon(AlfilANa2);
+		casillas[lineaANh6][columnaANh6].setIcon(AlfilANh6);
+		//Reinas
+		casillas[lineaQBa4][columnaQBa4].setIcon(ReinaQBa4);
+		casillas[lineaQNh4][columnaQNh4].setIcon(ReinaQNh4);
+		//Reyes
+		casillas[lineaRBa5][columnaRBa5].setIcon(ReyRBa5);
+		casillas[lineaRNh5][columnaRNh5].setIcon(ReyRNh5);
 		// Tamaño y monitor de la ventana
 
 		setSize(750,750);
@@ -129,10 +183,10 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		int lineaPosicion = Math.abs(i - lineaCBa2);
 		int columnaPosicion = Math.abs(j - columnaCBa2);
 
-		
+
 		if ((lineaPosicion == 1) && (columnaPosicion == 2))
 		{
-			
+
 			return true;
 		}
 		if ((columnaPosicion == 1) && (lineaPosicion == 2))
@@ -148,13 +202,13 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 
 		if (esMovimValido(i, j) == false)
 		{
-			
+
 			return;
 		}
 		casillas[lineaCBa2][columnaCBa2].setIcon(null);
 		casillas[i][j].setIcon(caballoBa2);
-		
-		
+
+
 		lineaCBa2 = i;
 		columnaCBa2 = j;
 
@@ -173,8 +227,8 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 				{
 					if (fuente == casillas[i][j])
 					{
-						
-						
+
+
 						procesoClic(i, j);
 						return;
 					}
@@ -244,31 +298,31 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
