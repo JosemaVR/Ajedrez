@@ -7,10 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.MouseWheelListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -51,7 +49,6 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		BotonAccion botonAccion = new BotonAccion();
 
 		// Crear y añadir componentes del tablero
-
 		for (int i = 0; i < 8; i++)
 		{
 			for (int j = 0; j < 8; j++)
