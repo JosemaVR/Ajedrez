@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.MouseWheelListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -28,17 +27,51 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	private JButton[][] casillas = new JButton[8][8];
 
 	// Colores
-	private Color colorNegro =  new Color(173, 113, 0); // Casillas negras
-	private Color colorBlanco = new Color(227, 194, 102);
+	private Color colorNegro =  new Color(173, 113, 0); // Casillas marron oscuro
+	private Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
 	
-	// Posición actual:
+	// Posición actual:Caballos
 	// Esquina superior izquierda en el tablero es (0,0).
-	private int linea = 7;
-	private int columna = 1;
+
+	private int lineaCBa2 = 7;
+	private int columnaCBa2 = 1;
+	
+	private int lineaCBa7 = 7;
+	private int columnaCBa7 = 6;
+	
+	private int lineaCNh2 = 0;
+	private int columnaCNh2 = 1;
+	
+	private int lineaCNh7 = 0;
+	private int columnaCNh7 = 6;
+	
+	// Posición actual:Torres
+	// Esquina superior izquierda en el tablero es (0,0).
+	
+	private int lineaTBa1 = 7;
+	private int columnaTBa1 = 0;
+	
+	private int lineaTBa8 = 7;
+	private int columnaTBa8 = 7;
+	
+	private int lineaTNh1 = 0;
+	private int columnaTNh1 = 0;
+	
+	private int lineaTNh8 = 0;
+	private int columnaTNh8 = 7;
+	
 
 	// Imagenes:
-	private ImageIcon caballo = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
-	
+	//Caballos
+	private ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	private ImageIcon caballoBa7 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	private ImageIcon caballoNh2 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	private ImageIcon caballoNh7 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	//Torres
+	private ImageIcon torreTBa0 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	private ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	private ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	private ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
 
 	public Tablero_v3(int x, int y)
 	{
@@ -73,7 +106,17 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 			}
 
 		}
-		casillas[linea][columna].setIcon(caballo);
+		//Posición inicial:
+		//Caballos
+		casillas[lineaCBa2][columnaCBa2].setIcon(caballoBa2);
+		casillas[lineaCBa7][columnaCBa7].setIcon(caballoBa7);
+		casillas[lineaCNh2][columnaCNh2].setIcon(caballoNh2);
+		casillas[lineaCNh7][columnaCNh7].setIcon(caballoNh7);
+		//Torres
+		casillas[lineaTBa1][columnaTBa1].setIcon(torreTBa0);
+		casillas[lineaTBa8][columnaTBa8].setIcon(torreTBa8);
+		casillas[lineaTNh1][columnaTNh1].setIcon(torreTNh0);
+		casillas[lineaTNh8][columnaTNh8].setIcon(torreTNh8);
 		// Tamaño y monitor de la ventana
 
 		setSize(750,750);
@@ -85,8 +128,8 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 
 	private boolean esMovimValido(int i, int j)
 	{
-		int lineaPosicion = Math.abs(i - linea);
-		int columnaPosicion = Math.abs(j - columna);
+		int lineaPosicion = Math.abs(i - lineaCBa2);
+		int columnaPosicion = Math.abs(j - columnaCBa2);
 
 		
 		if ((lineaPosicion == 1) && (columnaPosicion == 2))
@@ -110,12 +153,12 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 			
 			return;
 		}
-		casillas[linea][columna].setIcon(null);
-		casillas[i][j].setIcon(caballo);
+		casillas[lineaCBa2][columnaCBa2].setIcon(null);
+		casillas[i][j].setIcon(caballoBa2);
 		
 		
-		linea = i;
-		columna = j;
+		lineaCBa2 = i;
+		columnaCBa2 = j;
 
 	}
 
@@ -141,12 +184,6 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 			}
 
 		}
-
-	}
-
-	public static void main(String[] args)
-	{
-		
 
 	}
 

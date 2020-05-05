@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
-
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -48,7 +47,7 @@ public class PanelContenedores extends JFrame
 		contenedor.setLayout(new BorderLayout());
 		contenedor.setBorder(borderContents);
 		contenedor.setBackground(colorContenedores);
-		contenedor.setSize(900, 900);
+		contenedor.setSize(750, 750);
 		setContentPane(contenedor);
 		// Crear y añadir componentes
 		
@@ -61,7 +60,7 @@ public class PanelContenedores extends JFrame
 
 		panelOeste = new JPanel();
 		//panelOeste.setBorder(borderRegion);
-		panelOeste.setPreferredSize(new Dimension(50, 50));
+		panelOeste.setPreferredSize(new Dimension(25, 25));
 		JLabel lblOeste = new JLabel("Texto panel OESTE");
 		panelOeste.add(lblOeste);
 		contenedor.add(panelOeste, BorderLayout.WEST);
