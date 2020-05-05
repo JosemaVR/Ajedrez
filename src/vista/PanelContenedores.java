@@ -16,6 +16,7 @@ public class PanelContenedores extends JFrame
 	Tablero_v3 tablerin;
 	
 	private static final long serialVersionUID = 1L;
+	
 
 	private JPanel contenedor;// Panel contenedor
 
