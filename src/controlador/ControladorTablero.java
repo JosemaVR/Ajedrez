@@ -17,6 +17,7 @@ public class ControladorTablero implements WindowListener, ActionListener
 	
 	public ControladorTablero(VistaTablero objVista, ModeloTablero objModelo) {
 		
+		
 	}
 	
 	

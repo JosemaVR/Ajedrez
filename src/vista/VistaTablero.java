@@ -17,7 +17,7 @@ public class VistaTablero extends JFrame implements WindowListener
 
 	private static final long serialVersionUID = 1L;
 
-	private Container contenedores;
+	public Container contenedores;
 	private Color colorNegro = Color.black; // Casillas negras
 
 	public VistaTablero()
@@ -37,6 +37,26 @@ public class VistaTablero extends JFrame implements WindowListener
 		setVisible(true);		
 		
 		
+	}
+
+	public Container getContenedores()
+	{
+		return contenedores;
+	}
+
+	public void setContenedores(Container contenedores)
+	{
+		this.contenedores = contenedores;
+	}
+
+	public Color getColorNegro()
+	{
+		return colorNegro;
+	}
+
+	public void setColorNegro(Color colorNegro)
+	{
+		this.colorNegro = colorNegro;
 	}
 
 	@Override

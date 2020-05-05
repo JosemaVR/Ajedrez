@@ -1,5 +1,7 @@
 package modelo;
 
+import java.awt.Container;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -51,6 +53,24 @@ public class ModeloTablero
 			}
 		}
 	}
-	
+	public void añadirCompTablero(JButton casilla , Container contenedores, java.awt.Color colorNegro ) {
+		
+		for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				casillas[i][j] = new JButton();
+				if ((i+j)% 2 != 0)
+				{
+					casillas[i][j].setBackground(colorNegro);
+					
+				}
+				contenedores.add(casillas[i][j]);
+				
+			}
+			
+			
+		}
+	}
 	
 }
