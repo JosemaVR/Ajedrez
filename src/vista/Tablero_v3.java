@@ -60,7 +60,20 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	private int lineaTNh8 = 0;
 	private int columnaTNh8 = 7;
 	
-
+	// Posición actual:Alfiles
+	// Esquina superior izquierda en el tablero es (0,0).
+	
+	private int lineaABa3 = 7;
+	private int columnaABa3 = 2;
+	
+	private int lineaABa6 = 7;
+	private int columnaABa6 = 5;
+	
+	private int lineaANh3 = 0;
+	private int columnaANh3 = 2;
+	
+	private int lineaANh6 = 0;
+	private int columnaANh6 = 5;
 	// Imagenes:
 	//Caballos
 	private ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
@@ -72,6 +85,11 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	private ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
 	private ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
 	private ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	//Alfiles
+	private ImageIcon AlfilABa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	private ImageIcon AlfilABa6 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	private ImageIcon AlfilANa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
+	private ImageIcon AlfilANh6 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
 
 	public Tablero_v3(int x, int y)
 	{
@@ -117,6 +135,11 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		casillas[lineaTBa8][columnaTBa8].setIcon(torreTBa8);
 		casillas[lineaTNh1][columnaTNh1].setIcon(torreTNh0);
 		casillas[lineaTNh8][columnaTNh8].setIcon(torreTNh8);
+		//Alfiles
+		casillas[lineaABa3][columnaABa3].setIcon(AlfilABa2);
+		casillas[lineaABa6][columnaABa6].setIcon(AlfilABa6);
+		casillas[lineaANh3][columnaANh3].setIcon(AlfilANa2);
+		casillas[lineaANh6][columnaANh6].setIcon(AlfilANh6);
 		// Tamaño y monitor de la ventana
 
 		setSize(750,750);
