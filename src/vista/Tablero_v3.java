@@ -1,22 +1,23 @@
 package vista;
 
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 {
 
 	private static final long serialVersionUID = 1L;
 
-	private Container contenedores;
+	private JPanel contenedores;
 
 	// Componentes
 
@@ -37,7 +38,7 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	{
 		super("Tablero Java - (pulsa una casilla válida para mover el caballo)");
 
-		contenedores = getContentPane();
+		contenedores = (JPanel) getContentPane();
 		contenedores.setLayout(new GridLayout(8, 8));
 
 		// Crear eventos oficios
@@ -63,8 +64,8 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		casillas[linea][columna].setIcon(caballo);
 		// Tamaño y monitor de la ventana
 
-		setSize(250, 250);
-		setResizable(false);
+		setSize(750,750);
+		setResizable(true);
 		setLocationRelativeTo(null);
 		setVisible(true);
 
@@ -97,6 +98,8 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		}
 		casillas[linea][columna].setIcon(null);
 		casillas[i][j].setIcon(caballo);
+		
+		
 		linea = i;
 		columna = j;
 
@@ -127,7 +130,7 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 
 	public static void main(String[] args)
 	{
-		new Tablero_v3();
+		
 
 	}
 

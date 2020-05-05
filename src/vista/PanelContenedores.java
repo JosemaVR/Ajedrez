@@ -51,11 +51,7 @@ public class PanelContenedores extends JFrame
 		setContentPane(contenedor);
 
 		// Crear y añadir componentes
-		panelCentral = new JPanel();
-		JLabel lblCenter = new JLabel("Center");
 		
-		panelCentral.add(tablerin.getContentPane());
-		contenedor.add(panelCentral, BorderLayout.CENTER);
 
 		panelEste = new JPanel();
 		panelEste.setBorder(borderRegion);
@@ -85,6 +81,9 @@ public class PanelContenedores extends JFrame
 		panelSur.add(lblSur);
 		contenedor.add(panelSur, BorderLayout.SOUTH);
 
+		panelCentral = new JPanel();		
+		panelCentral.add(tablerin.getContentPane());
+		contenedor.add(panelCentral, BorderLayout.CENTER);
 		pack();
 		setVisible(true);
 	}
@@ -93,6 +92,7 @@ public class PanelContenedores extends JFrame
 	}
 	public static void main(String[] args)
 	{
+
 		PanelContenedores prueba = new PanelContenedores();
 		prueba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
