@@ -5,6 +5,9 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseWheelListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -13,7 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
+public class Tablero_v3 extends JFrame implements WindowListener, ActionListener, MouseListener
 {
 
 	private static final long serialVersionUID = 1L;
@@ -25,15 +28,17 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	private JButton[][] casillas = new JButton[8][8];
 
 	// Colores
-	private Color colorNegro = Color.black; // Casillas negras
-
+	private Color colorNegro =  new Color(173, 113, 0); // Casillas negras
+	private Color colorBlanco = new Color(227, 194, 102);
+	
 	// Posición actual:
 	// Esquina superior izquierda en el tablero es (0,0).
 	private int linea = 7;
 	private int columna = 1;
 
 	// Imagenes:
-	private ImageIcon caballo = new ImageIcon("./imagenes/con_fondo/Caballo_negro.png");
+	private ImageIcon caballo = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	
 
 	public Tablero_v3(int x, int y)
 	{
@@ -58,6 +63,11 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 					casillas[i][j].setBackground(colorNegro);
 
 				}
+				if ((i + j) % 2 == 0)
+				{
+					casillas[i][j].setBackground(colorBlanco);
+
+				}
 				contenedores.add(casillas[i][j]);
 				casillas[i][j].addActionListener(botonAccion);
 			}
@@ -78,9 +88,10 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		int lineaPosicion = Math.abs(i - linea);
 		int columnaPosicion = Math.abs(j - columna);
 
+		
 		if ((lineaPosicion == 1) && (columnaPosicion == 2))
 		{
-
+			
 			return true;
 		}
 		if ((columnaPosicion == 1) && (lineaPosicion == 2))
@@ -96,6 +107,7 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 
 		if (esMovimValido(i, j) == false)
 		{
+			
 			return;
 		}
 		casillas[linea][columna].setIcon(null);
@@ -120,6 +132,8 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 				{
 					if (fuente == casillas[i][j])
 					{
+						
+						
 						procesoClic(i, j);
 						return;
 					}
@@ -190,6 +204,36 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	{
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
