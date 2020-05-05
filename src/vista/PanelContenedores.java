@@ -14,7 +14,7 @@ import javax.swing.border.Border;
 
 public class PanelContenedores extends JFrame
 {
-	Tablero_v3 tablerin = new Tablero_v3();
+	Tablero_v3 tablerin;
 	
 	private static final long serialVersionUID = 1L;
 
@@ -29,7 +29,7 @@ public class PanelContenedores extends JFrame
 	// Límites
 
 	private Border borderContents = BorderFactory.createEmptyBorder(10, 10, 10, 10);
-	private Border borderRegion = BorderFactory.createLineBorder(Color.RED, 1);
+	//private Border borderRegion = BorderFactory.createLineBorder(Color.RED, 1);
 
 	// Colores
 	private Color colorContenedores = Color.WHITE; // Panel contenedor
@@ -48,43 +48,45 @@ public class PanelContenedores extends JFrame
 		contenedor.setLayout(new BorderLayout());
 		contenedor.setBorder(borderContents);
 		contenedor.setBackground(colorContenedores);
+		contenedor.setSize(900, 900);
 		setContentPane(contenedor);
-
 		// Crear y añadir componentes
 		
 
 		panelEste = new JPanel();
-		panelEste.setBorder(borderRegion);
-		panelEste.setPreferredSize(new Dimension(50, 300));
+	//panelEste.setBorder(borderRegion);
 		JLabel lblEste = new JLabel("Texto panel ESTE");
 		panelEste.add(lblEste);
 		contenedor.add(panelEste, BorderLayout.EAST);
 
 		panelOeste = new JPanel();
-		panelOeste.setBorder(borderRegion);
-		panelOeste.setPreferredSize(new Dimension(50, 300));
+		//panelOeste.setBorder(borderRegion);
+		panelOeste.setPreferredSize(new Dimension(50, 50));
 		JLabel lblOeste = new JLabel("Texto panel OESTE");
 		panelOeste.add(lblOeste);
 		contenedor.add(panelOeste, BorderLayout.WEST);
 
 		panelNorte = new JPanel();
-		panelNorte.setBorder(borderRegion);
-		panelNorte.setPreferredSize(new Dimension(750, 50));
+		//panelNorte.setBorder(borderRegion);
 		JLabel lblNorte = new JLabel("Texto panel NORTE");
 		panelNorte.add(lblNorte);
 		contenedor.add(panelNorte, BorderLayout.NORTH);
-
+		
 		panelSur = new JPanel();
-		panelSur.setBorder(borderRegion);
-		panelSur.setPreferredSize(new Dimension(750, 50));
+		//panelSur.setBorder(borderRegion);
 		JLabel lblSur = new JLabel("Texto panel SUR");
 		panelSur.add(lblSur);
 		contenedor.add(panelSur, BorderLayout.SOUTH);
 
+		tablerin = new Tablero_v3((int) contenedor.getSize().getWidth()/10, (int) contenedor.getSize().getHeight()/10);
+		
 		panelCentral = new JPanel();		
 		panelCentral.add(tablerin.getContentPane());
 		contenedor.add(panelCentral, BorderLayout.CENTER);
+		
 		pack();
+		setResizable(false);
+		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 	private void setFonts() {

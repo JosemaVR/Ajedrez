@@ -1,6 +1,7 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,7 +35,7 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 	// Imagenes:
 	private ImageIcon caballo = new ImageIcon("./imagenes/con_fondo/Caballo_negro.png");
 
-	public Tablero_v3()
+	public Tablero_v3(int x, int y)
 	{
 		super("Tablero Java - (pulsa una casilla válida para mover el caballo)");
 
@@ -51,6 +52,7 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 			for (int j = 0; j < 8; j++)
 			{
 				casillas[i][j] = new JButton();
+				casillas[i][j].setPreferredSize(new Dimension(x, y));
 				if ((i + j) % 2 != 0)
 				{
 					casillas[i][j].setBackground(colorNegro);
@@ -67,7 +69,7 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 		setSize(750,750);
 		setResizable(true);
 		setLocationRelativeTo(null);
-		setVisible(true);
+		setVisible(false);
 
 	}
 
