@@ -79,7 +79,6 @@ public class Vista extends JFrame {
 					letTablero[j].setHorizontalAlignment(JLabel.CENTER);
 					letTablero[j].setVerticalAlignment(JLabel.CENTER);
 					tablero.add(letTablero[j]);
-					System.out.println(letTablero[j].getText() + " " + i);
 				}
 				else 
 				{

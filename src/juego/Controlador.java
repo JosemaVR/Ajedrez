@@ -7,14 +7,16 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 
 public class Controlador implements WindowListener, ActionListener
 {
 	Vista objVista = null;
 	Modelo objModelo = null;
-	Border bordeRojo = BorderFactory.createLineBorder(Color.red);
 	Integer i, j;
+	Border bordeRojo = BorderFactory.createLineBorder(Color.red);
 
 	public Controlador(Modelo objModelo, Vista objVista)
 	{
@@ -28,8 +30,21 @@ public class Controlador implements WindowListener, ActionListener
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		Object fuente = arg0.getSource();
+	public void actionPerformed(ActionEvent e) {
+		Object fuente = e.getSource();
+		if (e.getSource() instanceof JButton) {
+			String text = ((JButton) e.getSource()).getText();
+			for(i=0; i<8; i++) 
+			{
+				for(j=0; j<8; j++) {
+					if ((i + ", " + j).equals(text))
+					{
+						System.out.println("Funciona en " + i + " " + j);
+					}     			
+				}
+			}
+		}
+
 		if (objVista.casillas[0][0].equals(fuente))
 		{
 			objVista.casillas[0][0].setBorder(bordeRojo);
