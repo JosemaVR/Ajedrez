@@ -1,4 +1,4 @@
-package vista;
+package sinUso;
 
 public class Pieza {
 

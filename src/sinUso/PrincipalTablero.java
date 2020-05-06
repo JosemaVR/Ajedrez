@@ -1,8 +1,4 @@
-package test;
-
-import controlador.ControladorTablero;
-import modelo.ModeloTablero;
-import vista.VistaTablero;
+package sinUso;
 
 public class PrincipalTablero
 {

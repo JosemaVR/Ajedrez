@@ -1,4 +1,4 @@
-package vista;
+package versionCero;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -94,10 +94,8 @@ public class PanelContenedores extends JFrame
 	}
 	public static void main(String[] args)
 	{
-
 		PanelContenedores prueba = new PanelContenedores();
 		prueba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 	}
 
 }
