@@ -19,7 +19,7 @@ public class VistaTablero extends JFrame implements WindowListener
 
 	public Container contenedores;
 	private Color colorNegro = Color.black; // Casillas negras
-
+	Color colorBlanco = new Color(227, 194, 102);
 	public VistaTablero()
 	{
 
