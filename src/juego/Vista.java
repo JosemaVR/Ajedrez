@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 
 public class Vista extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	// Panel contenedor
 	JPanel pantalla = new JPanel();
 	JPanel panelCentral = new JPanel();
@@ -74,7 +75,7 @@ public class Vista extends JFrame {
 					//En un futuro añadir cambios aqui segun la pieza seleccionada o algo así
 				}
 				else if(i==0 || i==9)  {
-					letTablero[j] = new JLabel(Character.toString(letra-1));
+					letTablero[j] = new JLabel(Character.toString((char) (letra-1)));
 					letTablero[j].setHorizontalAlignment(JLabel.CENTER);
 					letTablero[j].setVerticalAlignment(JLabel.CENTER);
 					tablero.add(letTablero[j]);

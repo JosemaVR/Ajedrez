@@ -14,6 +14,7 @@ public class ModeloTablero
 	public JButton[][] casillas = new JButton[8][8];
 	public int linea = 7;
 	public int columna = 1;
+	
 
 	public boolean esMovimValido(int i, int j) {
 		int lineaPosicion = Math.abs(i - linea);
@@ -53,7 +54,7 @@ public class ModeloTablero
 			}
 		}
 	}
-	public void añadirCompTablero(JButton casilla , Container contenedores, java.awt.Color colorNegro ) {
+	public void añadirCompTablero(JButton casilla , Container contenedores, java.awt.Color colorNegro, java.awt.Color colorBlanco ) {
 		
 		for (int i = 0; i < 8; i++)
 		{
@@ -64,6 +65,10 @@ public class ModeloTablero
 				{
 					casillas[i][j].setBackground(colorNegro);
 					
+				}
+				if ((i+j)%2 == 0) {
+					
+					casillas[i][j].setBackground(colorBlanco);
 				}
 				contenedores.add(casillas[i][j]);
 				
