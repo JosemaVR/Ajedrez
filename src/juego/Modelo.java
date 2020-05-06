@@ -53,4 +53,13 @@ public class Modelo
 			}
 		}
 	}
+	public boolean seleccionPieza (JButton[][] casillas, ImageIcon pieza) {
+				
+		boolean focus = false;
+		
+		
+		
+		return focus;
+		
+	}
 }
