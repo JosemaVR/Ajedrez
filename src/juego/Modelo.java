@@ -24,9 +24,9 @@ public class Modelo
 		return false;
 	}
 
-	public void procesoClic(int i, int j, int linea, int columna, JButton[][] casillas, ImageIcon pieza)
+	public void procesoClic(int i, int j, int linea, int columna, ImageIcon pieza)
 	{
-
+		JButton casillas[][] = new  JButton[8][8];
 		if (esMovimValido(i, j, linea, columna) == false)
 		{
 			return;
@@ -35,7 +35,6 @@ public class Modelo
 		casillas[i][j].setIcon(pieza);
 		linea = i;
 		columna = j;
-
 	}
 
 	public void botonAccion(Object fuente,  int linea, int columna, JButton[][] casillas, ImageIcon pieza)
@@ -47,8 +46,7 @@ public class Modelo
 			{
 				if (fuente == casillas[i][j])
 				{
-					procesoClic(i, j, linea, columna, casillas, pieza);
-					return;
+					procesoClic(i, j, linea, columna, pieza);
 				}
 			}
 		}

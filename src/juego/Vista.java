@@ -91,7 +91,7 @@ public class Vista extends JFrame {
 					}
 					else 
 					{
-						casillas[i-1][j-1] = new JButton();
+						casillas[i-1][j-1] = new JButton((i-1) + ", " + (j-1));
 						casillas[i-1][j-1].setPreferredSize(new Dimension(70, 70));
 						if ((i + j) % 2 != 0)
 						{
@@ -106,6 +106,10 @@ public class Vista extends JFrame {
 					}
 				}
 			}
+		}
+		
+		if(casillas[0][0]!=null) {
+			System.out.println("No esta vacio");
 		}
 		tableroCompleto.add(tablero);
 		add(tableroCompleto);
