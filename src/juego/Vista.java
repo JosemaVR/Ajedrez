@@ -79,7 +79,6 @@ public class Vista extends JFrame {
 					letTablero[j].setHorizontalAlignment(JLabel.CENTER);
 					letTablero[j].setVerticalAlignment(JLabel.CENTER);
 					tablero.add(letTablero[j]);
-					System.out.println(letTablero[j].getText() + " " + i);
 				}
 				else 
 				{
@@ -102,36 +101,28 @@ public class Vista extends JFrame {
 							casillas[i-1][j-1].setBackground(colorBlanco);
 						}
 						tablero.add(casillas[i-1][j-1]);
-						//casillas[i][j].addActionListener(this);	
 					}
 				}
 			}
 		}
-		
-		if(casillas[0][0]!=null) {
-			System.out.println("No esta vacio");
-		}
+
 		tableroCompleto.add(tablero);
 		add(tableroCompleto);
 
-		//panelEste.setBorder(borderRegion);
 		panelEste.add(lblEste);
 		add(panelEste, BorderLayout.EAST);
 
-		//panelOeste.setBorder(borderRegion);
 		panelOeste.setPreferredSize(new Dimension(25, 25));
 		panelOeste.add(lblOeste);
 		add(panelOeste, BorderLayout.WEST);
 
-		//panelNorte.setBorder(borderRegion);
 		panelNorte.add(lblNorte);
 		add(panelNorte, BorderLayout.NORTH);
 
-		//panelSur.setBorder(borderRegion);
 		panelSur.add(lblSur);
 		add(panelSur, BorderLayout.SOUTH);
 
-		setSize(1200,800);
+		setSize(1100,800);
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setVisible(true);

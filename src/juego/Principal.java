@@ -1,5 +1,6 @@
 package juego;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Principal {
@@ -10,8 +11,8 @@ public class Principal {
 
 		new Controlador(objModelo, objVista);
 
-		System.out.println("[" + LocalTime.now() + "][Inicio del programa]");
-		
-		
+
+		System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Inicio del programa]");
+
 	}
 }

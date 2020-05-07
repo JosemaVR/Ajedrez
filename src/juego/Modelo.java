@@ -13,12 +13,10 @@ public class Modelo
 
 		if ((lineaPosicion == 1) && (columnaPosicion == 2))
 		{
-
 			return true;
 		}
 		if ((columnaPosicion == 1) && (lineaPosicion == 2))
 		{
-
 			return true;
 		}
 		return false;
@@ -39,7 +37,6 @@ public class Modelo
 
 	public void botonAccion(Object fuente,  int linea, int columna, JButton[][] casillas, ImageIcon pieza)
 	{
-
 		for (int i = 0; i < 8; i++)
 		{
 			for (int j = 0; j < 8; j++)
