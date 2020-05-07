@@ -1,4 +1,4 @@
-package modelo;
+package sinUso;
 
 public class Rey {
 

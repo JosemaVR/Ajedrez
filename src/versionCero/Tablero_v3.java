@@ -1,4 +1,4 @@
-package vista;
+package versionCero;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -94,26 +94,26 @@ public class Tablero_v3 extends JFrame implements WindowListener, ActionListener
 
 	// Imagenes:
 	// Caballos
-	ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
-	ImageIcon caballoBa7 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
-	ImageIcon caballoNh2 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
-	ImageIcon caballoNh7 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	public ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	public ImageIcon caballoBa7 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	public ImageIcon caballoNh2 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
+	public ImageIcon caballoNh7 = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
 	// Torres
-	ImageIcon torreTBa0 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
-	ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
-	ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
-	ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	public ImageIcon torreTBa0 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	public ImageIcon torreTBa8 = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
+	public ImageIcon torreTNh0 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
+	public ImageIcon torreTNh8 = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
 	// Alfiles
-	ImageIcon AlfilABa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
-	ImageIcon AlfilABa6 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
-	ImageIcon AlfilANa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
-	ImageIcon AlfilANh6 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
-	// Reinas
-	ImageIcon ReinaQBa4 = new ImageIcon("./imagenes/con_fondo/Reina1_blanca.png");
-	ImageIcon ReinaQNh4 = new ImageIcon("./imagenes/con_fondo/Reina1_negra.png");
-	// Reyes
-	ImageIcon ReyRBa5 = new ImageIcon("./imagenes/sin_fondo/Rey_blanco.png");
-	ImageIcon ReyRNh5 = new ImageIcon("./imagenes/sin_fondo/Rey_negro.png");
+	public ImageIcon AlfilABa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	public ImageIcon AlfilABa6 = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
+	public ImageIcon AlfilANa2 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
+	public ImageIcon AlfilANh6 = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
+	 // Reinas
+	public ImageIcon ReinaQBa4 = new ImageIcon("./imagenes/con_fondo/Reina1_blanca.png");
+	public ImageIcon ReinaQNh4 = new ImageIcon("./imagenes/con_fondo/Reina1_negra.png");
+	 // Reyes
+	public ImageIcon ReyRBa5 = new ImageIcon("./imagenes/sin_fondo/Rey_blanco.png");
+	public ImageIcon ReyRNh5 = new ImageIcon("./imagenes/sin_fondo/Rey_negro.png");
 
 	public Tablero_v3(int x, int y)
 	{

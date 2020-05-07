@@ -1,4 +1,4 @@
-package vista;
+package sinUso;
 
 import java.awt.Color;
 import java.awt.Container;
