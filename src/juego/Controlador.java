@@ -56,6 +56,10 @@ public class Controlador implements WindowListener, ActionListener
 						}
 					}
 					objVista.casillas[Integer.parseInt(text[0])][Integer.parseInt(text[1])].setBorder(bordeRojo);
+					
+					if (objModelo.tablero[i][j] != null) {
+						
+					}
 				}
 			}
 		}
