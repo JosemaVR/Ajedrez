@@ -18,17 +18,17 @@ public class Controlador implements WindowListener, ActionListener
 	Modelo objModelo = null;
 	Integer i, j;
 	Border bordeRojo = BorderFactory.createLineBorder(Color.red);
-	//TO-DO Arreglar, pone el borde en negro
+	// TO-DO Arreglar, pone el borde en negro
 	Border sinBorde = BorderFactory.createLineBorder(null);
 
 	public Controlador(Modelo objModelo, Vista objVista)
 	{
 		this.objVista = objVista;
 		this.objModelo = objModelo;
-		
-		for(i=0; i<8; i++) 
+
+		for (i = 0; i < 8; i++)
 		{
-			for(j=0; j<8; j++) 
+			for (j = 0; j < 8; j++)
 			{
 				objVista.casillas[i][j].addActionListener(this);
 			}
@@ -37,20 +37,20 @@ public class Controlador implements WindowListener, ActionListener
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)
 	{
 		Object fuente = e.getSource();
-	
-		for(i=0; i<8; i++) 
+
+		for (i = 0; i < 8; i++)
 		{
-			for(j=0; j<8; j++) 
+			for (j = 0; j < 8; j++)
 			{
-				if(fuente.equals(objVista.casillas[i][j])) 
+				if (fuente.equals(objVista.casillas[i][j]))
 				{
 					String[] text = ((JButton) fuente).getText().split(", ");
-					for(i=0; i<8; i++) 
+					for (i = 0; i < 8; i++)
 					{
-						for(j=0; j<8; j++) 
+						for (j = 0; j < 8; j++)
 						{
 							objVista.casillas[i][j].setBorder(sinBorde);
 						}
@@ -59,7 +59,7 @@ public class Controlador implements WindowListener, ActionListener
 				}
 			}
 		}
-		
+
 	}
 
 	@Override
@@ -78,7 +78,7 @@ public class Controlador implements WindowListener, ActionListener
 	public void windowClosing(WindowEvent arg0)
 	{
 		System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Cierre del programa]");
-		System.exit(0);			
+		System.exit(0);
 	}
 
 	@Override
