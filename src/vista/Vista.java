@@ -1,4 +1,4 @@
-package juego;
+package vista;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -42,7 +42,7 @@ public class Vista extends JFrame {
 	JLabel lblSur = new JLabel("Texto panel SUR");
 
 	// Componentes del tablero
-	JButton[][] casillas = new JButton[8][8];
+	private JButton[][] casillas = new JButton[8][8];
 	JButton fichaElegida = new JButton();
 	JLabel[] letTablero = new JLabel[9];
 	JLabel[] numTablero = new JLabel[9];
@@ -90,17 +90,17 @@ public class Vista extends JFrame {
 					}
 					else 
 					{
-						casillas[i-1][j-1] = new JButton((i-1) + ", " + (j-1));
-						casillas[i-1][j-1].setPreferredSize(new Dimension(70, 70));
+						getCasillas()[i-1][j-1] = new JButton((i-1) + ", " + (j-1));
+						getCasillas()[i-1][j-1].setPreferredSize(new Dimension(70, 70));
 						if ((i + j) % 2 != 0)
 						{
-							casillas[i-1][j-1].setBackground(colorNegro);
+							getCasillas()[i-1][j-1].setBackground(colorNegro);
 						}
 						if ((i + j) % 2 == 0)
 						{
-							casillas[i-1][j-1].setBackground(colorBlanco);
+							getCasillas()[i-1][j-1].setBackground(colorBlanco);
 						}
-						tablero.add(casillas[i-1][j-1]);
+						tablero.add(getCasillas()[i-1][j-1]);
 					}
 				}
 			}
@@ -126,5 +126,13 @@ public class Vista extends JFrame {
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setVisible(true);
+	}
+
+	public JButton[][] getCasillas() {
+		return casillas;
+	}
+
+	public void setCasillas(JButton[][] casillas) {
+		this.casillas = casillas;
 	}	
 }

@@ -1,7 +1,10 @@
-package juego;
+package controlador;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+
+import modelo.Modelo;
+import vista.Vista;
 
 public class Principal {
 

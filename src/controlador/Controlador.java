@@ -1,4 +1,7 @@
-package juego;
+package controlador;
+
+import vista.*;
+import modelo.*;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -30,7 +33,7 @@ public class Controlador implements WindowListener, ActionListener
 		{
 			for (j = 0; j < 8; j++)
 			{
-				objVista.casillas[i][j].addActionListener(this);
+				objVista.getCasillas()[i][j].addActionListener(this);
 			}
 		}
 		objVista.addWindowListener(this);
@@ -45,19 +48,19 @@ public class Controlador implements WindowListener, ActionListener
 		{
 			for (j = 0; j < 8; j++)
 			{
-				if (fuente.equals(objVista.casillas[i][j]))
+				if (fuente.equals(objVista.getCasillas()[i][j]))
 				{
 					String[] text = ((JButton) fuente).getText().split(", ");
 					for (i = 0; i < 8; i++)
 					{
 						for (j = 0; j < 8; j++)
 						{
-							objVista.casillas[i][j].setBorder(sinBorde);
+							objVista.getCasillas()[i][j].setBorder(sinBorde);
 						}
 					}
-					objVista.casillas[Integer.parseInt(text[0])][Integer.parseInt(text[1])].setBorder(bordeRojo);
+					objVista.getCasillas()[Integer.parseInt(text[0])][Integer.parseInt(text[1])].setBorder(bordeRojo);
 					
-					if (objModelo.tablero[i][j] != null) {
+					if (objModelo.getTablero()[i][j] != null) {
 						
 					}
 				}

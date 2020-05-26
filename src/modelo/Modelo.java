@@ -1,11 +1,11 @@
-package juego;
+package modelo;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class Modelo
 {
-	String[][] tablero = new String[8][8];
+	private String[][] tablero = new String[8][8];
 	
 	public void nuevoJuego(JButton[][] casillas) {
 		
@@ -14,46 +14,46 @@ public class Modelo
 		{
 			for (int j = 0; j < 8; j++)
 			{
-				tablero[i][j] = null;
+				getTablero()[i][j] = null;
 			}
 		}
 		
-		tablero[0][0] = "Tn1";
-		tablero[0][1] = "Cn1";
-		tablero[0][2] = "An1";
-		tablero[0][3] = "Qn1";
-		tablero[0][4] = "Kn1";
-		tablero[0][5] = "An2";
-		tablero[0][6] = "Cn2";
-		tablero[0][7] = "Tn2";
-		tablero[1][0] = "Pn1";
-		tablero[1][1] = "Pn2";
-		tablero[1][2] = "Pn3";
-		tablero[1][3] = "Pn4";
-		tablero[1][4] = "Pn5";
-		tablero[1][5] = "Pn6";
-		tablero[1][6] = "Pn7";
-		tablero[1][7] = "Pn8";
+		getTablero()[0][0] = "Tn1";
+		getTablero()[0][1] = "Cn1";
+		getTablero()[0][2] = "An1";
+		getTablero()[0][3] = "Qn1";
+		getTablero()[0][4] = "Kn1";
+		getTablero()[0][5] = "An2";
+		getTablero()[0][6] = "Cn2";
+		getTablero()[0][7] = "Tn2";
+		getTablero()[1][0] = "Pn1";
+		getTablero()[1][1] = "Pn2";
+		getTablero()[1][2] = "Pn3";
+		getTablero()[1][3] = "Pn4";
+		getTablero()[1][4] = "Pn5";
+		getTablero()[1][5] = "Pn6";
+		getTablero()[1][6] = "Pn7";
+		getTablero()[1][7] = "Pn8";
 		
 		
-		tablero[7][0] = "Tb1";
-		tablero[7][1] = "Cb1";
-		tablero[7][2] = "Ab1";
-		tablero[7][3] = "Qb1";
-		tablero[7][4] = "Kb1";
-		tablero[7][5] = "Ab2";
-		tablero[7][6] = "Cb2";
-		tablero[7][7] = "Tb2";
-		tablero[6][0] = "Pb1";
-		tablero[6][1] = "Pb2";
-		tablero[6][2] = "Pb3";
-		tablero[6][3] = "Pb4";
-		tablero[6][4] = "Pb5";
-		tablero[6][5] = "Pb6";
-		tablero[6][6] = "Pb7";
-		tablero[6][7] = "Pb8";
+		getTablero()[7][0] = "Tb1";
+		getTablero()[7][1] = "Cb1";
+		getTablero()[7][2] = "Ab1";
+		getTablero()[7][3] = "Qb1";
+		getTablero()[7][4] = "Kb1";
+		getTablero()[7][5] = "Ab2";
+		getTablero()[7][6] = "Cb2";
+		getTablero()[7][7] = "Tb2";
+		getTablero()[6][0] = "Pb1";
+		getTablero()[6][1] = "Pb2";
+		getTablero()[6][2] = "Pb3";
+		getTablero()[6][3] = "Pb4";
+		getTablero()[6][4] = "Pb5";
+		getTablero()[6][5] = "Pb6";
+		getTablero()[6][6] = "Pb7";
+		getTablero()[6][7] = "Pb8";
 		
-		setIcons(tablero, casillas);
+		setIcons(getTablero(), casillas);
 	}
 	
 	public static void setIcons(String[][] tablero, JButton[][] casillas) {
@@ -237,5 +237,13 @@ public class Modelo
 		
 		return focus;
 		
+	}
+
+	public String[][] getTablero() {
+		return tablero;
+	}
+
+	public void setTablero(String[][] tablero) {
+		this.tablero = tablero;
 	}
 }
