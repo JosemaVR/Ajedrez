@@ -1,4 +1,4 @@
-package juego;
+package controlador;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -11,6 +11,9 @@ import java.time.LocalTime;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.border.Border;
+
+import modelo.Modelo;
+import vista.Vista;
 
 public class Controlador implements WindowListener, ActionListener
 {
@@ -26,17 +29,17 @@ public class Controlador implements WindowListener, ActionListener
 		this.objVista = objVista;
 		this.objModelo = objModelo;
 
-		objVista.mniPartidaRapida.addActionListener(this);
-		objVista.mniSalir.addActionListener(this);
-		objVista.mniClasificacionJugador.addActionListener(this);
-		objVista.mniPartidas.addActionListener(this);
-		objVista.mniAyuda.addActionListener(this);
+		objVista.getMniPartidaRapida().addActionListener(this);
+		objVista.getMniSalir().addActionListener(this);
+		objVista.getMniClasificacionJugador().addActionListener(this);
+		objVista.getMniPartidas().addActionListener(this);
+		objVista.getMniAyuda().addActionListener(this);
 		
 		for (i = 0; i < 8; i++)
 		{
 			for (j = 0; j < 8; j++)
 			{
-				objVista.casillas[i][j].addActionListener(this);
+				objVista.getCasillas()[i][j].addActionListener(this);
 			}
 		}
 		objVista.addWindowListener(this);
@@ -51,19 +54,19 @@ public class Controlador implements WindowListener, ActionListener
 		{
 			for (j = 0; j < 8; j++)
 			{
-				if (fuente.equals(objVista.casillas[i][j]))
+				if (fuente.equals(objVista.getCasillas()[i][j]))
 				{
 					String[] text = ((JButton) fuente).getText().split(", ");
 					for (i = 0; i < 8; i++)
 					{
 						for (j = 0; j < 8; j++)
 						{
-							objVista.casillas[i][j].setBorder(sinBorde);
+							objVista.getCasillas()[i][j].setBorder(sinBorde);
 						}
 					}
-					objVista.casillas[Integer.parseInt(text[0])][Integer.parseInt(text[1])].setBorder(bordeRojo);
+					objVista.getCasillas()[Integer.parseInt(text[0])][Integer.parseInt(text[1])].setBorder(bordeRojo);
 					
-					if (objModelo.tablero[i][j] != null) {
+					if (objModelo.getTablero()[i][j] != null) {
 						
 					}
 				}
@@ -74,24 +77,24 @@ public class Controlador implements WindowListener, ActionListener
 		//TODO Si pulsas en "Ranking de partidas"
 		//TODO Ocultar todos los frames salvo el pulsado
 		
-		if (fuente.equals(objVista.mniPartidaRapida)) {
-			objVista.frmPartidaRapida.setVisible(true);
-			objVista.frmAyuda.setVisible(false);
-			objVista.frmClasificacionJugador.setVisible(false);
+		if (fuente.equals(objVista.getMniPartidaRapida())) {
+			objVista.getFrmPartidaRapida().setVisible(true);
+			objVista.getFrmAyuda().setVisible(false);
+			objVista.getFrmClasificacionJugador().setVisible(false);
 		}
-		else if (fuente.equals(objVista.mniAyuda)) {
-			objVista.frmPartidaRapida.setVisible(false);
-			objVista.frmAyuda.setVisible(true);
-			objVista.frmClasificacionJugador.setVisible(false);		
+		else if (fuente.equals(objVista.getMniAyuda())) {
+			objVista.getFrmPartidaRapida().setVisible(false);
+			objVista.getFrmAyuda().setVisible(true);
+			objVista.getFrmClasificacionJugador().setVisible(false);		
 		}
-		else if (fuente.equals(objVista.mniClasificacionJugador)) {
-			objVista.frmPartidaRapida.setVisible(false);
-			objVista.frmAyuda.setVisible(false);
-			objVista.frmClasificacionJugador.setVisible(true);
-			objVista.txtAreaConsultaJugadores.setText("");
-			objModelo.consultaJugadores(objVista.txtAreaConsultaJugadores);
+		else if (fuente.equals(objVista.getMniClasificacionJugador())) {
+			objVista.getFrmPartidaRapida().setVisible(false);
+			objVista.getFrmAyuda().setVisible(false);
+			objVista.getFrmClasificacionJugador().setVisible(true);
+			objVista.getTxtAreaConsultaJugadores().setText("");
+			objModelo.consultaJugadores(objVista.getTxtAreaConsultaJugadores());
 		}
-		else if (fuente.equals(objVista.mniSalir)) {
+		else if (fuente.equals(objVista.getMniSalir())) {
 			System.exit(0);
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][[Cierre del programa]]");
 		}

@@ -1,4 +1,4 @@
-package juego;
+package vista;
 
 import java.awt.BorderLayout;
 import java.awt.Choice;
@@ -30,9 +30,9 @@ public class Vista extends JFrame
 
 	JFrame frmInicio = new JFrame();
 	JFrame frmMenuPartida = new JFrame();
-	JFrame frmPartidaRapida = new JFrame();
-	JFrame frmAyuda = new JFrame();
-	JFrame frmClasificacionJugador = new JFrame();
+	private JFrame frmPartidaRapida = new JFrame();
+	private JFrame frmAyuda = new JFrame();
+	private JFrame frmClasificacionJugador = new JFrame();
 	JFrame frmTablero = new JFrame();
 	
 	JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
@@ -44,11 +44,11 @@ public class Vista extends JFrame
 	JMenu mnClasificacion = new JMenu("Clasificación");
 	JMenu mnAyuda = new JMenu("Ayuda");
 
-	JMenuItem mniPartidaRapida = new JMenuItem("Partida Rápida");
-	JMenuItem mniSalir = new JMenuItem("Salir");
-	JMenuItem mniClasificacionJugador = new JMenuItem("Jugador");
-	JMenuItem mniPartidas = new JMenuItem("Partidas");
-	JMenuItem mniAyuda = new JMenuItem("Ayuda");
+	private JMenuItem mniPartidaRapida = new JMenuItem("Partida Rápida");
+	private JMenuItem mniSalir = new JMenuItem("Salir");
+	private JMenuItem mniClasificacionJugador = new JMenuItem("Jugador");
+	private JMenuItem mniPartidas = new JMenuItem("Partidas");
+	private JMenuItem mniAyuda = new JMenuItem("Ayuda");
 
 	// Etiquetas Menú Principal
 
@@ -117,7 +117,7 @@ public class Vista extends JFrame
 	JLabel lblSur = new JLabel("Texto panel SUR");
 
 	// Componentes del tablero
-	JButton[][] casillas = new JButton[8][8];
+	private JButton[][] casillas = new JButton[8][8];
 	JButton fichaElegida = new JButton();
 	JLabel[] letTablero = new JLabel[9];
 	JLabel[] numTablero = new JLabel[9];
@@ -129,7 +129,7 @@ public class Vista extends JFrame
 	Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
 
 	//TextArea para consulta de jugadores
-	TextArea txtAreaConsultaJugadores = new TextArea(20,40);
+	private TextArea txtAreaConsultaJugadores = new TextArea(20,40);
 	
 	char letra = 'A';
 	JLabel lblLetra;
@@ -144,13 +144,13 @@ public class Vista extends JFrame
 		setJMenuBar(barraMenu);
 		
 		
-		mnJugar.add(mniPartidaRapida);
+		mnJugar.add(getMniPartidaRapida());
 		mnJugar.addSeparator();
-		mnJugar.add(mniSalir);
+		mnJugar.add(getMniSalir());
 		
-		mnClasificacion.add(mniClasificacionJugador);
-		mnClasificacion.add(mniPartidas);
-		mnAyuda.add(mniAyuda);
+		mnClasificacion.add(getMniClasificacionJugador());
+		mnClasificacion.add(getMniPartidas());
+		mnAyuda.add(getMniAyuda());
 
 		
 		setSize(300, 300);
@@ -192,17 +192,17 @@ public class Vista extends JFrame
 						tablero.add(numTablero[i]);
 					} else
 					{
-						casillas[i - 1][j - 1] = new JButton((i - 1) + ", " + (j - 1));
-						casillas[i - 1][j - 1].setPreferredSize(new Dimension(70, 70));
+						getCasillas()[i - 1][j - 1] = new JButton((i - 1) + ", " + (j - 1));
+						getCasillas()[i - 1][j - 1].setPreferredSize(new Dimension(70, 70));
 						if ((i + j) % 2 != 0)
 						{
-							casillas[i - 1][j - 1].setBackground(colorNegro);
+							getCasillas()[i - 1][j - 1].setBackground(colorNegro);
 						}
 						if ((i + j) % 2 == 0)
 						{
-							casillas[i - 1][j - 1].setBackground(colorBlanco);
+							getCasillas()[i - 1][j - 1].setBackground(colorBlanco);
 						}
-						tablero.add(casillas[i - 1][j - 1]);
+						tablero.add(getCasillas()[i - 1][j - 1]);
 					}
 				}
 			}
@@ -271,12 +271,12 @@ public class Vista extends JFrame
 		
 		//TODO Completar frame para "Ranking de jugadores"
 		//Ranking de jugadores
-		frmClasificacionJugador.setTitle("Clasificación de jugadores");
-		frmClasificacionJugador.setSize(600, 600);
-		frmClasificacionJugador.setResizable(false);
-		frmClasificacionJugador.setLocationRelativeTo(null);
-		frmClasificacionJugador.setVisible(false);
-		frmClasificacionJugador.add(txtAreaConsultaJugadores);
+		getFrmClasificacionJugador().setTitle("Clasificación de jugadores");
+		getFrmClasificacionJugador().setSize(600, 600);
+		getFrmClasificacionJugador().setResizable(false);
+		getFrmClasificacionJugador().setLocationRelativeTo(null);
+		getFrmClasificacionJugador().setVisible(false);
+		getFrmClasificacionJugador().add(getTxtAreaConsultaJugadores());
 		
 		
 		
@@ -286,5 +286,85 @@ public class Vista extends JFrame
 		
 		//TODO Completar frame para "Final de la partida"
 		
+	}
+
+	public JMenuItem getMniClasificacionJugador() {
+		return mniClasificacionJugador;
+	}
+
+	public void setMniClasificacionJugador(JMenuItem mniClasificacionJugador) {
+		this.mniClasificacionJugador = mniClasificacionJugador;
+	}
+
+	public JMenuItem getMniSalir() {
+		return mniSalir;
+	}
+
+	public void setMniSalir(JMenuItem mniSalir) {
+		this.mniSalir = mniSalir;
+	}
+
+	public JMenuItem getMniPartidaRapida() {
+		return mniPartidaRapida;
+	}
+
+	public void setMniPartidaRapida(JMenuItem mniPartidaRapida) {
+		this.mniPartidaRapida = mniPartidaRapida;
+	}
+
+	public JMenuItem getMniPartidas() {
+		return mniPartidas;
+	}
+
+	public void setMniPartidas(JMenuItem mniPartidas) {
+		this.mniPartidas = mniPartidas;
+	}
+
+	public JMenuItem getMniAyuda() {
+		return mniAyuda;
+	}
+
+	public void setMniAyuda(JMenuItem mniAyuda) {
+		this.mniAyuda = mniAyuda;
+	}
+
+	public JButton[][] getCasillas() {
+		return casillas;
+	}
+
+	public void setCasillas(JButton[][] casillas) {
+		this.casillas = casillas;
+	}
+
+	public JFrame getFrmPartidaRapida() {
+		return frmPartidaRapida;
+	}
+
+	public void setFrmPartidaRapida(JFrame frmPartidaRapida) {
+		this.frmPartidaRapida = frmPartidaRapida;
+	}
+
+	public JFrame getFrmAyuda() {
+		return frmAyuda;
+	}
+
+	public void setFrmAyuda(JFrame frmAyuda) {
+		this.frmAyuda = frmAyuda;
+	}
+
+	public JFrame getFrmClasificacionJugador() {
+		return frmClasificacionJugador;
+	}
+
+	public void setFrmClasificacionJugador(JFrame frmClasificacionJugador) {
+		this.frmClasificacionJugador = frmClasificacionJugador;
+	}
+
+	public TextArea getTxtAreaConsultaJugadores() {
+		return txtAreaConsultaJugadores;
+	}
+
+	public void setTxtAreaConsultaJugadores(TextArea txtAreaConsultaJugadores) {
+		this.txtAreaConsultaJugadores = txtAreaConsultaJugadores;
 	}
 }
