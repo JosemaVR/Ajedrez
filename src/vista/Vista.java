@@ -235,8 +235,7 @@ public class Vista extends JFrame
 		dlgNuevaPartida.setTitle("Crear Partida");
 		
 		pnlNuevaPartida1.add(lblTipoPartida);
-		pnlNuevaPartida1.add(chkUnoVsIa);
-		pnlNuevaPartida1.add(chkUnoVsUno);
+		pnlNuevaPartida1.add(txtTipoPartida);
 		dlgNuevaPartida.add(pnlNuevaPartida1);
 		
 		pnlNuevaPartida2.add(lblNombreJ1);
@@ -262,7 +261,7 @@ public class Vista extends JFrame
 		dlgNuevaPartida.add(pnlNuevaPartida6);
 		
 		dlgNuevaPartida.setSize(850, 125);
-		dlgNuevaPartida.setVisible(true);
+		dlgNuevaPartida.setVisible(false);
 		dlgNuevaPartida.setLocationRelativeTo(null);
 		dlgNuevaPartida.setResizable(true);
 		
@@ -286,6 +285,16 @@ public class Vista extends JFrame
 		
 		//TODO Completar frame para "Final de la partida"
 		
+	}
+
+	public JDialog getDlgNuevaPartida()
+	{
+		return dlgNuevaPartida;
+	}
+
+	public void setDlgNuevaPartida(JDialog dlgNuevaPartida)
+	{
+		this.dlgNuevaPartida = dlgNuevaPartida;
 	}
 
 	public JMenuItem getMniClasificacionJugador() {
