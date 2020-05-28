@@ -10,7 +10,6 @@ import java.time.LocalTime;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JMenuItem;
 import javax.swing.border.Border;
 
 public class Controlador implements WindowListener, ActionListener
@@ -88,10 +87,13 @@ public class Controlador implements WindowListener, ActionListener
 		else if (fuente.equals(objVista.mniClasificacionJugador)) {
 			objVista.frmPartidaRapida.setVisible(false);
 			objVista.frmAyuda.setVisible(false);
-			objVista.frmClasificacionJugador.setVisible(true);		
+			objVista.frmClasificacionJugador.setVisible(true);
+			objVista.txtAreaConsultaJugadores.setText("");
+			objModelo.consultaJugadores(objVista.txtAreaConsultaJugadores);
 		}
 		else if (fuente.equals(objVista.mniSalir)) {
 			System.exit(0);
+			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][[Cierre del programa]]");
 		}
 		
 	}

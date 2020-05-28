@@ -1,8 +1,13 @@
 package juego;
 
+import java.awt.TextArea;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -24,10 +29,10 @@ public class Modelo
 			// Establecer la conexión con la BD empresa
 			con = DriverManager.getConnection(url, user, password);
 			if (con != null) {
-				System.out.println("Conectado a la base de datos");
+				System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Conectando a la base de datos]");
 			}
 		} catch (SQLException ex) {
-			System.out.println("ERROR:La dirección no es válida o el usuario y clave");
+			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][ERROR:La dirección no es válida o el usuario y clave]");
 			ex.printStackTrace();
 		} catch (ClassNotFoundException cnfe) {
 			System.out.println("Error 1-" + cnfe.getMessage());
@@ -265,4 +270,44 @@ public class Modelo
 		return focus;
 		
 	}
+	
+	public void consultaJugadores(TextArea consulta) {
+		System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Consultando ranking]");
+		Connection con = conectar();
+		String sqlSelect = "SELECT * FROM usuarios, partidas WHERE "
+				+ "usuarios.idUsuario = partidas.idGanadorFK "
+				+ "ORDER BY usuarios.victorias DESC, usuarios.tablas DESC, usuarios.nombreUsuario ASC";
+		int i = 0;
+		try {
+			// CREAR UN STATEMENT PARA UNA CONSULTA SELECT
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sqlSelect);
+			while (rs.next()) 
+			{
+				if(consulta.getText().length()==0)
+				{
+					i++;
+					consulta.setText(i +
+							"º - Nombre: "+rs.getString("nombreUsuario")+
+							" // Victorias: "+rs.getInt("victorias")+
+							"  - Tablas: "+rs.getInt("tablas")+
+							"  - Derrotas: "+rs.getInt("derrotas"));
+				}
+				else
+				{
+					i++;
+					consulta.setText(consulta.getText() + "\n" + i +
+							"º - Nombre: "+rs.getString("nombreUsuario")+
+							" // Victorias: "+rs.getInt("victorias")+
+							"  - Tablas: "+rs.getInt("tablas")+
+							"  - Derrotas: "+rs.getInt("derrotas"));
+				}
+			}
+			rs.close();
+			stmt.close();
+		} catch (SQLException ex) {
+			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Error al consultar]");
+			ex.printStackTrace();
+		}
+	} 
 }

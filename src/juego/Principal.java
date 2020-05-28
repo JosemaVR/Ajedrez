@@ -11,7 +11,6 @@ public class Principal {
 
 		new Controlador(objModelo, objVista);
 
-
 		System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Inicio del programa]");
 
 	}
