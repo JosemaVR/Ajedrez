@@ -117,7 +117,7 @@ public class Vista extends JFrame
 	Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
 
 	//TextArea para consulta de jugadores
-	TextArea consultaJugadores = new TextArea(20,40);
+	TextArea txtAreaConsultaJugadores = new TextArea(20,40);
 	
 	char letra = 'A';
 	JLabel lblLetra;
@@ -128,8 +128,8 @@ public class Vista extends JFrame
 	public Vista()
 	{
 
-		frmInicio.setTitle("Menú Principal");
-		frmInicio.setJMenuBar(barraMenu);
+		setTitle("Menú Principal");
+		setJMenuBar(barraMenu);
 		
 		
 		mnJugar.add(mniPartidaRapida);
@@ -141,10 +141,10 @@ public class Vista extends JFrame
 		mnAyuda.add(mniAyuda);
 
 		
-		frmInicio.setSize(300, 300);
-		frmInicio.setLocationRelativeTo(null);
-		frmInicio.setVisible(true);
-		frmInicio.setResizable(false);
+		setSize(300, 300);
+		setLocationRelativeTo(null);
+		setVisible(true);
+		setResizable(false);
 
 		barraMenu.add(mnJugar);
 		barraMenu.add(mnClasificacion);	
@@ -226,7 +226,7 @@ public class Vista extends JFrame
 		frmClasificacionJugador.setResizable(false);
 		frmClasificacionJugador.setLocationRelativeTo(null);
 		frmClasificacionJugador.setVisible(false);
-		frmClasificacionJugador.add(consultaJugadores);
+		frmClasificacionJugador.add(txtAreaConsultaJugadores);
 		
 		
 		
