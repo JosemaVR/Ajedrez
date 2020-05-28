@@ -1,11 +1,12 @@
 package juego;
 
 import java.awt.BorderLayout;
+import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.TextArea;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -27,14 +28,20 @@ public class Vista extends JFrame
 	private static final long serialVersionUID = 1L;
 
 	JFrame frmInicio = new JFrame();
+	JFrame frmMenuPartida = new JFrame();
+	JFrame frmPartidaRapida = new JFrame();
+	JFrame frmAyuda = new JFrame();
+	JFrame frmClasificacionJugador = new JFrame();
+	JFrame frmTablero = new JFrame();
+	
 	JMenuBar barraMenu = new JMenuBar();
-	JMenu mnJugar = new JMenu();
-	JMenu mnClasificacion = new JMenu();
-	JMenu mnAyuda = new JMenu();
+	JMenu mnJugar = new JMenu("Jugar");
+	JMenu mnClasificacion = new JMenu("Clasificación");
+	JMenu mnAyuda = new JMenu("Ayuda");
 
 	JMenuItem mniPartidaRapida = new JMenuItem("Partida Rápida");
 	JMenuItem mniSalir = new JMenuItem("Salir");
-	JMenuItem mniJugador = new JMenuItem("Jugador");
+	JMenuItem mniClasificacionJugador = new JMenuItem("Jugador");
 	JMenuItem mniPartidas = new JMenuItem("Partidas");
 	JMenuItem mniAyuda = new JMenuItem("Ayuda");
 
@@ -69,6 +76,10 @@ public class Vista extends JFrame
 	JCheckBox chkUnoVsUno = new JCheckBox("Jugador contra Jugador", selected);
 	JCheckBox chkUnoVsIa = new JCheckBox();
 
+	// Choices de selección de jugadores
+	Choice choJugador1 = new Choice();
+	Choice choJugador2 = new Choice();
+	
 	// Panel contenedor
 	JPanel pantalla = new JPanel();
 	JPanel panelCentral = new JPanel();
@@ -105,6 +116,9 @@ public class Vista extends JFrame
 	Color colorNegro = new Color(173, 113, 0); // Casillas marron oscuro
 	Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
 
+	//TextArea para consulta de jugadores
+	TextArea consultaJugadores = new TextArea(20,40);
+	
 	char letra = 'A';
 	JLabel lblLetra;
 	JLabel lblNum;
@@ -122,7 +136,7 @@ public class Vista extends JFrame
 		mnJugar.addSeparator();
 		mnJugar.add(mniSalir);
 		
-		mnClasificacion.add(mniJugador);
+		mnClasificacion.add(mniClasificacionJugador);
 		mnClasificacion.add(mniPartidas);
 		mnAyuda.add(mniAyuda);
 
@@ -136,7 +150,7 @@ public class Vista extends JFrame
 		barraMenu.add(mnClasificacion);	
 		barraMenu.add(mnAyuda);
 		
-		setTitle("Tablero");
+		frmTablero.setTitle("Tablero");
 		UIManager.put("Label.font", fuenteEtiquetas);
 
 		// Crear y añadir componentes del tablero
@@ -183,24 +197,44 @@ public class Vista extends JFrame
 		}
 
 		tableroCompleto.add(tablero);
-		add(tableroCompleto);
+		frmTablero.add(tableroCompleto);
 
 		panelEste.add(lblEste);
-		add(panelEste, BorderLayout.EAST);
+		frmTablero.add(panelEste, BorderLayout.EAST);
 
 		panelOeste.setPreferredSize(new Dimension(25, 25));
 		panelOeste.add(lblOeste);
-		add(panelOeste, BorderLayout.WEST);
+		frmTablero.add(panelOeste, BorderLayout.WEST);
 
 		panelNorte.add(lblNorte);
-		add(panelNorte, BorderLayout.NORTH);
+		frmTablero.add(panelNorte, BorderLayout.NORTH);
 
 		panelSur.add(lblSur);
-		add(panelSur, BorderLayout.SOUTH);
+		frmTablero.add(panelSur, BorderLayout.SOUTH);
 
-		setSize(1100, 800);
-		setResizable(false);
-		setLocationRelativeTo(null);
-		setVisible(false);
+		frmTablero.setSize(1100, 800);
+		frmTablero.setResizable(false);
+		frmTablero.setLocationRelativeTo(null);
+		frmTablero.setVisible(false);
+		
+		//TODO Completar frame para "Nueva partida"
+		
+		//TODO Completar frame para "Ranking de jugadores"
+		//Ranking de jugadores
+		frmClasificacionJugador.setTitle("Clasificación de jugadores");
+		frmClasificacionJugador.setSize(600, 600);
+		frmClasificacionJugador.setResizable(false);
+		frmClasificacionJugador.setLocationRelativeTo(null);
+		frmClasificacionJugador.setVisible(false);
+		frmClasificacionJugador.add(consultaJugadores);
+		
+		
+		
+		//TODO Completar frame para "Ranking de partidas"
+		
+		//TODO Completar frame para "Ayuda"
+		
+		//TODO Completar frame para "Final de la partida"
+		
 	}
 }
