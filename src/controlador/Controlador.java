@@ -78,7 +78,7 @@ public class Controlador implements WindowListener, ActionListener
 		//TODO Ocultar todos los frames salvo el pulsado
 		
 		if (fuente.equals(objVista.getMniPartidaRapida())) {
-			objVista.getFrmPartidaRapida().setVisible(true);
+			objVista.getDlgNuevaPartida().setVisible(true);
 			objVista.getFrmAyuda().setVisible(false);
 			objVista.getFrmClasificacionJugador().setVisible(false);
 		}
