@@ -19,6 +19,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.Border;
@@ -34,6 +35,7 @@ public class Vista extends JFrame
 	private JFrame frmAyuda = new JFrame();
 	private JFrame frmClasificacionJugador = new JFrame();
 	JFrame frmTablero = new JFrame();
+	
 	
 	JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
 	
@@ -65,9 +67,10 @@ public class Vista extends JFrame
 	JPanel pnlNuevaPartida4 = new JPanel();
 	JPanel pnlNuevaPartida5 = new JPanel();
 	JPanel pnlNuevaPartida6 = new JPanel();
+	
 	// Botones Menú Principal
 
-	JButton btnLanzar = new JButton("Lanzar");
+	JButton btnLanzar = new JButton("Lanzar Moneda");
 	JButton btnEmpezar = new JButton("Empezar");
 	JButton btnCancelar = new JButton("Cancelar");
 	JButton btnMostrar = new JButton("Mostrar");
@@ -248,6 +251,7 @@ public class Vista extends JFrame
 		
 		pnlNuevaPartida4.add(lblSeleccionColor);
 		pnlNuevaPartida4.add(txtSeleccionColor);
+		txtSeleccionColor.setEditable(false);
 		pnlNuevaPartida4.add(btnLanzar);
 		dlgNuevaPartida.add(pnlNuevaPartida4);
 		
