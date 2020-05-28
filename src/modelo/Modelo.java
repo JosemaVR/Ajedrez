@@ -1,11 +1,14 @@
 package modelo;
 
+import java.util.Random;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class Modelo
 {
 	private String[][] tablero = new String[8][8];
+	int color = 0;
 	
 	public void nuevoJuego(JButton[][] casillas) {
 		
@@ -54,6 +57,22 @@ public class Modelo
 		getTablero()[6][7] = "Pb8";
 		
 		setIcons(getTablero(), casillas);
+	}
+	
+	public Random nuevoTurno() {
+		Random turno = new Random(1);
+		return turno;
+//		blanco=1		negro=0
+	}
+	
+	public int cambiarTurno(int turno) {
+		if (turno==1) {
+			turno = 0;
+		}
+		else {
+			turno = 1;
+		}
+		return turno;
 	}
 	
 	public static void setIcons(String[][] tablero, JButton[][] casillas) {
