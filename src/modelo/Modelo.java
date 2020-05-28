@@ -1,10 +1,11 @@
 package modelo;
 
 import java.awt.TextArea;
-import java.beans.Statement;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Random;
@@ -12,7 +13,6 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-import com.sun.jdi.connect.spi.Connection;
 
 public class Modelo
 {
