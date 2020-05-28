@@ -323,83 +323,43 @@ public class Modelo
 	
 
 	public void consultaJugadores(TextArea consulta) {
-
 		System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Consultando ranking]");
-
 		Connection con = conectar();
-
 		String sqlSelect = "SELECT * FROM usuarios, partidas WHERE "
-
 				+ "usuarios.idUsuario = partidas.idGanadorFK "
-
 				+ "ORDER BY usuarios.victorias DESC, usuarios.tablas DESC, usuarios.nombreUsuario ASC";
-
 		int i = 0;
-
 		try {
-
 			// CREAR UN STATEMENT PARA UNA CONSULTA SELECT
-
 			Statement stmt = con.createStatement();
-
 			ResultSet rs = stmt.executeQuery(sqlSelect);
-
 			while (rs.next()) 
-
 			{
-
 				if(consulta.getText().length()==0)
-
 				{
-
 					i++;
-
 					consulta.setText(i +
-
 							"º - Nombre: "+rs.getString("nombreUsuario")+
-
 							" // Victorias: "+rs.getInt("victorias")+
-
 							"  - Tablas: "+rs.getInt("tablas")+
-
 							"  - Derrotas: "+rs.getInt("derrotas"));
-
 				}
-
 				else
-
 				{
-
 					i++;
-
 					consulta.setText(consulta.getText() + "\n" + i +
-
 							"º - Nombre: "+rs.getString("nombreUsuario")+
-
 							" // Victorias: "+rs.getInt("victorias")+
-
 							"  - Tablas: "+rs.getInt("tablas")+
-
 							"  - Derrotas: "+rs.getInt("derrotas"));
-
 				}
-
 			}
-
 			rs.close();
-
 			stmt.close();
-
 		} catch (SQLException ex) {
-
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Error al consultar]");
-
 			ex.printStackTrace();
-
 		}
-
 	} 
-	
-	
 
 }
