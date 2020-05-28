@@ -1,11 +1,39 @@
 package juego;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class Modelo
 {
 	String[][] tablero = new String[8][8];
+	
+	public Connection conectar()
+	{
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/ajedrez?autoReconnect=true&useSSL=false";
+		String user = "ajedrez";
+		String password = "Ajedrez2020;";
+		Connection con = null;
+		try {
+			// Cargar los controladores para el acceso a la BD
+			Class.forName(driver);
+			// Establecer la conexión con la BD empresa
+			con = DriverManager.getConnection(url, user, password);
+			if (con != null) {
+				System.out.println("Conectado a la base de datos");
+			}
+		} catch (SQLException ex) {
+			System.out.println("ERROR:La dirección no es válida o el usuario y clave");
+			ex.printStackTrace();
+		} catch (ClassNotFoundException cnfe) {
+			System.out.println("Error 1-" + cnfe.getMessage());
+		}
+		return con;
+	}
 	
 	public void nuevoJuego(JButton[][] casillas) {
 		
@@ -232,7 +260,6 @@ public class Modelo
 	public boolean seleccionPieza (JButton[][] casillas, ImageIcon pieza) {
 				
 		boolean focus = false;
-		
 		
 		
 		return focus;

@@ -1,4 +1,8 @@
+CREATE USER IF NOT EXISTS 'ajedrez'@'%' IDENTIFIED BY 'Ajedrez2020;';
+
 CREATE DATABASE IF NOT EXISTS ajedrez CHARSET utf8mb4 COLLATE utf8mb4_spanish2_ci;
+
+GRANT ALL PRIVILEGES ON ajedrez.* TO 'ajedrez'@'%';
 
 USE ajedrez;
 

@@ -10,6 +10,7 @@ import java.time.LocalTime;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JMenuItem;
 import javax.swing.border.Border;
 
 public class Controlador implements WindowListener, ActionListener
@@ -26,6 +27,12 @@ public class Controlador implements WindowListener, ActionListener
 		this.objVista = objVista;
 		this.objModelo = objModelo;
 
+		objVista.mniPartidaRapida.addActionListener(this);
+		objVista.mniSalir.addActionListener(this);
+		objVista.mniClasificacionJugador.addActionListener(this);
+		objVista.mniPartidas.addActionListener(this);
+		objVista.mniAyuda.addActionListener(this);
+		
 		for (i = 0; i < 8; i++)
 		{
 			for (j = 0; j < 8; j++)
@@ -63,7 +70,30 @@ public class Controlador implements WindowListener, ActionListener
 				}
 			}
 		}
-
+		
+		//TODO Si pulsas en "Iniciar partida"
+		//TODO Si pulsas en "Ranking de partidas"
+		//TODO Ocultar todos los frames salvo el pulsado
+		
+		if (fuente.equals(objVista.mniPartidaRapida)) {
+			objVista.frmPartidaRapida.setVisible(true);
+			objVista.frmAyuda.setVisible(false);
+			objVista.frmClasificacionJugador.setVisible(false);
+		}
+		else if (fuente.equals(objVista.mniAyuda)) {
+			objVista.frmPartidaRapida.setVisible(false);
+			objVista.frmAyuda.setVisible(true);
+			objVista.frmClasificacionJugador.setVisible(false);		
+		}
+		else if (fuente.equals(objVista.mniClasificacionJugador)) {
+			objVista.frmPartidaRapida.setVisible(false);
+			objVista.frmAyuda.setVisible(false);
+			objVista.frmClasificacionJugador.setVisible(true);		
+		}
+		else if (fuente.equals(objVista.mniSalir)) {
+			System.exit(0);
+		}
+		
 	}
 
 	@Override
