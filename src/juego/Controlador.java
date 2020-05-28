@@ -10,7 +10,6 @@ import java.time.LocalTime;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JMenuItem;
 import javax.swing.border.Border;
 
 public class Controlador implements WindowListener, ActionListener

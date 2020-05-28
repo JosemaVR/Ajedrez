@@ -12,6 +12,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -34,6 +35,10 @@ public class Vista extends JFrame
 	JFrame frmClasificacionJugador = new JFrame();
 	JFrame frmTablero = new JFrame();
 	
+	JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
+	
+	
+	
 	JMenuBar barraMenu = new JMenuBar();
 	JMenu mnJugar = new JMenu("Jugar");
 	JMenu mnClasificacion = new JMenu("Clasificación");
@@ -54,6 +59,12 @@ public class Vista extends JFrame
 	JLabel lblLimiTiempo = new JLabel("Límite de tiempo");
 	JLabel lblNombre = new JLabel("Nombre");
 
+	JPanel pnlNuevaPartida1 = new JPanel();
+	JPanel pnlNuevaPartida2 = new JPanel();
+	JPanel pnlNuevaPartida3 = new JPanel();
+	JPanel pnlNuevaPartida4 = new JPanel();
+	JPanel pnlNuevaPartida5 = new JPanel();
+	JPanel pnlNuevaPartida6 = new JPanel();
 	// Botones Menú Principal
 
 	JButton btnLanzar = new JButton("Lanzar");
@@ -64,22 +75,23 @@ public class Vista extends JFrame
 
 	// TextFields Menú Principal
 
-	JTextField txtNombre = new JTextField();
-	JTextField txtNombreJ1 = new JTextField();
-	JTextField txtNombreJ2 = new JTextField();
-	JTextField txtSeleccionColor = new JTextField();
+	JTextField txtNombre = new JTextField("",10);
+	JTextField txtNombreJ1 = new JTextField("",10);
+	JTextField txtNombreJ2 = new JTextField("",10);
+	JTextField txtTipoPartida = new JTextField("",10);
+	JTextField txtSeleccionColor = new JTextField("",10);
 
-	// Choices Menú Principal
+	// CheckBox Menú Principal
 	boolean selected = false;
 
 	JCheckBox chkMejorTres = new JCheckBox("¿Al mejor de tres?", selected);
-	JCheckBox chkUnoVsUno = new JCheckBox("Jugador contra Jugador", selected);
-	JCheckBox chkUnoVsIa = new JCheckBox();
+	JCheckBox chkUnoVsUno = new JCheckBox("Jug. vs Jug.", selected);
+	JCheckBox  chkUnoVsIa = new JCheckBox(" Jug. vs I.A.", selected);
 
 	// Choices de selección de jugadores
 	Choice choJugador1 = new Choice();
 	Choice choJugador2 = new Choice();
-	
+	Choice choTiempo = new Choice();
 	// Panel contenedor
 	JPanel pantalla = new JPanel();
 	JPanel panelCentral = new JPanel();
@@ -217,7 +229,45 @@ public class Vista extends JFrame
 		frmTablero.setLocationRelativeTo(null);
 		frmTablero.setVisible(false);
 		
-		//TODO Completar frame para "Nueva partida"
+		//TODO Completar frame para "Crear partida"
+		
+		dlgNuevaPartida.setLayout(new GridLayout(1,5));
+		dlgNuevaPartida.setTitle("Crear Partida");
+		
+		pnlNuevaPartida1.add(lblTipoPartida);
+		pnlNuevaPartida1.add(chkUnoVsIa);
+		pnlNuevaPartida1.add(chkUnoVsUno);
+		dlgNuevaPartida.add(pnlNuevaPartida1);
+		
+		pnlNuevaPartida2.add(lblNombreJ1);
+		pnlNuevaPartida2.add(txtNombreJ1);		
+		dlgNuevaPartida.add(pnlNuevaPartida2);
+		
+		pnlNuevaPartida3.add(lblNombreJ2);
+		pnlNuevaPartida3.add(txtNombreJ2);
+		dlgNuevaPartida.add(pnlNuevaPartida3);
+		
+		pnlNuevaPartida4.add(lblSeleccionColor);
+		pnlNuevaPartida4.add(txtSeleccionColor);
+		pnlNuevaPartida4.add(btnLanzar);
+		dlgNuevaPartida.add(pnlNuevaPartida4);
+		
+		pnlNuevaPartida5.add(lblLimiTiempo);
+		pnlNuevaPartida5.add(choTiempo);
+		pnlNuevaPartida5.add(chkMejorTres);
+		dlgNuevaPartida.add(pnlNuevaPartida5);
+		
+		pnlNuevaPartida6.add(btnEmpezar);
+		pnlNuevaPartida6.add(btnCancelar);
+		dlgNuevaPartida.add(pnlNuevaPartida6);
+		
+		dlgNuevaPartida.setSize(850, 125);
+		dlgNuevaPartida.setVisible(true);
+		dlgNuevaPartida.setLocationRelativeTo(null);
+		dlgNuevaPartida.setResizable(true);
+		
+		
+		
 		
 		//TODO Completar frame para "Ranking de jugadores"
 		//Ranking de jugadores
