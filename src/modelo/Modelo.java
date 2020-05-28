@@ -1,5 +1,6 @@
 package modelo;
 
+import java.awt.TextArea;
 import java.util.Random;
 
 import javax.swing.ImageIcon;
@@ -264,5 +265,11 @@ public class Modelo
 
 	public void setTablero(String[][] tablero) {
 		this.tablero = tablero;
+	}
+
+	public void consultaJugadores(TextArea txtAreaConsultaJugadores)
+	{
+		// TODO Auto-generated method stub
+		
 	}
 }
