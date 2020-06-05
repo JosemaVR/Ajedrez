@@ -1,6 +1,6 @@
 package modelo;
 
-import java.awt.Dimension;
+import java.awt.Choice;
 import java.awt.TextArea;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,11 +11,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Random;
 
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-
-import vista.Vista;
 
 
 public class Modelo
@@ -293,7 +290,7 @@ public class Modelo
 		this.tablero = tablero;
 	}
 
-	public void consultaJugadores(TextArea consulta) {
+	public void consultaJugadoresRanking(TextArea consulta) {
 		System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Consultando ranking]");
 		Connection con = conectar();
 		String sqlSelect = "SELECT * FROM usuarios, partidas WHERE "
@@ -329,6 +326,46 @@ public class Modelo
 			stmt.close();
 		} catch (SQLException ex) {
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Error al consultar]");
+			ex.printStackTrace();
+		}
+	} 
+	
+	public void consultaJugador1(Choice usuario) {
+		Connection con = conectar();
+		String sqlSelect = "SELECT * FROM usuarios";
+		try {
+			// CREAR UN STATEMENT PARA UNA CONSULTA SELECT
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sqlSelect);
+			while (rs.next()) 
+			{
+				usuario.add(rs.getInt("idUsuario")+
+						"-"+rs.getString("nombreUsuario"));
+			}
+			rs.close();
+			stmt.close();
+		} catch (SQLException ex) {
+			System.out.println("ERROR: al consultar");
+			ex.printStackTrace();
+		}
+	} 
+	
+	public void consultaJugador2(Choice usuario, String jugador1) {
+		Connection con = conectar();
+		String sqlSelect = "SELECT * FROM usuarios WHERE idUsuario <> " + jugador1;
+		try {
+			// CREAR UN STATEMENT PARA UNA CONSULTA SELECT
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sqlSelect);
+			while (rs.next()) 
+			{
+				usuario.add(rs.getInt("idUsuario")+
+						"-"+rs.getString("nombreUsuario"));
+			}
+			rs.close();
+			stmt.close();
+		} catch (SQLException ex) {
+			System.out.println("ERROR: al consultar");
 			ex.printStackTrace();
 		}
 	} 

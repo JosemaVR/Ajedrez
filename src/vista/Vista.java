@@ -4,12 +4,12 @@ import java.awt.BorderLayout;
 import java.awt.Choice;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.TextArea;
 
 import javax.swing.BorderFactory;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -38,9 +38,10 @@ public class Vista extends JFrame
 
 	JFrame frmInicio = new JFrame();
 	JFrame frmMenuPartida = new JFrame();
-	private JFrame frmPartidaRapida = new JFrame();
-	private JFrame frmAyuda = new JFrame();
-	private JFrame frmClasificacionJugador = new JFrame();
+	public JFrame frmElegirJugador1 = new JFrame();
+	public JFrame frmElegirJugador2 = new JFrame();
+	public JFrame frmAyuda = new JFrame();
+	public JFrame frmClasificacionJugador = new JFrame();
 	public JFrame frmTablero = new JFrame();
 
 	JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
@@ -58,8 +59,8 @@ public class Vista extends JFrame
 
 	// Etiquetas Menú Principal
 
-	JLabel lblNombreJ1 = new JLabel("Nombre Jugador 1");
-	JLabel lblNombreJ2 = new JLabel("Nombre Jugador 2");
+	JLabel lblNombreJ1 = new JLabel("Jugador Blancas");
+	JLabel lblNombreJ2 = new JLabel("Jugador Negras");
 	JLabel lblTipoPartida = new JLabel("Tipo de Partida");
 	JLabel lblSeleccionColor = new JLabel("Seleccionar color");
 	JLabel lblLimiTiempo = new JLabel("Límite de tiempo");
@@ -75,13 +76,14 @@ public class Vista extends JFrame
 	// Botones Menú Principal
 
 	JButton btnLanzar = new JButton("Lanzar Moneda");
-	JButton btnEmpezar = new JButton("Empezar");
-	JButton btnCancelar = new JButton("Cancelar");
+	public JButton btnEmpezar = new JButton("Empezar");
+	public JButton btnCancelar = new JButton("Cancelar");
+	public JButton btnAvanzar = new JButton("Avanzar");
+	public JButton btnCancelar1 = new JButton("Cancelar");
 	JButton btnMostrar = new JButton("Mostrar");
 	JButton btnVolver = new JButton("Volver");
 
 	// TextFields Menú Principal
-
 	JTextField txtNombre = new JTextField("",10);
 	JTextField txtNombreJ1 = new JTextField("",10);
 	JTextField txtNombreJ2 = new JTextField("",10);
@@ -96,8 +98,8 @@ public class Vista extends JFrame
 	JCheckBox  chkUnoVsIa = new JCheckBox(" Jug. vs I.A.", selected);
 
 	// Choices de selección de jugadores
-	Choice choJugador1 = new Choice();
-	Choice choJugador2 = new Choice();
+	public Choice choJugador1 = new Choice();
+	public Choice choJugador2 = new Choice();
 	Choice choTiempo = new Choice();
 	// Panel contenedor
 	JPanel pantalla = new JPanel();
@@ -118,10 +120,10 @@ public class Vista extends JFrame
 	Font fuenteEtiquetas = new Font(Font.DIALOG, Font.BOLD, 16);
 
 	// Labels
-	JLabel lblEste = new JLabel("Texto panel ESTE");
-	JLabel lblOeste = new JLabel("Texto panel OESTE");
-	JLabel lblNorte = new JLabel("Texto panel NORTE");
-	JLabel lblSur = new JLabel("Texto panel SUR");
+	JLabel lblEste = new JLabel();
+	JLabel lblOeste = new JLabel();
+	public JLabel lblNorte = new JLabel();
+	public JLabel lblSur = new JLabel();
 
 	// Componentes del tablero
 	public JButton[][] casillas = new JButton[8][8];
@@ -273,6 +275,7 @@ public class Vista extends JFrame
 			{
 				if (i == 0 && j == 0)
 				{
+					fichaElegida.setEnabled(false);
 					fichaElegida.setIcon(caballoBa2);
 					fichaElegida.setPreferredSize(new Dimension(70, 70));
 					tablero.add(fichaElegida);
@@ -343,55 +346,40 @@ public class Vista extends JFrame
 		frmTablero.setVisible(false);
 
 		//TODO Completar frame para "Crear partida"
-
-		dlgNuevaPartida.setLayout(new GridLayout(1,5));
+		dlgNuevaPartida.setLayout(new GridLayout(2,2));
 		dlgNuevaPartida.setTitle("Crear Partida");
 
-		pnlNuevaPartida1.add(lblTipoPartida);
-		pnlNuevaPartida1.add(txtTipoPartida);
-		dlgNuevaPartida.add(pnlNuevaPartida1);
+		choJugador1.add("Seleccionar uno...");
+		choJugador2.add("Seleccionar otro...");
+		
+		frmElegirJugador1.setLayout(new FlowLayout());
+		frmElegirJugador1.setTitle("Crear Partida");
+		frmElegirJugador1.add(lblNombreJ1);
+		frmElegirJugador1.add(choJugador1);		
+		frmElegirJugador1.add(btnAvanzar);
+		frmElegirJugador1.add(btnCancelar1);
+		frmElegirJugador1.setSize(300, 150);
+		frmElegirJugador1.setVisible(false);
+		frmElegirJugador1.setLocationRelativeTo(null);
+		frmElegirJugador1.setResizable(true);
+		
+		frmElegirJugador2.setLayout(new FlowLayout());
+		frmElegirJugador2.setTitle("Crear Partida");
+		frmElegirJugador2.add(lblNombreJ2);
+		frmElegirJugador2.add(choJugador2);
+		frmElegirJugador2.add(btnEmpezar);
+		frmElegirJugador2.add(btnCancelar);
+		frmElegirJugador2.setSize(300, 150);
+		frmElegirJugador2.setVisible(false);
+		frmElegirJugador2.setLocationRelativeTo(null);
+		frmElegirJugador2.setResizable(true);
 
-		pnlNuevaPartida2.add(lblNombreJ1);
-		pnlNuevaPartida2.add(txtNombreJ1);		
-		dlgNuevaPartida.add(pnlNuevaPartida2);
-
-		pnlNuevaPartida3.add(lblNombreJ2);
-		pnlNuevaPartida3.add(txtNombreJ2);
-		dlgNuevaPartida.add(pnlNuevaPartida3);
-
-		pnlNuevaPartida4.add(lblSeleccionColor);
-		pnlNuevaPartida4.add(txtSeleccionColor);
-		txtSeleccionColor.setEditable(false);
-		pnlNuevaPartida4.add(btnLanzar);
-		dlgNuevaPartida.add(pnlNuevaPartida4);
-
-		pnlNuevaPartida5.add(lblLimiTiempo);
-		pnlNuevaPartida5.add(choTiempo);
-		pnlNuevaPartida5.add(chkMejorTres);
-		dlgNuevaPartida.add(pnlNuevaPartida5);
-
-		pnlNuevaPartida6.add(btnEmpezar);
-		pnlNuevaPartida6.add(btnCancelar);
-		dlgNuevaPartida.add(pnlNuevaPartida6);
-
-		dlgNuevaPartida.setSize(850, 125);
-		dlgNuevaPartida.setVisible(false);
-		dlgNuevaPartida.setLocationRelativeTo(null);
-		dlgNuevaPartida.setResizable(true);
-
-
-
-
-		//TODO Completar frame para "Ranking de jugadores"
-		//Ranking de jugadores
 		getFrmClasificacionJugador().setTitle("Clasificación de jugadores");
 		getFrmClasificacionJugador().setSize(600, 600);
 		getFrmClasificacionJugador().setResizable(false);
 		getFrmClasificacionJugador().setLocationRelativeTo(null);
 		getFrmClasificacionJugador().setVisible(false);
 		getFrmClasificacionJugador().add(getTxtAreaConsultaJugadores());
-
-
 
 		//TODO Completar frame para "Ranking de partidas"
 
@@ -457,14 +445,6 @@ public class Vista extends JFrame
 
 	public void setCasillas(JButton[][] casillas) {
 		this.casillas = casillas;
-	}
-
-	public JFrame getFrmPartidaRapida() {
-		return frmPartidaRapida;
-	}
-
-	public void setFrmPartidaRapida(JFrame frmPartidaRapida) {
-		this.frmPartidaRapida = frmPartidaRapida;
 	}
 
 	public JFrame getFrmAyuda() {
