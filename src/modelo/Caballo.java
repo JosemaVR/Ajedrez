@@ -8,19 +8,19 @@ import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-public class Peon {
+public class Caballo {
 
 	public ColorPieza color;
 	public Icon icono;
 	public int x, y;
 
-	public Peon(ColorPieza color, int y, int x) {
+	public Caballo(ColorPieza color, int y, int x) {
 		this.color = color;
 		if(color == ColorPieza.BLANCO) {
-			this.icono = new ImageIcon("imagenes/sin_fondo/Peon_blanco.png");
+			this.icono = new ImageIcon("imagenes/sin_fondo/Caballo_blanco.png");
 		}
 		else if(color == ColorPieza.NEGRO) {
-			this.icono = new ImageIcon("imagenes/sin_fondo/Peon_negro.png");
+			this.icono = new ImageIcon("imagenes/sin_fondo/Caballo_negro.png");
 		}
 		this.x = x;
 		this.y = y;

@@ -80,6 +80,7 @@ public class Controlador implements WindowListener, ActionListener
 		if (fuente.equals(objVista.getMniPartidaRapida())) {
 			//objVista.setVisible(false);
 			objVista.getDlgNuevaPartida().setVisible(true);
+			objVista.frmTablero.setVisible(true);
 			objVista.getFrmAyuda().setVisible(false);
 			objVista.getFrmClasificacionJugador().setVisible(false);
 		}
@@ -99,7 +100,6 @@ public class Controlador implements WindowListener, ActionListener
 			System.exit(0);
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][[Cierre del programa]]");
 		}
-		
 	}
 
 	@Override
