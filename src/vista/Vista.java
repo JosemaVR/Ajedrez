@@ -9,6 +9,7 @@ import java.awt.GridLayout;
 import java.awt.TextArea;
 
 import javax.swing.BorderFactory;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -19,14 +20,20 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.Border;
 
+import modelo.Alfil;
+import modelo.Caballo;
+import modelo.ColorPieza;
+import modelo.Peon;
+import modelo.Reina;
+import modelo.Rey;
+import modelo.Torre;
+
 public class Vista extends JFrame 
 {
-
 	private static final long serialVersionUID = 1L;
 
 	JFrame frmInicio = new JFrame();
@@ -34,13 +41,10 @@ public class Vista extends JFrame
 	private JFrame frmPartidaRapida = new JFrame();
 	private JFrame frmAyuda = new JFrame();
 	private JFrame frmClasificacionJugador = new JFrame();
-	JFrame frmTablero = new JFrame();
-	
-	
+	public JFrame frmTablero = new JFrame();
+
 	JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
-	
-	
-	
+
 	JMenuBar barraMenu = new JMenuBar();
 	JMenu mnJugar = new JMenu("Jugar");
 	JMenu mnClasificacion = new JMenu("Clasificación");
@@ -67,7 +71,7 @@ public class Vista extends JFrame
 	JPanel pnlNuevaPartida4 = new JPanel();
 	JPanel pnlNuevaPartida5 = new JPanel();
 	JPanel pnlNuevaPartida6 = new JPanel();
-	
+
 	// Botones Menú Principal
 
 	JButton btnLanzar = new JButton("Lanzar Moneda");
@@ -120,21 +124,21 @@ public class Vista extends JFrame
 	JLabel lblSur = new JLabel("Texto panel SUR");
 
 	// Componentes del tablero
-	private JButton[][] casillas = new JButton[8][8];
-	JButton fichaElegida = new JButton();
+	public JButton[][] casillas = new JButton[8][8];
+	public JButton fichaElegida = new JButton();
 	JLabel[] letTablero = new JLabel[9];
 	JLabel[] numTablero = new JLabel[9];
-	JPanel tablero = new JPanel(new GridLayout(9, 9));
-	JPanel tableroCompleto = new JPanel();
+	public JPanel tablero = new JPanel(new GridLayout(9, 9));
+	public JPanel tableroCompleto = new JPanel();
 
 	// Colores
-	Color colorNegro = new Color(173, 113, 0); // Casillas marron oscuro
-	Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
+	public Color colorNegro = new Color(173, 113, 0); // Casillas marron oscuro
+	public Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
 
 	//TextArea para consulta de jugadores
-	private TextArea txtAreaConsultaJugadores = new TextArea(20,40);
-	
-	char letra = 'A';
+	public TextArea txtAreaConsultaJugadores = new TextArea(20,40);
+
+	public char letra = 'A';
 	JLabel lblLetra;
 	JLabel lblNum;
 	Integer i, j;
@@ -142,20 +146,18 @@ public class Vista extends JFrame
 
 	public Vista()
 	{
-
 		setTitle("Menú Principal");
 		setJMenuBar(barraMenu);
-		
-		
+
 		mnJugar.add(getMniPartidaRapida());
 		mnJugar.addSeparator();
 		mnJugar.add(getMniSalir());
-		
+
 		mnClasificacion.add(getMniClasificacionJugador());
 		mnClasificacion.add(getMniPartidas());
 		mnAyuda.add(getMniAyuda());
 
-		
+
 		setSize(300, 300);
 		setLocationRelativeTo(null);
 		setVisible(true);
@@ -164,9 +166,105 @@ public class Vista extends JFrame
 		barraMenu.add(mnJugar);
 		barraMenu.add(mnClasificacion);	
 		barraMenu.add(mnAyuda);
-		
+
 		frmTablero.setTitle("Tablero");
 		UIManager.put("Label.font", fuenteEtiquetas);
+
+		Torre torreNI = new Torre(ColorPieza.NEGRO, 0, 0);
+		getCasillas()[torreNI.getX()][torreNI.getY()] = new JButton(torreNI.getIcono());
+
+		Caballo caballoNI = new Caballo(ColorPieza.NEGRO, 1, 0);
+		getCasillas()[caballoNI.getX()][caballoNI.getY()] = new JButton(caballoNI.getIcono());
+
+		Alfil alfilNI = new Alfil(ColorPieza.NEGRO, 2, 0);
+		getCasillas()[alfilNI.getX()][alfilNI.getY()] = new JButton(alfilNI.getIcono());
+
+		Reina reinaN = new Reina(ColorPieza.NEGRO, 3, 0);
+		getCasillas()[reinaN.getX()][reinaN.getY()] = new JButton(reinaN.getIcono());
+
+		Rey reyN = new Rey(ColorPieza.NEGRO, 4, 0);
+		getCasillas()[reyN.getX()][reyN.getY()] = new JButton(reyN.getIcono());
+
+		Alfil alfilND = new Alfil(ColorPieza.NEGRO, 5, 0);
+		getCasillas()[alfilND.getX()][alfilND.getY()] = new JButton(alfilND.getIcono());
+
+		Caballo caballoND = new Caballo(ColorPieza.NEGRO, 6, 0);
+		getCasillas()[caballoND.getX()][caballoND.getY()] = new JButton(caballoND.getIcono());
+
+		Torre torreND = new Torre(ColorPieza.NEGRO, 7, 0);
+		getCasillas()[torreND.getX()][torreND.getY()] = new JButton(torreND.getIcono());
+
+		Peon peonN1 = new Peon(ColorPieza.NEGRO, 0, 1);
+		getCasillas()[peonN1.getX()][peonN1.getY()] = new JButton(peonN1.getIcono());
+
+		Peon peonN2 = new Peon(ColorPieza.NEGRO, 1, 1);
+		getCasillas()[peonN2.getX()][peonN2.getY()] = new JButton(peonN2.getIcono());
+
+		Peon peonN3 = new Peon(ColorPieza.NEGRO, 2, 1);
+		getCasillas()[peonN3.getX()][peonN3.getY()] = new JButton(peonN3.getIcono());
+
+		Peon peonN4 = new Peon(ColorPieza.NEGRO, 3, 1);
+		getCasillas()[peonN4.getX()][peonN4.getY()] = new JButton(peonN4.getIcono());
+
+		Peon peonN5 = new Peon(ColorPieza.NEGRO, 4, 1);
+		getCasillas()[peonN5.getX()][peonN5.getY()] = new JButton(peonN5.getIcono());
+
+		Peon peonN6 = new Peon(ColorPieza.NEGRO, 5, 1);
+		getCasillas()[peonN6.getX()][peonN6.getY()] = new JButton(peonN6.getIcono());
+
+		Peon peonN7 = new Peon(ColorPieza.NEGRO, 6, 1);
+		getCasillas()[peonN7.getX()][peonN7.getY()] = new JButton(peonN7.getIcono());
+
+		Peon peonN8 = new Peon(ColorPieza.NEGRO, 7, 1);
+		getCasillas()[peonN8.getX()][peonN8.getY()] = new JButton(peonN8.getIcono());
+
+		Torre torreBI = new Torre(ColorPieza.BLANCO, 0, 7);
+		getCasillas()[torreBI.getX()][torreBI.getY()] = new JButton(torreBI.getIcono());
+
+		Caballo caballoBI = new Caballo(ColorPieza.BLANCO, 1, 7);
+		getCasillas()[caballoBI.getX()][caballoBI.getY()] = new JButton(caballoBI.getIcono());
+
+		Alfil alfilBI = new Alfil(ColorPieza.BLANCO, 2, 7);
+		getCasillas()[alfilBI.getX()][alfilBI.getY()] = new JButton(alfilBI.getIcono());
+
+		Reina reinaB = new Reina(ColorPieza.BLANCO, 3, 7);
+		getCasillas()[reinaB.getX()][reinaB.getY()] = new JButton(reinaB.getIcono());
+
+		Rey reyB = new Rey(ColorPieza.BLANCO, 4, 7);
+		getCasillas()[reyB.getX()][reyB.getY()] = new JButton(reyB.getIcono());
+
+		Alfil alfilBD = new Alfil(ColorPieza.BLANCO, 5, 7);
+		getCasillas()[alfilBD.getX()][alfilBD.getY()] = new JButton(alfilBD.getIcono());
+
+		Caballo caballoBD = new Caballo(ColorPieza.BLANCO, 6, 7);
+		getCasillas()[caballoBD.getX()][caballoBD.getY()] = new JButton(caballoBD.getIcono());
+
+		Torre torreBD = new Torre(ColorPieza.BLANCO, 7, 7);
+		getCasillas()[torreBD.getX()][torreBD.getY()] = new JButton(torreBD.getIcono());
+
+		Peon peonB1 = new Peon(ColorPieza.BLANCO, 0, 6);
+		getCasillas()[peonB1.getX()][peonB1.getY()] = new JButton(peonB1.getIcono());
+
+		Peon peonB2 = new Peon(ColorPieza.BLANCO, 1, 6);
+		getCasillas()[peonB2.getX()][peonB2.getY()] = new JButton(peonB2.getIcono());
+
+		Peon peonB3 = new Peon(ColorPieza.BLANCO, 2, 6);
+		getCasillas()[peonB3.getX()][peonB3.getY()] = new JButton(peonB3.getIcono());
+
+		Peon peonB4 = new Peon(ColorPieza.BLANCO, 3, 6);
+		getCasillas()[peonB4.getX()][peonB4.getY()] = new JButton(peonB4.getIcono());
+
+		Peon peonB5 = new Peon(ColorPieza.BLANCO, 4, 6);
+		getCasillas()[peonB5.getX()][peonB5.getY()] = new JButton(peonB5.getIcono());
+
+		Peon peonB6 = new Peon(ColorPieza.BLANCO, 5, 6);
+		getCasillas()[peonB6.getX()][peonB6.getY()] = new JButton(peonB6.getIcono());
+
+		Peon peonB7 = new Peon(ColorPieza.BLANCO, 6, 6);
+		getCasillas()[peonB7.getX()][peonB7.getY()] = new JButton(peonB7.getIcono());
+
+		Peon peonB8 = new Peon(ColorPieza.BLANCO, 7, 6);
+		getCasillas()[peonB8.getX()][peonB8.getY()] = new JButton(peonB8.getIcono());
 
 		// Crear y añadir componentes del tablero
 		for (i = 0; i < 9; i++)
@@ -195,15 +293,27 @@ public class Vista extends JFrame
 						tablero.add(numTablero[i]);
 					} else
 					{
-						getCasillas()[i - 1][j - 1] = new JButton((i - 1) + ", " + (j - 1));
-						getCasillas()[i - 1][j - 1].setPreferredSize(new Dimension(70, 70));
-						if ((i + j) % 2 != 0)
-						{
-							getCasillas()[i - 1][j - 1].setBackground(colorNegro);
-						}
-						if ((i + j) % 2 == 0)
-						{
-							getCasillas()[i - 1][j - 1].setBackground(colorBlanco);
+						if(getCasillas()[i - 1][j - 1] == null) {
+							getCasillas()[i - 1][j - 1] = new JButton("");
+							getCasillas()[i - 1][j - 1].setPreferredSize(new Dimension(70, 70));
+							if ((i + j) % 2 != 0)
+							{
+								getCasillas()[i - 1][j - 1].setBackground(colorNegro);
+							}
+							if ((i + j) % 2 == 0)
+							{
+								getCasillas()[i - 1][j - 1].setBackground(colorBlanco);
+							}
+						} else {
+							getCasillas()[i - 1][j - 1].setPreferredSize(new Dimension(70, 70));
+							if ((i + j) % 2 != 0)
+							{
+								getCasillas()[i - 1][j - 1].setBackground(colorNegro);
+							}
+							if ((i + j) % 2 == 0)
+							{
+								getCasillas()[i - 1][j - 1].setBackground(colorBlanco);
+							}
 						}
 						tablero.add(getCasillas()[i - 1][j - 1]);
 					}
@@ -231,47 +341,47 @@ public class Vista extends JFrame
 		frmTablero.setResizable(false);
 		frmTablero.setLocationRelativeTo(null);
 		frmTablero.setVisible(false);
-		
+
 		//TODO Completar frame para "Crear partida"
-		
+
 		dlgNuevaPartida.setLayout(new GridLayout(1,5));
 		dlgNuevaPartida.setTitle("Crear Partida");
-		
+
 		pnlNuevaPartida1.add(lblTipoPartida);
 		pnlNuevaPartida1.add(txtTipoPartida);
 		dlgNuevaPartida.add(pnlNuevaPartida1);
-		
+
 		pnlNuevaPartida2.add(lblNombreJ1);
 		pnlNuevaPartida2.add(txtNombreJ1);		
 		dlgNuevaPartida.add(pnlNuevaPartida2);
-		
+
 		pnlNuevaPartida3.add(lblNombreJ2);
 		pnlNuevaPartida3.add(txtNombreJ2);
 		dlgNuevaPartida.add(pnlNuevaPartida3);
-		
+
 		pnlNuevaPartida4.add(lblSeleccionColor);
 		pnlNuevaPartida4.add(txtSeleccionColor);
 		txtSeleccionColor.setEditable(false);
 		pnlNuevaPartida4.add(btnLanzar);
 		dlgNuevaPartida.add(pnlNuevaPartida4);
-		
+
 		pnlNuevaPartida5.add(lblLimiTiempo);
 		pnlNuevaPartida5.add(choTiempo);
 		pnlNuevaPartida5.add(chkMejorTres);
 		dlgNuevaPartida.add(pnlNuevaPartida5);
-		
+
 		pnlNuevaPartida6.add(btnEmpezar);
 		pnlNuevaPartida6.add(btnCancelar);
 		dlgNuevaPartida.add(pnlNuevaPartida6);
-		
+
 		dlgNuevaPartida.setSize(850, 125);
 		dlgNuevaPartida.setVisible(false);
 		dlgNuevaPartida.setLocationRelativeTo(null);
 		dlgNuevaPartida.setResizable(true);
-		
-		
-		
-		
+
+
+
+
 		//TODO Completar frame para "Ranking de jugadores"
 		//Ranking de jugadores
 		getFrmClasificacionJugador().setTitle("Clasificación de jugadores");
@@ -280,15 +390,15 @@ public class Vista extends JFrame
 		getFrmClasificacionJugador().setLocationRelativeTo(null);
 		getFrmClasificacionJugador().setVisible(false);
 		getFrmClasificacionJugador().add(getTxtAreaConsultaJugadores());
-		
-		
-		
+
+
+
 		//TODO Completar frame para "Ranking de partidas"
-		
+
 		//TODO Completar frame para "Ayuda"
-		
+
 		//TODO Completar frame para "Final de la partida"
-		
+
 	}
 
 	public JDialog getDlgNuevaPartida()

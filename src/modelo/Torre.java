@@ -1,26 +1,21 @@
 package modelo;
 
-import java.awt.Image;
-import java.io.IOException;
-import java.io.InputStream;
-
-import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-public class Peon {
+public class Torre {
 
 	public ColorPieza color;
 	public Icon icono;
 	public int x, y;
 
-	public Peon(ColorPieza color, int y, int x) {
+	public Torre(ColorPieza color, int y, int x) {
 		this.color = color;
 		if(color == ColorPieza.BLANCO) {
-			this.icono = new ImageIcon("imagenes/sin_fondo/Peon_blanco.png");
+			this.icono = new ImageIcon("imagenes/sin_fondo/Torre_blanca.png");
 		}
 		else if(color == ColorPieza.NEGRO) {
-			this.icono = new ImageIcon("imagenes/sin_fondo/Peon_negro.png");
+			this.icono = new ImageIcon("imagenes/sin_fondo/Torre_negra.png");
 		}
 		this.x = x;
 		this.y = y;

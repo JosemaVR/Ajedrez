@@ -1,5 +1,6 @@
 package modelo;
 
+import java.awt.Dimension;
 import java.awt.TextArea;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,64 +11,43 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Random;
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+
+import vista.Vista;
 
 
 public class Modelo
 {
 	private String[][] tablero = new String[8][8];
 	int color = 0;
-	
+
 	public Connection conectar()
-
 	{
-
 		String driver = "com.mysql.jdbc.Driver";
-
 		String url = "jdbc:mysql://localhost:3306/ajedrez?autoReconnect=true&useSSL=false";
-
 		String user = "ajedrez";
-
 		String password = "Ajedrez2020;";
-
 		Connection con = null;
-
 		try {
-
 			// Cargar los controladores para el acceso a la BD
-
 			Class.forName(driver);
-
 			// Establecer la conexión con la BD empresa
-
 			con = DriverManager.getConnection(url, user, password);
-
 			if (con != null) {
-
 				System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Conectando a la base de datos]");
-
 			}
-
 		} catch (SQLException ex) {
-
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][ERROR:La dirección no es válida o el usuario y clave]");
-
 			ex.printStackTrace();
-
 		} catch (ClassNotFoundException cnfe) {
-
 			System.out.println("Error 1-" + cnfe.getMessage());
-
 		}
-
 		return con;
-
 	}
-	
+	/*
 	public void nuevoJuego(JButton[][] casillas) {
-		
-		
 		for (int i = 0; i < 8; i++)
 		{
 			for (int j = 0; j < 8; j++)
@@ -75,7 +55,6 @@ public class Modelo
 				getTablero()[i][j] = null;
 			}
 		}
-		
 		getTablero()[0][0] = "Tn1";
 		getTablero()[0][1] = "Cn1";
 		getTablero()[0][2] = "An1";
@@ -92,8 +71,7 @@ public class Modelo
 		getTablero()[1][5] = "Pn6";
 		getTablero()[1][6] = "Pn7";
 		getTablero()[1][7] = "Pn8";
-		
-		
+
 		getTablero()[7][0] = "Tb1";
 		getTablero()[7][1] = "Cb1";
 		getTablero()[7][2] = "Ab1";
@@ -110,16 +88,16 @@ public class Modelo
 		getTablero()[6][5] = "Pb6";
 		getTablero()[6][6] = "Pb7";
 		getTablero()[6][7] = "Pb8";
-		
+
 		setIcons(getTablero(), casillas);
-	}
-	
+	}*/
+
 	public Random nuevoTurno() {
 		Random turno = new Random(1);
 		return turno;
-//		blanco=1		negro=0
+		//		blanco=1		negro=0
 	}
-	
+
 	public int cambiarTurno(int turno) {
 		if (turno==1) {
 			turno = 0;
@@ -129,23 +107,24 @@ public class Modelo
 		}
 		return turno;
 	}
-	
+
+	/*
 	public static void setIcons(String[][] tablero, JButton[][] casillas) {
 		ImageIcon pn = new ImageIcon("./imagenes/sin_fondo/Peon_negro.png");
 		ImageIcon pb = new ImageIcon("./imagenes/sin_fondo/Peon_blanco.png");
-		
+
 		ImageIcon cn = new ImageIcon("./imagenes/sin_fondo/Caballo_negro.png");
 		ImageIcon tn = new ImageIcon("./imagenes/sin_fondo/Torre_negra.png");
 		ImageIcon an = new ImageIcon("./imagenes/sin_fondo/Alfil_negro.png");
 		ImageIcon qn = new ImageIcon("./imagenes/sin_fondo/Reina_negra.png");
 		ImageIcon kn = new ImageIcon("./imagenes/sin_fondo/Rey_negro.png");
-		
+
 		ImageIcon cb = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
 		ImageIcon tb = new ImageIcon("./imagenes/sin_fondo/Torre_blanca.png");
 		ImageIcon ab = new ImageIcon("./imagenes/sin_fondo/Alfil_blanco.png");
 		ImageIcon qb = new ImageIcon("./imagenes/sin_fondo/Reina_blanca.png");
 		ImageIcon kb = new ImageIcon("./imagenes/sin_fondo/Rey_blanco.png");
-		
+
 		for (int i = 0; i < 8; i++)
 		{
 			for (int j = 0; j < 8; j++)
@@ -153,7 +132,7 @@ public class Modelo
 				casillas[i][j].setIcon(null);
 			}
 		}
-		
+
 		for (int i = 0; i < 8; i++)
 		{
 			for (int j = 0; j < 8; j++)
@@ -182,7 +161,7 @@ public class Modelo
 				if (tablero[i][j].equals("Pn8")) {
 					casillas[i][j].setIcon(pn);
 				}
-				
+
 				if (tablero[i][j].equals("Pb1")) {
 					casillas[i][j].setIcon(pb);
 				}
@@ -207,7 +186,6 @@ public class Modelo
 				if (tablero[i][j].equals("Pb8")) {
 					casillas[i][j].setIcon(pb);
 				}
-				
 				if (tablero[i][j].equals("Tn1")) {
 					casillas[i][j].setIcon(tn);
 				}
@@ -232,7 +210,6 @@ public class Modelo
 				if (tablero[i][j].equals("Tn2")) {
 					casillas[i][j].setIcon(tn);
 				}
-				
 				if (tablero[i][j].equals("Tb1")) {
 					casillas[i][j].setIcon(tb);
 				}
@@ -259,7 +236,7 @@ public class Modelo
 				}
 			}
 		}
-	}
+	}*/
 
 	public boolean esMovimValido(int i, int j, int linea, int columna)
 	{
@@ -304,13 +281,8 @@ public class Modelo
 		}
 	}
 	public boolean seleccionPieza (JButton[][] casillas, ImageIcon pieza) {
-				
 		boolean focus = false;
-		
-		
-		
 		return focus;
-		
 	}
 
 	public String[][] getTablero() {
@@ -320,7 +292,6 @@ public class Modelo
 	public void setTablero(String[][] tablero) {
 		this.tablero = tablero;
 	}
-	
 
 	public void consultaJugadores(TextArea consulta) {
 		System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Consultando ranking]");
@@ -361,5 +332,4 @@ public class Modelo
 			ex.printStackTrace();
 		}
 	} 
-
 }
