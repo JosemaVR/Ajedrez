@@ -34,7 +34,11 @@ public class Controlador implements WindowListener, ActionListener
 		objVista.getMniClasificacionJugador().addActionListener(this);
 		objVista.getMniPartidas().addActionListener(this);
 		objVista.getMniAyuda().addActionListener(this);
-		
+		objVista.btnAvanzar.addActionListener(this);
+		objVista.btnEmpezar.addActionListener(this);
+		objVista.btnCancelar.addActionListener(this);
+		objVista.btnCancelar1.addActionListener(this);
+
 		for (i = 0; i < 8; i++)
 		{
 			for (j = 0; j < 8; j++)
@@ -56,45 +60,78 @@ public class Controlador implements WindowListener, ActionListener
 			{
 				if (fuente.equals(objVista.getCasillas()[i][j]))
 				{
-					String[] text = ((JButton) fuente).getText().split(", ");
+					Integer x = i;
+					Integer y = j;
 					for (i = 0; i < 8; i++)
 					{
 						for (j = 0; j < 8; j++)
 						{
 							objVista.getCasillas()[i][j].setBorder(sinBorde);
+							System.out.println(i + " " + j);
 						}
 					}
-					objVista.getCasillas()[Integer.parseInt(text[0])][Integer.parseInt(text[1])].setBorder(bordeRojo);
-					
-					if (objModelo.getTablero()[i][j] != null) {
-						
-					}
+					objVista.getCasillas()[x][y].setBorder(bordeRojo);
+					objVista.fichaElegida.setIcon(objVista.getCasillas()[x][y].getIcon());
 				}
 			}
 		}
-		
 		//TODO Si pulsas en "Iniciar partida"
 		//TODO Si pulsas en "Ranking de partidas"
 		//TODO Ocultar todos los frames salvo el pulsado
 		
 		if (fuente.equals(objVista.getMniPartidaRapida())) {
 			//objVista.setVisible(false);
-			objVista.getDlgNuevaPartida().setVisible(true);
+			objModelo.consultaJugador1(objVista.choJugador1);
+			objVista.frmElegirJugador1.setVisible(true);
+			objVista.frmElegirJugador2.setVisible(false);
+			objVista.frmTablero.setVisible(false);
+			objVista.getFrmAyuda().setVisible(false);
+			objVista.getFrmClasificacionJugador().setVisible(false);
+		}
+		else if (fuente.equals(objVista.btnAvanzar)){
+			objModelo.consultaJugador2(objVista.choJugador2, objVista.choJugador1.getSelectedItem().split("-")[0]);
+			objVista.frmElegirJugador1.setVisible(false);
+			objVista.frmElegirJugador2.setVisible(true);
+			objVista.frmTablero.setVisible(false);
+			objVista.getFrmAyuda().setVisible(false);
+			objVista.getFrmClasificacionJugador().setVisible(false);
+		}
+		else if (fuente.equals(objVista.btnEmpezar)) {
+			objVista.frmElegirJugador1.setVisible(false);
+			objVista.frmElegirJugador2.setVisible(false);
+			//label en tablero vacio --> meterle los jugadores
 			objVista.frmTablero.setVisible(true);
+			objVista.getFrmAyuda().setVisible(false);
+			objVista.getFrmClasificacionJugador().setVisible(false);
+			objVista.lblNorte.setText("Juega " + objVista.choJugador1.getSelectedItem().split("-")[1] + " con blancas");
+		}
+		else if (fuente.equals(objVista.btnCancelar)) {
+			objVista.frmElegirJugador1.setVisible(false);
+			objVista.frmElegirJugador2.setVisible(false);
+			objVista.frmTablero.setVisible(false);
+			objVista.getFrmAyuda().setVisible(false);
+			objVista.getFrmClasificacionJugador().setVisible(false);
+		}
+		else if (fuente.equals(objVista.btnCancelar1)) {
+			objVista.frmElegirJugador1.setVisible(false);
+			objVista.frmElegirJugador2.setVisible(false);
+			objVista.frmTablero.setVisible(false);
 			objVista.getFrmAyuda().setVisible(false);
 			objVista.getFrmClasificacionJugador().setVisible(false);
 		}
 		else if (fuente.equals(objVista.getMniAyuda())) {
-			objVista.getFrmPartidaRapida().setVisible(false);
+			objVista.frmElegirJugador1.setVisible(false);
+			objVista.frmElegirJugador2.setVisible(false);
 			objVista.getFrmAyuda().setVisible(true);
 			objVista.getFrmClasificacionJugador().setVisible(false);		
 		}
 		else if (fuente.equals(objVista.getMniClasificacionJugador())) {
-			objVista.getFrmPartidaRapida().setVisible(false);
+			objVista.frmElegirJugador1.setVisible(false);
+			objVista.frmElegirJugador2.setVisible(false);
 			objVista.getFrmAyuda().setVisible(false);
 			objVista.getFrmClasificacionJugador().setVisible(true);
 			objVista.getTxtAreaConsultaJugadores().setText("");
-			objModelo.consultaJugadores(objVista.getTxtAreaConsultaJugadores());
+			objModelo.consultaJugadoresRanking(objVista.getTxtAreaConsultaJugadores());
 		}
 		else if (fuente.equals(objVista.getMniSalir())) {
 			System.exit(0);

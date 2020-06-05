@@ -1,10 +1,5 @@
 package modelo;
 
-import java.awt.Image;
-import java.io.IOException;
-import java.io.InputStream;
-
-import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
