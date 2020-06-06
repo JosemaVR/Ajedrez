@@ -160,7 +160,7 @@ public class Vista extends JFrame
 		mnAyuda.add(getMniAyuda());
 
 
-		setSize(300, 300);
+		setSize(300, 150);
 		setLocationRelativeTo(null);
 		setVisible(true);
 		setResizable(false);
