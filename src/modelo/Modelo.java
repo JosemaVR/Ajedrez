@@ -2,6 +2,10 @@ package modelo;
 
 import java.awt.Choice;
 import java.awt.TextArea;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -9,10 +13,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Date;
 import java.util.Random;
+import java.util.logging.FileHandler;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 
 public class Modelo
@@ -310,7 +320,7 @@ public class Modelo
 							"º - Nombre: "+rs.getString("nombreUsuario")+
 							" // Victorias: "+rs.getInt("victorias")+
 							"  - Tablas: "+rs.getInt("tablas")+
-							"  - Derrotas: "+rs.getInt("derrotas"));
+							"  - Derrotas: "+rs.getInt("derrotas") + "\n");
 				}
 				else
 				{
@@ -319,7 +329,7 @@ public class Modelo
 							"º - Nombre: "+rs.getString("nombreUsuario")+
 							" // Victorias: "+rs.getInt("victorias")+
 							"  - Tablas: "+rs.getInt("tablas")+
-							"  - Derrotas: "+rs.getInt("derrotas"));
+							"  - Derrotas: "+rs.getInt("derrotas") + "\n");
 				}
 			}
 			rs.close();
@@ -329,7 +339,7 @@ public class Modelo
 			ex.printStackTrace();
 		}
 	} 
-	
+
 	public void consultaJugador1(Choice usuario) {
 		Connection con = conectar();
 		String sqlSelect = "SELECT * FROM usuarios";
@@ -349,7 +359,7 @@ public class Modelo
 			ex.printStackTrace();
 		}
 	} 
-	
+
 	public void consultaJugador2(Choice usuario, String jugador1) {
 		Connection con = conectar();
 		String sqlSelect = "SELECT * FROM usuarios WHERE idUsuario <> " + jugador1;
@@ -369,4 +379,139 @@ public class Modelo
 			ex.printStackTrace();
 		}
 	} 
+
+	public String iconoPieza(JButton casilla) {
+		Torre torreN = new Torre(ColorPieza.NEGRO, 0, 0);
+		Caballo caballoN = new Caballo(ColorPieza.NEGRO, 1, 0);
+		Alfil alfilN = new Alfil(ColorPieza.NEGRO, 2, 0);
+		Reina reinaN = new Reina(ColorPieza.NEGRO, 3, 0);
+		Rey reyN = new Rey(ColorPieza.NEGRO, 4, 0);
+		Peon peonN = new Peon(ColorPieza.NEGRO, 0, 1);
+		Torre torreB = new Torre(ColorPieza.BLANCO, 0, 7);
+		Caballo caballoB = new Caballo(ColorPieza.BLANCO, 1, 7);
+		Alfil alfilB = new Alfil(ColorPieza.BLANCO, 2, 7);
+		Reina reinaB = new Reina(ColorPieza.BLANCO, 3, 7);
+		Rey reyB = new Rey(ColorPieza.BLANCO, 4, 7);
+		Peon peonB = new Peon(ColorPieza.BLANCO, 0, 6);
+		String res = "Vacío";
+		if(casilla.getIcon()==null) {
+			res = "Vacío";
+		}
+		else if(casilla.getIcon().toString() == torreN.getIcono().toString() 
+				|| casilla.getIcon().toString() == torreB.getIcono().toString()) {
+			res = "Torre";
+		}
+		else if(casilla.getIcon().toString() == caballoN.getIcono().toString() 
+				|| casilla.getIcon().toString() == caballoB.getIcono().toString()) {
+			res = "Caballo";
+		}
+		else if(casilla.getIcon().toString() == alfilN.getIcono().toString() 
+				|| casilla.getIcon().toString() == alfilB.getIcono().toString()) {
+			res = "Alfil";
+		}
+		else if(casilla.getIcon().toString() == reinaN.getIcono().toString() 
+				|| casilla.getIcon().toString() == reinaB.getIcono().toString()) {
+			res = "Reina";
+		}
+		else if(casilla.getIcon().toString() == reyN.getIcono().toString() 
+				|| casilla.getIcon().toString() == reyB.getIcono().toString()) {
+			res = "Rey";
+		}
+		else if(casilla.getIcon().toString() == peonN.getIcono().toString() 
+				|| casilla.getIcon().toString() == peonB.getIcono().toString()) {
+			res = "Peon";
+		}
+		return res;
+	}
+
+	public String numeroLetra(Integer x) {
+		String res = "";
+		if(x == 0) {
+			res = "A";
+		}
+		else if(x == 1) {
+			res = "B";
+		}
+		else if(x == 2) {
+			res = "C";
+		}
+		else if(x == 3) {
+			res = "D";
+		}
+		else if(x == 4) {
+			res = "E";
+		}
+		else if(x == 5) {
+			res = "F";
+		}
+		else if(x == 6) {
+			res = "G";
+		}
+		else if(x == 7) {
+			res = "H";
+		}
+		return res;
+	}
+
+	public void crearJugador(JTextField txtNombreNuevoJugador) {
+		Connection con = conectar();
+		try 
+		{
+			Statement sta2 = con.createStatement();
+
+			String cadenaSQL = "INSERT INTO usuarios (nombreUsuario) VALUES ('" + txtNombreNuevoJugador.getText() + "')";
+			sta2.executeUpdate(cadenaSQL);
+			sta2.close();
+			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Creado nuevo usuario: "+ txtNombreNuevoJugador.getText() +"]");
+		} 
+		catch (SQLException ex) 
+		{
+			System.out.println("ERROR al hacer un Insert");
+			ex.printStackTrace();
+		}
+	}
+
+	public void escribirLog(String mensaje) {
+
+		Logger logger = Logger.getLogger("MyLog");
+		FileHandler fh;
+		String textoAnterior = "";
+		try {
+
+			fh = new FileHandler("log.txt", true);
+			logger.addHandler(fh);
+			
+			SimpleFormatter formatter = new SimpleFormatter();
+			fh.setFormatter(formatter);
+
+			try { 
+				//Origen de los datos en el proyecto anterior 
+				FileReader fr = new FileReader("log.txt"); 
+				//Buffer de lectura BufferedReader 
+				BufferedReader entrada = new BufferedReader(fr); 
+				String s; 
+				//Bucle para sacar la información del archivo 
+				while((s=entrada.readLine())!=null) { 
+					textoAnterior = textoAnterior + s;
+				} 
+				//Cerrar el objeto entrada
+				entrada.close(); 
+				fr.close(); 
+			} catch(FileNotFoundException e) { 
+				System.out.println("Archivo NO encontrado"); 
+			} catch(IOException i) { 
+				System.out.println("Se produjo un error de Archivo"); 
+			} 
+
+			logger.info("[" + mensaje + "] \n");
+			
+			fh.close();
+		} catch (SecurityException e) {
+			System.out.println("error 1");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("error 2");
+			e.printStackTrace();
+		}
+	}
 }
