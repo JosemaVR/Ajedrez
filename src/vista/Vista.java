@@ -95,7 +95,7 @@ public class Vista extends JFrame
 	JTextField txtNombreJ2 = new JTextField("",10);
 	JTextField txtTipoPartida = new JTextField("",10);
 	JTextField txtSeleccionColor = new JTextField("",10);
-	JTextField txtNombreNuevoJugador = new JTextField("",10);
+	public JTextField txtNombreNuevoJugador = new JTextField("",10);
 	// CheckBox Menú Principal
 	boolean selected = false;
 
@@ -298,7 +298,7 @@ public class Vista extends JFrame
 				{
 					if ((j == 0 && (i != 0 || i != 9)))
 					{
-						numTablero[i] = new JLabel(Integer.toString(i));
+						numTablero[i] = new JLabel(Integer.toString(9-i));
 						numTablero[i].setHorizontalAlignment(JLabel.CENTER);
 						numTablero[i].setVerticalAlignment(JLabel.CENTER);
 						tablero.add(numTablero[i]);
