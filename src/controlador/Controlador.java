@@ -9,7 +9,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 import javax.swing.BorderFactory;
-import javax.swing.JButton;
 import javax.swing.border.Border;
 
 import modelo.Modelo;
