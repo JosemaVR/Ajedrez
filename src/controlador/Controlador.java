@@ -29,6 +29,7 @@ public class Controlador implements WindowListener, ActionListener
 		this.objModelo = objModelo;
 
 		objVista.getMniPartidaRapida().addActionListener(this);
+		objVista.getMniNuevoJugador().addActionListener(this);
 		objVista.getMniSalir().addActionListener(this);
 		objVista.getMniClasificacionJugador().addActionListener(this);
 		objVista.getMniPartidas().addActionListener(this);
@@ -83,6 +84,14 @@ public class Controlador implements WindowListener, ActionListener
 			objModelo.consultaJugador1(objVista.choJugador1);
 			objVista.frmElegirJugador1.setVisible(true);
 			objVista.frmElegirJugador2.setVisible(false);
+			objVista.frmTablero.setVisible(false);
+			objVista.getFrmAyuda().setVisible(false);
+			objVista.getFrmClasificacionJugador().setVisible(false);
+		}else if (fuente.equals(objVista.getMniNuevoJugador())) {
+			//objVista.setVisible(false);
+			objVista.frmElegirJugador1.setVisible(false);
+			objVista.frmElegirJugador2.setVisible(false);
+			objVista.frmNuevoJugador.setVisible(true);
 			objVista.frmTablero.setVisible(false);
 			objVista.getFrmAyuda().setVisible(false);
 			objVista.getFrmClasificacionJugador().setVisible(false);

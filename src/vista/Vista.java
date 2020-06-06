@@ -38,20 +38,23 @@ public class Vista extends JFrame
 
 	JFrame frmInicio = new JFrame();
 	JFrame frmMenuPartida = new JFrame();
+	
 	public JFrame frmElegirJugador1 = new JFrame();
 	public JFrame frmElegirJugador2 = new JFrame();
+	public JFrame frmNuevoJugador = new JFrame();
 	public JFrame frmAyuda = new JFrame();
 	public JFrame frmClasificacionJugador = new JFrame();
 	public JFrame frmTablero = new JFrame();
 
 	JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
-
+	JDialog dlgNuevoJugador = new JDialog(frmInicio, "Crear Jugador");
 	JMenuBar barraMenu = new JMenuBar();
 	JMenu mnJugar = new JMenu("Jugar");
 	JMenu mnClasificacion = new JMenu("Clasificación");
 	JMenu mnAyuda = new JMenu("Ayuda");
 
 	private JMenuItem mniPartidaRapida = new JMenuItem("Partida Rápida");
+	private JMenuItem mniNuevoJugador = new JMenuItem("Nuevo Jugador");
 	private JMenuItem mniSalir = new JMenuItem("Salir");
 	private JMenuItem mniClasificacionJugador = new JMenuItem("Jugador");
 	private JMenuItem mniPartidas = new JMenuItem("Partidas");
@@ -65,6 +68,8 @@ public class Vista extends JFrame
 	JLabel lblSeleccionColor = new JLabel("Seleccionar color");
 	JLabel lblLimiTiempo = new JLabel("Límite de tiempo");
 	JLabel lblNombre = new JLabel("Nombre");
+	JLabel lblNuevoJugador = new JLabel("Nombre nuevo jugador");
+	
 
 	JPanel pnlNuevaPartida1 = new JPanel();
 	JPanel pnlNuevaPartida2 = new JPanel();
@@ -75,21 +80,22 @@ public class Vista extends JFrame
 
 	// Botones Menú Principal
 
-	JButton btnLanzar = new JButton("Lanzar Moneda");
+	public JButton btnLanzar = new JButton("Lanzar Moneda");
 	public JButton btnEmpezar = new JButton("Empezar");
 	public JButton btnCancelar = new JButton("Cancelar");
 	public JButton btnAvanzar = new JButton("Avanzar");
 	public JButton btnCancelar1 = new JButton("Cancelar");
-	JButton btnMostrar = new JButton("Mostrar");
-	JButton btnVolver = new JButton("Volver");
-
+	public JButton btnMostrar = new JButton("Mostrar");
+	public JButton btnVolver = new JButton("Volver");
+	public JButton btnCrearNuevoJugador = new JButton("Crear");
+	public JButton btnVolverNuevoJugador = new JButton("Volver");
 	// TextFields Menú Principal
 	JTextField txtNombre = new JTextField("",10);
 	JTextField txtNombreJ1 = new JTextField("",10);
 	JTextField txtNombreJ2 = new JTextField("",10);
 	JTextField txtTipoPartida = new JTextField("",10);
 	JTextField txtSeleccionColor = new JTextField("",10);
-
+	JTextField txtNombreNuevoJugador = new JTextField("",10);
 	// CheckBox Menú Principal
 	boolean selected = false;
 
@@ -148,10 +154,12 @@ public class Vista extends JFrame
 
 	public Vista()
 	{
+		//Menú principal
 		setTitle("Menú Principal");
 		setJMenuBar(barraMenu);
 
 		mnJugar.add(getMniPartidaRapida());
+		mnJugar.add(getMniNuevoJugador());
 		mnJugar.addSeparator();
 		mnJugar.add(getMniSalir());
 
@@ -339,15 +347,17 @@ public class Vista extends JFrame
 
 		panelSur.add(lblSur);
 		frmTablero.add(panelSur, BorderLayout.SOUTH);
-
+		
+		//Layout Tablero de juego
 		frmTablero.setSize(1100, 800);
 		frmTablero.setResizable(false);
 		frmTablero.setLocationRelativeTo(null);
 		frmTablero.setVisible(false);
 
+		//Layout Crear Partida
 		//TODO Completar frame para "Crear partida"
-		dlgNuevaPartida.setLayout(new GridLayout(2,2));
-		dlgNuevaPartida.setTitle("Crear Partida");
+//		dlgNuevaPartida.setLayout(new GridLayout(2,2));
+//		dlgNuevaPartida.setTitle("Crear Partida");
 
 		choJugador1.add("Seleccionar uno...");
 		choJugador2.add("Seleccionar otro...");
@@ -381,12 +391,52 @@ public class Vista extends JFrame
 		getFrmClasificacionJugador().setVisible(false);
 		getFrmClasificacionJugador().add(getTxtAreaConsultaJugadores());
 
+		//Layout Crear nuevo jugador
+		
+//		dlgNuevoJugador.setLayout(new GridLayout(2,2));
+//		dlgNuevoJugador.setTitle("Crear nuevo Jugador");
+		frmNuevoJugador.setLayout(new FlowLayout());
+		frmNuevoJugador.setTitle("Crear nuevo Jugador");
+		frmNuevoJugador.add(lblNuevoJugador);
+		frmNuevoJugador.add(txtNombreNuevoJugador);
+		frmNuevoJugador.add(btnCrearNuevoJugador);
+		frmNuevoJugador.add(btnVolverNuevoJugador);
+		frmNuevoJugador.setSize(300, 150);
+		frmNuevoJugador.setVisible(false);
+		frmNuevoJugador.setResizable(false);
+		frmNuevoJugador.setLocationRelativeTo(null);
+		frmNuevoJugador.add(lblNuevoJugador);
+		frmNuevoJugador.add(txtNombreNuevoJugador);
+		frmNuevoJugador.add(btnCrearNuevoJugador);
+		frmNuevoJugador.add(btnVolverNuevoJugador);
+		
+		
 		//TODO Completar frame para "Ranking de partidas"
 
 		//TODO Completar frame para "Ayuda"
 
 		//TODO Completar frame para "Final de la partida"
 
+	}
+
+	public JDialog getDlgNuevoJugador()
+	{
+		return dlgNuevoJugador;
+	}
+
+	public void setDlgNuevoJugador(JDialog dlgNuevoJugador)
+	{
+		this.dlgNuevoJugador = dlgNuevoJugador;
+	}
+
+	public JMenuItem getMniNuevoJugador()
+	{
+		return mniNuevoJugador;
+	}
+
+	public void setMniNuevoJugador(JMenuItem mniNuevoJugador)
+	{
+		this.mniNuevoJugador = mniNuevoJugador;
 	}
 
 	public JDialog getDlgNuevaPartida()
