@@ -57,7 +57,7 @@ public class Vista extends JFrame
 	private JMenuItem mniNuevoJugador = new JMenuItem("Nuevo Jugador");
 	private JMenuItem mniSalir = new JMenuItem("Salir");
 	private JMenuItem mniClasificacionJugador = new JMenuItem("Jugador");
-	private JMenuItem mniPartidas = new JMenuItem("Partidas");
+	//private JMenuItem mniPartidas = new JMenuItem("Partidas");
 	private JMenuItem mniAyuda = new JMenuItem("Ayuda");
 
 	// Etiquetas Menú Principal
@@ -88,7 +88,7 @@ public class Vista extends JFrame
 	public JButton btnMostrar = new JButton("Mostrar");
 	public JButton btnVolver = new JButton("Volver");
 	public JButton btnCrearNuevoJugador = new JButton("Crear");
-	public JButton btnVolverNuevoJugador = new JButton("Volver");
+	public JButton btnVolverNuevoJugador = new JButton("Crear partida");
 	// TextFields Menú Principal
 	JTextField txtNombre = new JTextField("",10);
 	JTextField txtNombreJ1 = new JTextField("",10);
@@ -164,7 +164,7 @@ public class Vista extends JFrame
 		mnJugar.add(getMniSalir());
 
 		mnClasificacion.add(getMniClasificacionJugador());
-		mnClasificacion.add(getMniPartidas());
+	//	mnClasificacion.add(getMniPartidas());
 		mnAyuda.add(getMniAyuda());
 
 
@@ -405,10 +405,7 @@ public class Vista extends JFrame
 		frmNuevoJugador.setVisible(false);
 		frmNuevoJugador.setResizable(false);
 		frmNuevoJugador.setLocationRelativeTo(null);
-		frmNuevoJugador.add(lblNuevoJugador);
-		frmNuevoJugador.add(txtNombreNuevoJugador);
-		frmNuevoJugador.add(btnCrearNuevoJugador);
-		frmNuevoJugador.add(btnVolverNuevoJugador);
+		
 		
 		
 		//TODO Completar frame para "Ranking de partidas"
@@ -419,15 +416,15 @@ public class Vista extends JFrame
 
 	}
 
-	public JDialog getDlgNuevoJugador()
-	{
-		return dlgNuevoJugador;
-	}
-
-	public void setDlgNuevoJugador(JDialog dlgNuevoJugador)
-	{
-		this.dlgNuevoJugador = dlgNuevoJugador;
-	}
+//	public JDialog getDlgNuevoJugador()
+//	{
+//		return dlgNuevoJugador;
+//	}
+//
+//	public void setDlgNuevoJugador(JDialog dlgNuevoJugador)
+//	{
+//		this.dlgNuevoJugador = dlgNuevoJugador;
+//	}
 
 	public JMenuItem getMniNuevoJugador()
 	{
@@ -439,15 +436,15 @@ public class Vista extends JFrame
 		this.mniNuevoJugador = mniNuevoJugador;
 	}
 
-	public JDialog getDlgNuevaPartida()
-	{
-		return dlgNuevaPartida;
-	}
-
-	public void setDlgNuevaPartida(JDialog dlgNuevaPartida)
-	{
-		this.dlgNuevaPartida = dlgNuevaPartida;
-	}
+//	public JDialog getDlgNuevaPartida()
+//	{
+//		return dlgNuevaPartida;
+//	}
+//
+//	public void setDlgNuevaPartida(JDialog dlgNuevaPartida)
+//	{
+//		this.dlgNuevaPartida = dlgNuevaPartida;
+//	}
 
 	public JMenuItem getMniClasificacionJugador() {
 		return mniClasificacionJugador;
@@ -473,16 +470,26 @@ public class Vista extends JFrame
 		this.mniPartidaRapida = mniPartidaRapida;
 	}
 
-	public JMenuItem getMniPartidas() {
-		return mniPartidas;
-	}
-
-	public void setMniPartidas(JMenuItem mniPartidas) {
-		this.mniPartidas = mniPartidas;
-	}
+//	public JMenuItem getMniPartidas() {
+//		return mniPartidas;
+//	}
+//
+//	public void setMniPartidas(JMenuItem mniPartidas) {
+//		this.mniPartidas = mniPartidas;
+//	}
 
 	public JMenuItem getMniAyuda() {
 		return mniAyuda;
+	}
+
+	public JFrame getFrmNuevoJugador()
+	{
+		return frmNuevoJugador;
+	}
+
+	public void setFrmNuevoJugador(JFrame frmNuevoJugador)
+	{
+		this.frmNuevoJugador = frmNuevoJugador;
 	}
 
 	public void setMniAyuda(JMenuItem mniAyuda) {

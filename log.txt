@@ -1,0 +1,84 @@
+jun. 06, 2020 2:07:50 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jun. 06, 2020 2:08:06 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 06, 2020 2:08:25 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 9:28:10 A. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jun. 07, 2020 9:35:41 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 9:38:07 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 9:43:07 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 9:45:22 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 9:46:47 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 9:49:49 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 9:51:44 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 9:54:57 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:06:01 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:06:58 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:08:17 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:09:08 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:09:34 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 10:15:40 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:16:59 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:19:05 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:27:57 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:29:45 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:29:45 A. M. modelo.Modelo escribirLog
+INFO: [Volver al menú principal] 
+
+jun. 07, 2020 10:34:01 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 07, 2020 10:34:13 A. M. modelo.Modelo escribirLog
+INFO: [Nuevo jugador creado] 
+
+jun. 07, 2020 10:34:18 A. M. modelo.Modelo escribirLog
+INFO: [Creación de nueva partida] 
+
+jun. 07, 2020 10:34:30 A. M. modelo.Modelo escribirLog
+INFO: [Cancelando partida] 
+
+jun. 07, 2020 10:34:34 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
