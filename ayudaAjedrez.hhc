@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Iacute;ndice">
+		<param name="Local" value="index.html">
+		<param name="ImageNumber" value="9">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Contenido">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Menu Principal">
+			<param name="Local" value="menu_principal.html">
+			<param name="ImageNumber" value="4">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Partida R&aacute;pida">
+			<param name="Local" value="partida_rapida.html">
+			<param name="ImageNumber" value="4">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Nuevo Jugador">
+			<param name="Local" value="nuevo_jugador.html">
+			<param name="ImageNumber" value="4">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Clasificaci&oacute;n">
+			<param name="Local" value="clasificacion.html">
+			<param name="ImageNumber" value="4">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Interfaz Juego">
+			<param name="Local" value="interfaz_juego.html">
+			<param name="ImageNumber" value="4">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Autores">
+			<param name="Local" value="autores.html">
+			<param name="ImageNumber" value="4">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>
