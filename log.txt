@@ -82,3 +82,51 @@ INFO: [Cancelando partida]
 jun. 07, 2020 10:34:34 A. M. modelo.Modelo escribirLog
 INFO: [Abriendo creación de usuario] 
 
+jun. 07, 2020 10:56:55 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 10:57:00 A. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pedro] 
+
+jun. 07, 2020 11:02:09 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 11:02:13 A. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: yoli] 
+
+jun. 07, 2020 11:38:48 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 11:38:51 A. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Paco] 
+
+jun. 07, 2020 1:57:56 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 1:57:59 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Paco] 
+
+jun. 07, 2020 1:58:02 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Joaquin] 
+
+jun. 07, 2020 1:58:44 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 07, 2020 1:58:48 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 07, 2020 1:58:51 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: yoli] 
+
+jun. 07, 2020 2:05:14 P. M. modelo.Modelo escribirLog
+INFO: [Solicitando ayuda] 
+
+jun. 07, 2020 2:10:06 P. M. modelo.Modelo escribirLog
+INFO: [Solicitando ayuda] 
+
+jun. 07, 2020 2:11:30 P. M. modelo.Modelo escribirLog
+INFO: [Solicitando ayuda] 
+
+jun. 07, 2020 2:16:39 P. M. modelo.Modelo escribirLog
+INFO: [Solicitando ayuda] 
+

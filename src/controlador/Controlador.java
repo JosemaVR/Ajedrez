@@ -11,6 +11,7 @@ import java.time.LocalTime;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 
+import es.studium.Ayuda.Ayuda;
 import modelo.Modelo;
 import vista.Vista;
 
@@ -18,6 +19,7 @@ public class Controlador implements WindowListener, ActionListener
 {
 	Vista objVista = null;
 	Modelo objModelo = null;
+	Ayuda objAyuda;
 	Integer i, j;
 	Border bordeRojo = BorderFactory.createLineBorder(Color.red);
 	// TO-DO Arreglar, pone el borde en negro
@@ -178,12 +180,13 @@ public class Controlador implements WindowListener, ActionListener
 
 		} else if (fuente.equals(objVista.getMniAyuda()))
 		{
+			
 			objVista.frmElegirJugador1.setVisible(false);
 			objVista.frmElegirJugador2.setVisible(false);
-			objVista.getFrmAyuda().setVisible(true);
 			objVista.getFrmClasificacionJugador().setVisible(false);
 			objModelo.escribirLog("Solicitando ayuda");
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Solicitando ayuda]");
+			new Ayuda();
 		} else if (fuente.equals(objVista.btnVolver))
 		{
 			objVista.frmElegirJugador1.setVisible(false);
