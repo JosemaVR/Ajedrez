@@ -21,6 +21,13 @@ public class Caballo {
 		this.y = y;
 	}
 
+	public Caballo() {
+		this.color = null;
+		this.x = 0;
+		this.y = 0;
+		this.icono = null;
+	}
+
 	public ColorPieza getColor() {
 		return color;
 	}

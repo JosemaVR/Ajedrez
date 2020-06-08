@@ -12,6 +12,8 @@ import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 
 import es.studium.Ayuda.Ayuda;
+import modelo.Caballo;
+import modelo.ColorPieza;
 import modelo.Modelo;
 import vista.Vista;
 
@@ -22,9 +24,14 @@ public class Controlador implements WindowListener, ActionListener
 	Ayuda objAyuda;
 	Integer i, j;
 	Border bordeRojo = BorderFactory.createLineBorder(Color.red);
+	Border bordeVerde = BorderFactory.createLineBorder(Color.green);
 	// TO-DO Arreglar, pone el borde en negro
 	Border sinBorde = BorderFactory.createLineBorder(null);
-
+	Boolean primerClick = true;
+	Caballo caballoElegido;
+	int posX, posY, k;
+	int turno = 1;
+	
 	public Controlador(Modelo objModelo, Vista objVista)
 	{
 		this.objVista = objVista;
@@ -34,7 +41,7 @@ public class Controlador implements WindowListener, ActionListener
 		objVista.getMniNuevoJugador().addActionListener(this);
 		objVista.getMniSalir().addActionListener(this);
 		objVista.getMniClasificacionJugador().addActionListener(this);
-//		objVista.getMniPartidas().addActionListener(this);
+		//		objVista.getMniPartidas().addActionListener(this);
 		objVista.getMniAyuda().addActionListener(this);
 		objVista.btnAvanzar.addActionListener(this);
 		objVista.btnEmpezar.addActionListener(this);
@@ -58,46 +65,131 @@ public class Controlador implements WindowListener, ActionListener
 	{
 		Object fuente = e.getSource();
 
-		for (i = 0; i < 8; i++)
-		{
-			for (j = 0; j < 8; j++)
+		if(turno%2 == 1) {
+			for (i = 0; i < 8; i++)
 			{
-				if (fuente.equals(objVista.getCasillas()[i][j]))
+				for (j = 0; j < 8; j++)
 				{
-					Integer x = i;
-					Integer y = j;
-					for (i = 0; i < 8; i++)
-					{
-						for (j = 0; j < 8; j++)
+					if(objModelo.iconoPieza(objVista.fichaElegida) == "Vacío") {
+						if (fuente.equals(objVista.getCasillas()[i][j]))
 						{
-							objVista.getCasillas()[i][j].setBorder(sinBorde);
-							
-						}
-					}
-					objVista.getCasillas()[x][y].setBorder(bordeRojo);
-					objVista.fichaElegida.setIcon(objVista.getCasillas()[x][y].getIcon());
-					objModelo.escribirLog("Pieza seleccionada: " + objModelo.iconoPieza(objVista.getCasillas()[x][y])
+							System.out.println("AQUI");
+							Integer x = i;
+							Integer y = j;
+							for (i = 0; i < 8; i++)
+							{
+								for (j = 0; j < 8; j++)
+								{
+									objVista.getCasillas()[i][j].setBorder(sinBorde);
+
+								}
+							}
+							objVista.getCasillas()[x][y].setBorder(bordeRojo);
+							objVista.fichaElegida.setIcon(objVista.getCasillas()[x][y].getIcon());
+							objModelo.escribirLog("Pieza seleccionada: " + objModelo.iconoPieza(objVista.getCasillas()[x][y])
 							+ " en " + objModelo.numeroLetra(y) + "" + (8 - x));
-					System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Pieza seleccionada: "
-							+ objModelo.iconoPieza(objVista.getCasillas()[x][y]) + " en " + objModelo.numeroLetra(y)
-							+ "" + (8 - x) + "]");
-					if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
-						if(objVista.caballoNI.getX() == x && objVista.caballoNI.getY() == y) {
-							objModelo.movimientoCaballo(objVista.caballoNI);
-						}
-						else if(objVista.caballoND.getX() == x && objVista.caballoND.getY() == y) {
-							objModelo.movimientoCaballo(objVista.caballoNI);
-						}
-						else if(objVista.caballoBD.getX() == x && objVista.caballoBI.getY() == y) {
-							objModelo.movimientoCaballo(objVista.caballoNI);
-						}
-						else if(objVista.caballoBI.getX() == x && objVista.caballoBI.getY() == y) {
-							objModelo.movimientoCaballo(objVista.caballoNI);
+							System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Pieza seleccionada: "
+									+ objModelo.iconoPieza(objVista.getCasillas()[x][y]) + " en " + objModelo.numeroLetra(y)
+									+ "" + (8 - x) + "]");
+							if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
+								if(objVista.caballoBI.getX() == x && objVista.caballoBI.getY() == y) {
+									objModelo.movimientoCaballo(objVista.caballoBI);
+									for (k = 0; k < 8; k++)
+									{
+										if(objModelo.movimientoCaballo(objVista.caballoBI)[k][0] >=0 
+												&& objModelo.movimientoCaballo(objVista.caballoBI)[k][0] <= 7
+												&& objModelo.movimientoCaballo(objVista.caballoBI)[k][1] >=0
+												&& objModelo.movimientoCaballo(objVista.caballoBI)[k][1] <=7) {
+											posX = objModelo.movimientoCaballo(objVista.caballoBI)[k][0];
+											posY = objModelo.movimientoCaballo(objVista.caballoBI)[k][1];
+											objVista.getCasillas()[posX][posY].setBorder(bordeVerde);
+											caballoElegido = objVista.caballoBI;
+										}
+
+									}
+
+								}
+							}
 						}
 					}
+					else {
+						if (fuente.equals(objVista.getCasillas()[i][j]))
+						{
+							System.out.println("ALLI");
+							Integer x = i;
+							Integer y = j;
+							
+							for (k = 0; k < 8; k++)
+							{
+								if(objModelo.movimientoCaballo(caballoElegido)[k][0] >=0 
+										&& objModelo.movimientoCaballo(caballoElegido)[k][0] <= 7
+										&& objModelo.movimientoCaballo(caballoElegido)[k][1] >=0
+										&& objModelo.movimientoCaballo(caballoElegido)[k][1] <=7) {
+									posX = objModelo.movimientoCaballo(caballoElegido)[k][0];
+									posY = objModelo.movimientoCaballo(caballoElegido)[k][1];
+									if(posX==x && posY == y) {
+										if(objModelo.colorPieza(objVista.getCasillas()[x][y]) != ColorPieza.BLANCO){
+											objVista.getCasillas()[caballoElegido.getX()][caballoElegido.getY()].setIcon(null);
+											objVista.getCasillas()[x][y].setIcon(caballoElegido.getIcono());
+											caballoElegido.setX(x);
+											caballoElegido.setY(y);
+											caballoElegido = null;
+											objVista.fichaElegida.setIcon(null);
+											
+										}
+										else {
+											objVista.fichaElegida.setIcon(null);
+										}
+									}
+									else {
+										objVista.fichaElegida.setIcon(null);
+									}
+									for (i = 0; i < 8; i++)
+									{
+										for (j = 0; j < 8; j++)
+										{
+											objVista.getCasillas()[i][j].setBorder(sinBorde);
+
+										}
+									}
+								}
+								
+							}
+
+							objModelo.escribirLog("Pieza seleccionada: " + objModelo.iconoPieza(objVista.getCasillas()[x][y])
+							+ " en " + objModelo.numeroLetra(y) + "" + (8 - x));
+							System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Pieza seleccionada: "
+									+ objModelo.iconoPieza(objVista.getCasillas()[x][y]) + " en " + objModelo.numeroLetra(y)
+									+ "" + (8 - x) + "]");
+							if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
+								if(objVista.caballoBI.getX() == x && objVista.caballoBI.getY() == y) {
+									int k;
+									objModelo.movimientoCaballo(objVista.caballoBI);
+									for (k = 0; k < 8; k++)
+									{
+										if(objModelo.movimientoCaballo(objVista.caballoBI)[k][0] >=0 
+												&& objModelo.movimientoCaballo(objVista.caballoBI)[k][0] <= 7
+												&& objModelo.movimientoCaballo(objVista.caballoBI)[k][1] >=0
+												&& objModelo.movimientoCaballo(objVista.caballoBI)[k][1] <=7) {
+											int posX = objModelo.movimientoCaballo(objVista.caballoBI)[k][0];
+											int posY = objModelo.movimientoCaballo(objVista.caballoBI)[k][1];
+											objVista.getCasillas()[posX][posY].setBorder(bordeVerde);
+										}
+
+									}
+
+								}
+							}
+						}
+					}
+
 				}
 			}
 		}
+		else if(turno%2==0) {
+			//TODO turno negras
+		}
+		
 		// TODO Si pulsas en "Iniciar partida"
 		// TODO Si pulsas en "Ranking de partidas"
 		// TODO Ocultar todos los frames salvo el pulsado
@@ -195,7 +287,7 @@ public class Controlador implements WindowListener, ActionListener
 
 		} else if (fuente.equals(objVista.getMniAyuda()))
 		{
-			
+
 			objVista.frmElegirJugador1.setVisible(false);
 			objVista.frmElegirJugador2.setVisible(false);
 			objVista.getFrmClasificacionJugador().setVisible(false);
