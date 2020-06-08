@@ -24,13 +24,9 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.Border;
 
-import modelo.Alfil;
-import modelo.Caballo;
 import modelo.ColorPieza;
-import modelo.Peon;
-import modelo.Reina;
-import modelo.Rey;
-import modelo.Torre;
+import modelo.Pieza;
+import modelo.TipoPieza;
 
 public class Vista extends JFrame 
 {
@@ -152,44 +148,45 @@ public class Vista extends JFrame
 	Integer i, j;
 	ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
 	
-	public Torre torreNI = new Torre(ColorPieza.NEGRO, 0, 0);
-	public Torre torreND = new Torre(ColorPieza.NEGRO, 7, 0);
-	public Torre torreBI = new Torre(ColorPieza.BLANCO, 0, 7);
-	public Torre torreBD = new Torre(ColorPieza.BLANCO, 7, 7);
 	
-	public Alfil alfilNI = new Alfil(ColorPieza.NEGRO, 2, 0);
-	public Alfil alfilND = new Alfil(ColorPieza.NEGRO, 5, 0);
-	public Alfil alfilBI = new Alfil(ColorPieza.BLANCO, 2, 7);
-	public Alfil alfilBD = new Alfil(ColorPieza.BLANCO, 5, 7);
+	public Pieza torreNI = new Pieza();
+	public Pieza torreND = new Pieza();
+	public Pieza torreBI = new Pieza();
+	public Pieza torreBD = new Pieza();
 	
-	public Reina reinaN = new Reina(ColorPieza.NEGRO, 3, 0);
-	public Reina reinaB = new Reina(ColorPieza.BLANCO, 3, 7);
+	public Pieza alfilNI = new Pieza();
+	public Pieza alfilND = new Pieza();
+	public Pieza alfilBI = new Pieza();
+	public Pieza alfilBD = new Pieza();
 	
-	public Rey reyN = new Rey(ColorPieza.NEGRO, 4, 0);
-	public Rey reyB = new Rey(ColorPieza.BLANCO, 4, 7);
+	public Pieza reinaN = new Pieza();
+	public Pieza reinaB = new Pieza();
 	
-	public Peon peonN1 = new Peon();
-	public Peon peonN2 = new Peon();
-	public Peon peonN3 = new Peon();
-	public Peon peonN4 = new Peon();
-	public Peon peonN5 = new Peon();
-	public Peon peonN6 = new Peon();
-	public Peon peonN7 = new Peon();
-	public Peon peonN8 = new Peon();
-	public Peon peonB1 = new Peon();
-	public Peon peonB2 = new Peon();
-	public Peon peonB3 = new Peon();
-	public Peon peonB4 = new Peon();
-	public Peon peonB5 = new Peon();
-	public Peon peonB6 = new Peon();
-	public Peon peonB7 = new Peon();
-	public Peon peonB8 = new Peon();
+	public Pieza reyN = new Pieza();
+	public Pieza reyB = new Pieza();
 	
-	public Caballo caballoNI = new Caballo();
-	public Caballo caballoND = new Caballo();
-	public Caballo caballoBD = new Caballo();
-	public Caballo caballoBI = new Caballo();
-
+	public Pieza peonN1 = new Pieza();
+	public Pieza peonN2 = new Pieza();
+	public Pieza peonN3 = new Pieza();
+	public Pieza peonN4 = new Pieza();
+	public Pieza peonN5 = new Pieza();
+	public Pieza peonN6 = new Pieza();
+	public Pieza peonN7 = new Pieza();
+	public Pieza peonN8 = new Pieza();
+	public Pieza peonB1 = new Pieza();
+	public Pieza peonB2 = new Pieza();
+	public Pieza peonB3 = new Pieza();
+	public Pieza peonB4 = new Pieza();
+	public Pieza peonB5 = new Pieza();
+	public Pieza peonB6 = new Pieza();
+	public Pieza peonB7 = new Pieza();
+	public Pieza peonB8 = new Pieza();
+	
+	public Pieza caballoNI = new Pieza();
+	public Pieza caballoND = new Pieza();
+	public Pieza caballoBD = new Pieza();
+	public Pieza caballoBI = new Pieza();
+	
 	public Vista()
 	{
 		//Menú principal
@@ -205,43 +202,43 @@ public class Vista extends JFrame
 	//	mnClasificacion.add(getMniPartidas());
 		mnAyuda.add(getMniAyuda());
 
-		torreNI = new Torre(ColorPieza.NEGRO, 0, 0);
-		torreND = new Torre(ColorPieza.NEGRO, 7, 0);
-		torreBI = new Torre(ColorPieza.BLANCO, 0, 7);
-		torreBD = new Torre(ColorPieza.BLANCO, 7, 7);
+		torreNI = new Pieza(ColorPieza.NEGRO, TipoPieza.TORRE, 0, 0);
+		torreND = new Pieza(ColorPieza.NEGRO, TipoPieza.TORRE, 7, 0);
+		torreBI = new Pieza(ColorPieza.BLANCO, TipoPieza.TORRE, 0, 7);
+		torreBD = new Pieza(ColorPieza.BLANCO, TipoPieza.TORRE, 7, 7);
 		
-		alfilNI = new Alfil(ColorPieza.NEGRO, 2, 0);
-		alfilND = new Alfil(ColorPieza.NEGRO, 5, 0);
-		alfilBI = new Alfil(ColorPieza.BLANCO, 2, 7);
-		alfilBD = new Alfil(ColorPieza.BLANCO, 5, 7);
+		alfilNI = new Pieza(ColorPieza.NEGRO, TipoPieza.ALFIL, 2, 0);
+		alfilND = new Pieza(ColorPieza.NEGRO, TipoPieza.ALFIL, 5, 0);
+		alfilBI = new Pieza(ColorPieza.BLANCO, TipoPieza.ALFIL, 2, 7);
+		alfilBD = new Pieza(ColorPieza.BLANCO, TipoPieza.ALFIL, 5, 7);
 		
-		reinaN = new Reina(ColorPieza.NEGRO, 3, 0);
-		reinaB = new Reina(ColorPieza.BLANCO, 3, 7);
+		reinaN = new Pieza(ColorPieza.NEGRO, TipoPieza.REINA, 3, 0);
+		reinaB = new Pieza(ColorPieza.BLANCO, TipoPieza.REINA, 3, 7);
 		
-		reyN = new Rey(ColorPieza.NEGRO, 4, 0);
-		reyB = new Rey(ColorPieza.BLANCO, 4, 7);
+		reyN = new Pieza(ColorPieza.NEGRO, TipoPieza.REY, 4, 0);
+		reyB = new Pieza(ColorPieza.BLANCO, TipoPieza.REY, 4, 7);
 		
-		peonN1 = new Peon(ColorPieza.NEGRO, 0, 1);
-		peonN2 = new Peon(ColorPieza.NEGRO, 1, 1);
-		peonN3 = new Peon(ColorPieza.NEGRO, 2, 1);
-		peonN4 = new Peon(ColorPieza.NEGRO, 3, 1);
-		peonN5 = new Peon(ColorPieza.NEGRO, 4, 1);
-		peonN6 = new Peon(ColorPieza.NEGRO, 5, 1);
-		peonN7 = new Peon(ColorPieza.NEGRO, 6, 1);
-		peonN8 = new Peon(ColorPieza.NEGRO, 7, 1);
-		peonB1 = new Peon(ColorPieza.BLANCO, 0, 6);
-		peonB2 = new Peon(ColorPieza.BLANCO, 1, 6);
-		peonB3 = new Peon(ColorPieza.BLANCO, 2, 6);
-		peonB4 = new Peon(ColorPieza.BLANCO, 3, 6);
-		peonB5 = new Peon(ColorPieza.BLANCO, 4, 6);
-		peonB6 = new Peon(ColorPieza.BLANCO, 5, 6);
-		peonB7 = new Peon(ColorPieza.BLANCO, 6, 6);
-		peonB8 = new Peon(ColorPieza.BLANCO, 7, 6);
+		peonN1 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 0, 1);
+		peonN2 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 1, 1);
+		peonN3 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 2, 1);
+		peonN4 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 3, 1);
+		peonN5 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 4, 1);
+		peonN6 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 5, 1);
+		peonN7 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 6, 1);
+		peonN8 = new Pieza(ColorPieza.NEGRO, TipoPieza.PEON, 7, 1);
+		peonB1 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 0, 6);
+		peonB2 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 1, 6);
+		peonB3 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 2, 6);
+		peonB4 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 3, 6);
+		peonB5 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 4, 6);
+		peonB6 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 5, 6);
+		peonB7 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 6, 6);
+		peonB8 = new Pieza(ColorPieza.BLANCO, TipoPieza.PEON, 7, 6);
 		
-		caballoNI = new Caballo(ColorPieza.NEGRO, 1, 0);
-		caballoND = new Caballo(ColorPieza.NEGRO, 6, 0);
-		caballoBD = new Caballo(ColorPieza.BLANCO, 6, 7);
-		caballoBI = new Caballo(ColorPieza.BLANCO, 1, 7);
+		caballoNI = new Pieza(ColorPieza.NEGRO, TipoPieza.CABALLO, 1, 0);
+		caballoND = new Pieza(ColorPieza.NEGRO, TipoPieza.CABALLO, 6, 0);
+		caballoBD = new Pieza(ColorPieza.BLANCO, TipoPieza.CABALLO, 6, 7);
+		caballoBI = new Pieza(ColorPieza.BLANCO, TipoPieza.CABALLO, 1, 7);
 		
 		setSize(300, 150);
 		setLocationRelativeTo(null);

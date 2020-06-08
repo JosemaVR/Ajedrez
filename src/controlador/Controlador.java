@@ -12,9 +12,10 @@ import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 
 import es.studium.Ayuda.Ayuda;
-import modelo.Caballo;
 import modelo.ColorPieza;
 import modelo.Modelo;
+import modelo.Pieza;
+import modelo.TipoPieza;
 import vista.Vista;
 
 public class Controlador implements WindowListener, ActionListener
@@ -28,7 +29,8 @@ public class Controlador implements WindowListener, ActionListener
 	// TO-DO Arreglar, pone el borde en negro
 	Border sinBorde = BorderFactory.createLineBorder(null);
 	Boolean primerClick = true;
-	Caballo caballoElegido;
+	
+	Pieza piezaElegida;
 	int posX, posY, k;
 	int turno = 1;
 	
@@ -64,7 +66,7 @@ public class Controlador implements WindowListener, ActionListener
 	public void actionPerformed(ActionEvent e)
 	{
 		Object fuente = e.getSource();
-
+		//TURNO BLANCAS
 		if(turno%2 == 1) {
 			for (i = 0; i < 8; i++)
 			{
@@ -73,7 +75,6 @@ public class Controlador implements WindowListener, ActionListener
 					if(objModelo.iconoPieza(objVista.fichaElegida) == "Vacío") {
 						if (fuente.equals(objVista.getCasillas()[i][j]))
 						{
-							System.out.println("AQUI");
 							Integer x = i;
 							Integer y = j;
 							for (i = 0; i < 8; i++)
@@ -88,9 +89,6 @@ public class Controlador implements WindowListener, ActionListener
 							objVista.fichaElegida.setIcon(objVista.getCasillas()[x][y].getIcon());
 							objModelo.escribirLog("Pieza seleccionada: " + objModelo.iconoPieza(objVista.getCasillas()[x][y])
 							+ " en " + objModelo.numeroLetra(y) + "" + (8 - x));
-							System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Pieza seleccionada: "
-									+ objModelo.iconoPieza(objVista.getCasillas()[x][y]) + " en " + objModelo.numeroLetra(y)
-									+ "" + (8 - x) + "]");
 							if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
 								if(objVista.caballoBI.getX() == x && objVista.caballoBI.getY() == y) {
 									objModelo.movimientoCaballo(objVista.caballoBI);
@@ -103,7 +101,7 @@ public class Controlador implements WindowListener, ActionListener
 											posX = objModelo.movimientoCaballo(objVista.caballoBI)[k][0];
 											posY = objModelo.movimientoCaballo(objVista.caballoBI)[k][1];
 											objVista.getCasillas()[posX][posY].setBorder(bordeVerde);
-											caballoElegido = objVista.caballoBI;
+											piezaElegida = objVista.caballoBI;
 										}
 
 									}
@@ -115,52 +113,53 @@ public class Controlador implements WindowListener, ActionListener
 					else {
 						if (fuente.equals(objVista.getCasillas()[i][j]))
 						{
-							System.out.println("ALLI");
 							Integer x = i;
 							Integer y = j;
-							
-							for (k = 0; k < 8; k++)
-							{
-								if(objModelo.movimientoCaballo(caballoElegido)[k][0] >=0 
-										&& objModelo.movimientoCaballo(caballoElegido)[k][0] <= 7
-										&& objModelo.movimientoCaballo(caballoElegido)[k][1] >=0
-										&& objModelo.movimientoCaballo(caballoElegido)[k][1] <=7) {
-									posX = objModelo.movimientoCaballo(caballoElegido)[k][0];
-									posY = objModelo.movimientoCaballo(caballoElegido)[k][1];
-									if(posX==x && posY == y) {
-										if(objModelo.colorPieza(objVista.getCasillas()[x][y]) != ColorPieza.BLANCO){
-											objVista.getCasillas()[caballoElegido.getX()][caballoElegido.getY()].setIcon(null);
-											objVista.getCasillas()[x][y].setIcon(caballoElegido.getIcono());
-											caballoElegido.setX(x);
-											caballoElegido.setY(y);
-											caballoElegido = null;
-											objVista.fichaElegida.setIcon(null);
-											
+							if(piezaElegida.tipoPieza == TipoPieza.CABALLO) {
+								for (k = 0; k < 8; k++)
+								{
+									if(objModelo.movimientoCaballo(piezaElegida)[k][0] >=0 
+											&& objModelo.movimientoCaballo(piezaElegida)[k][0] <=7
+											&& objModelo.movimientoCaballo(piezaElegida)[k][1] >=0
+											&& objModelo.movimientoCaballo(piezaElegida)[k][1] <=7) {
+										posX = objModelo.movimientoCaballo(piezaElegida)[k][0];
+										posY = objModelo.movimientoCaballo(piezaElegida)[k][1];
+										if(posX==x && posY == y) {
+											if(objModelo.colorPieza(objVista.getCasillas()[x][y]) != ColorPieza.BLANCO){
+												objVista.getCasillas()[piezaElegida.getX()][piezaElegida.getY()].setIcon(null);
+												objVista.getCasillas()[x][y].setIcon(null);
+												objVista.getCasillas()[x][y].setIcon(piezaElegida.getIcono());
+												piezaElegida.setX(x);
+												piezaElegida.setY(y);
+												piezaElegida = null;
+												objVista.fichaElegida.setIcon(null);
+												//Las 2 siguientes lineas marcan el siguiente turno
+												turno++;
+												objVista.lblNorte.setText("Juega " + objVista.choJugador2.getSelectedItem().split("-")[1] + " con negras");
+											}
+											else {
+												objVista.fichaElegida.setIcon(null);
+											}
 										}
 										else {
 											objVista.fichaElegida.setIcon(null);
 										}
-									}
-									else {
-										objVista.fichaElegida.setIcon(null);
-									}
-									for (i = 0; i < 8; i++)
-									{
-										for (j = 0; j < 8; j++)
+										for (i = 0; i < 8; i++)
 										{
-											objVista.getCasillas()[i][j].setBorder(sinBorde);
+											for (j = 0; j < 8; j++)
+											{
+												objVista.getCasillas()[i][j].setBorder(sinBorde);
 
+											}
 										}
 									}
+									
 								}
-								
 							}
+							
 
 							objModelo.escribirLog("Pieza seleccionada: " + objModelo.iconoPieza(objVista.getCasillas()[x][y])
 							+ " en " + objModelo.numeroLetra(y) + "" + (8 - x));
-							System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Pieza seleccionada: "
-									+ objModelo.iconoPieza(objVista.getCasillas()[x][y]) + " en " + objModelo.numeroLetra(y)
-									+ "" + (8 - x) + "]");
 							if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
 								if(objVista.caballoBI.getX() == x && objVista.caballoBI.getY() == y) {
 									int k;
@@ -186,8 +185,121 @@ public class Controlador implements WindowListener, ActionListener
 				}
 			}
 		}
+		//TURNO NEGRAS
 		else if(turno%2==0) {
-			//TODO turno negras
+			for (i = 0; i < 8; i++)
+			{
+				for (j = 0; j < 8; j++)
+				{
+					if(objModelo.iconoPieza(objVista.fichaElegida) == "Vacío") {
+						if (fuente.equals(objVista.getCasillas()[i][j]))
+						{
+							Integer x = i;
+							Integer y = j;
+							for (i = 0; i < 8; i++)
+							{
+								for (j = 0; j < 8; j++)
+								{
+									objVista.getCasillas()[i][j].setBorder(sinBorde);
+
+								}
+							}
+							objVista.getCasillas()[x][y].setBorder(bordeRojo);
+							objVista.fichaElegida.setIcon(objVista.getCasillas()[x][y].getIcon());
+							objModelo.escribirLog("Pieza seleccionada: " + objModelo.iconoPieza(objVista.getCasillas()[x][y])
+							+ " en " + objModelo.numeroLetra(y) + "" + (8 - x));
+							if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
+								if(objVista.caballoNI.getX() == x && objVista.caballoNI.getY() == y) {
+									objModelo.movimientoCaballo(objVista.caballoNI);
+									for (k = 0; k < 8; k++)
+									{
+										if(objModelo.movimientoCaballo(objVista.caballoNI)[k][0] >=0 
+												&& objModelo.movimientoCaballo(objVista.caballoNI)[k][0] <= 7
+												&& objModelo.movimientoCaballo(objVista.caballoNI)[k][1] >=0
+												&& objModelo.movimientoCaballo(objVista.caballoNI)[k][1] <=7) {
+											posX = objModelo.movimientoCaballo(objVista.caballoNI)[k][0];
+											posY = objModelo.movimientoCaballo(objVista.caballoNI)[k][1];
+											objVista.getCasillas()[posX][posY].setBorder(bordeVerde);
+											piezaElegida = objVista.caballoNI;
+										}
+
+									}
+
+								}
+							}
+						}
+					}
+					else {
+						if (fuente.equals(objVista.getCasillas()[i][j]))
+						{
+							Integer x = i;
+							Integer y = j;
+							if(piezaElegida.tipoPieza == TipoPieza.CABALLO) {
+								for (k = 0; k < 8; k++)
+								{
+									if(objModelo.movimientoCaballo(piezaElegida)[k][0] >=0 
+											&& objModelo.movimientoCaballo(piezaElegida)[k][0] <=7
+											&& objModelo.movimientoCaballo(piezaElegida)[k][1] >=0
+											&& objModelo.movimientoCaballo(piezaElegida)[k][1] <=7) {
+										posX = objModelo.movimientoCaballo(piezaElegida)[k][0];
+										posY = objModelo.movimientoCaballo(piezaElegida)[k][1];
+										if(posX==x && posY == y) {
+											if(objModelo.colorPieza(objVista.getCasillas()[x][y]) != ColorPieza.NEGRO){
+												objVista.getCasillas()[piezaElegida.getX()][piezaElegida.getY()].setIcon(null);
+												objVista.getCasillas()[x][y].setIcon(piezaElegida.getIcono());
+												piezaElegida.setX(x);
+												piezaElegida.setY(y);
+												piezaElegida = null;
+												objVista.fichaElegida.setIcon(null);
+												//Las 2 siguientes lineas marcan el siguiente turno
+												turno++;
+												objVista.lblNorte.setText("Juega " + objVista.choJugador1.getSelectedItem().split("-")[1] + " con negras");
+											}
+											else {
+												objVista.fichaElegida.setIcon(null);
+											}
+										}
+										else {
+											objVista.fichaElegida.setIcon(null);
+										}
+										for (i = 0; i < 8; i++)
+										{
+											for (j = 0; j < 8; j++)
+											{
+												objVista.getCasillas()[i][j].setBorder(sinBorde);
+
+											}
+										}
+									}
+									
+								}
+							}
+							objModelo.escribirLog("Pieza seleccionada: " + objModelo.iconoPieza(objVista.getCasillas()[x][y])
+							+ " en " + objModelo.numeroLetra(y) + "" + (8 - x));
+							if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
+								if(objVista.caballoNI.getX() == x && objVista.caballoNI.getY() == y) {
+									int k;
+									objModelo.movimientoCaballo(objVista.caballoNI);
+									for (k = 0; k < 8; k++)
+									{
+										if(objModelo.movimientoCaballo(objVista.caballoNI)[k][0] >=0 
+												&& objModelo.movimientoCaballo(objVista.caballoNI)[k][0] <= 7
+												&& objModelo.movimientoCaballo(objVista.caballoNI)[k][1] >=0
+												&& objModelo.movimientoCaballo(objVista.caballoNI)[k][1] <=7) {
+											int posX = objModelo.movimientoCaballo(objVista.caballoNI)[k][0];
+											int posY = objModelo.movimientoCaballo(objVista.caballoNI)[k][1];
+											objVista.getCasillas()[posX][posY].setBorder(bordeVerde);
+										}
+
+									}
+
+								}
+							}
+						}
+					}
+
+				}
+			}
 		}
 		
 		// TODO Si pulsas en "Iniciar partida"
@@ -232,6 +344,7 @@ public class Controlador implements WindowListener, ActionListener
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Abriendo creación de usuario]");
 		} else if (fuente.equals(objVista.btnEmpezar))
 		{
+			turno = 1;
 			objVista.frmElegirJugador1.setVisible(false);
 			objVista.frmElegirJugador2.setVisible(false);
 			// label en tablero vacio --> meterle los jugadores
