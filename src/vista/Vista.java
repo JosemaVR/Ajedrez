@@ -151,6 +151,10 @@ public class Vista extends JFrame
 	JLabel lblNum;
 	Integer i, j;
 	ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
+	
+	public Torre torreNI = new Torre(ColorPieza.NEGRO, 0, 0);
+	public Caballo caballoNI = new Caballo(ColorPieza.NEGRO, 1, 0);
+	public Caballo caballoND = new Caballo(ColorPieza.NEGRO, 6, 0);
 
 	public Vista()
 	{
@@ -180,10 +184,8 @@ public class Vista extends JFrame
 		frmTablero.setTitle("Tablero");
 		UIManager.put("Label.font", fuenteEtiquetas);
 
-		Torre torreNI = new Torre(ColorPieza.NEGRO, 0, 0);
 		getCasillas()[torreNI.getX()][torreNI.getY()] = new JButton(torreNI.getIcono());
 
-		Caballo caballoNI = new Caballo(ColorPieza.NEGRO, 1, 0);
 		getCasillas()[caballoNI.getX()][caballoNI.getY()] = new JButton(caballoNI.getIcono());
 
 		Alfil alfilNI = new Alfil(ColorPieza.NEGRO, 2, 0);
@@ -198,7 +200,6 @@ public class Vista extends JFrame
 		Alfil alfilND = new Alfil(ColorPieza.NEGRO, 5, 0);
 		getCasillas()[alfilND.getX()][alfilND.getY()] = new JButton(alfilND.getIcono());
 
-		Caballo caballoND = new Caballo(ColorPieza.NEGRO, 6, 0);
 		getCasillas()[caballoND.getX()][caballoND.getY()] = new JButton(caballoND.getIcono());
 
 		Torre torreND = new Torre(ColorPieza.NEGRO, 7, 0);
