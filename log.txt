@@ -331,3 +331,24 @@ INFO: [Pieza seleccionada: Caballo en B8]
 jun. 08, 2020 1:07:18 P. M. modelo.Modelo escribirLog
 INFO: [Pieza seleccionada: Caballo en G8] 
 
+jun. 08, 2020 1:23:45 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 1:23:49 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 1:23:52 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 1:23:53 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 1:23:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en A3] 
+
+jun. 08, 2020 1:23:58 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 1:24:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en G8] 
+

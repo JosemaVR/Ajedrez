@@ -153,8 +153,42 @@ public class Vista extends JFrame
 	ImageIcon caballoBa2 = new ImageIcon("./imagenes/sin_fondo/Caballo_blanco.png");
 	
 	public Torre torreNI = new Torre(ColorPieza.NEGRO, 0, 0);
+	public Torre torreND = new Torre(ColorPieza.NEGRO, 7, 0);
+	public Torre torreBI = new Torre(ColorPieza.BLANCO, 0, 7);
+	public Torre torreBD = new Torre(ColorPieza.BLANCO, 7, 7);
+	
+	public Alfil alfilNI = new Alfil(ColorPieza.NEGRO, 2, 0);
+	public Alfil alfilND = new Alfil(ColorPieza.NEGRO, 5, 0);
+	public Alfil alfilBI = new Alfil(ColorPieza.BLANCO, 2, 7);
+	public Alfil alfilBD = new Alfil(ColorPieza.BLANCO, 5, 7);
+	
+	public Reina reinaN = new Reina(ColorPieza.NEGRO, 3, 0);
+	public Reina reinaB = new Reina(ColorPieza.BLANCO, 3, 7);
+	
+	public Rey reyN = new Rey(ColorPieza.NEGRO, 4, 0);
+	public Rey reyB = new Rey(ColorPieza.BLANCO, 4, 7);
+	
+	public Peon peonN1 = new Peon(ColorPieza.NEGRO, 0, 1);
+	public Peon peonN2 = new Peon(ColorPieza.NEGRO, 1, 1);
+	public Peon peonN3 = new Peon(ColorPieza.NEGRO, 2, 1);
+	public Peon peonN4 = new Peon(ColorPieza.NEGRO, 3, 1);
+	public Peon peonN5 = new Peon(ColorPieza.NEGRO, 4, 1);
+	public Peon peonN6 = new Peon(ColorPieza.NEGRO, 5, 1);
+	public Peon peonN7 = new Peon(ColorPieza.NEGRO, 6, 1);
+	public Peon peonN8 = new Peon(ColorPieza.NEGRO, 7, 1);
+	public Peon peonB1 = new Peon(ColorPieza.BLANCO, 0, 6);
+	public Peon peonB2 = new Peon(ColorPieza.BLANCO, 1, 6);
+	public Peon peonB3 = new Peon(ColorPieza.BLANCO, 2, 6);
+	public Peon peonB4 = new Peon(ColorPieza.BLANCO, 3, 6);
+	public Peon peonB5 = new Peon(ColorPieza.BLANCO, 4, 6);
+	public Peon peonB6 = new Peon(ColorPieza.BLANCO, 5, 6);
+	public Peon peonB7 = new Peon(ColorPieza.BLANCO, 6, 6);
+	public Peon peonB8 = new Peon(ColorPieza.BLANCO, 7, 6);
+	
 	public Caballo caballoNI = new Caballo(ColorPieza.NEGRO, 1, 0);
 	public Caballo caballoND = new Caballo(ColorPieza.NEGRO, 6, 0);
+	public Caballo caballoBD = new Caballo(ColorPieza.BLANCO, 6, 7);
+	public Caballo caballoBI = new Caballo(ColorPieza.BLANCO, 1, 7);
 
 	public Vista()
 	{
@@ -188,93 +222,65 @@ public class Vista extends JFrame
 
 		getCasillas()[caballoNI.getX()][caballoNI.getY()] = new JButton(caballoNI.getIcono());
 
-		Alfil alfilNI = new Alfil(ColorPieza.NEGRO, 2, 0);
 		getCasillas()[alfilNI.getX()][alfilNI.getY()] = new JButton(alfilNI.getIcono());
 
-		Reina reinaN = new Reina(ColorPieza.NEGRO, 3, 0);
 		getCasillas()[reinaN.getX()][reinaN.getY()] = new JButton(reinaN.getIcono());
 
-		Rey reyN = new Rey(ColorPieza.NEGRO, 4, 0);
 		getCasillas()[reyN.getX()][reyN.getY()] = new JButton(reyN.getIcono());
 
-		Alfil alfilND = new Alfil(ColorPieza.NEGRO, 5, 0);
 		getCasillas()[alfilND.getX()][alfilND.getY()] = new JButton(alfilND.getIcono());
 
 		getCasillas()[caballoND.getX()][caballoND.getY()] = new JButton(caballoND.getIcono());
 
-		Torre torreND = new Torre(ColorPieza.NEGRO, 7, 0);
 		getCasillas()[torreND.getX()][torreND.getY()] = new JButton(torreND.getIcono());
 
-		Peon peonN1 = new Peon(ColorPieza.NEGRO, 0, 1);
 		getCasillas()[peonN1.getX()][peonN1.getY()] = new JButton(peonN1.getIcono());
 
-		Peon peonN2 = new Peon(ColorPieza.NEGRO, 1, 1);
 		getCasillas()[peonN2.getX()][peonN2.getY()] = new JButton(peonN2.getIcono());
 
-		Peon peonN3 = new Peon(ColorPieza.NEGRO, 2, 1);
 		getCasillas()[peonN3.getX()][peonN3.getY()] = new JButton(peonN3.getIcono());
 
-		Peon peonN4 = new Peon(ColorPieza.NEGRO, 3, 1);
 		getCasillas()[peonN4.getX()][peonN4.getY()] = new JButton(peonN4.getIcono());
 
-		Peon peonN5 = new Peon(ColorPieza.NEGRO, 4, 1);
 		getCasillas()[peonN5.getX()][peonN5.getY()] = new JButton(peonN5.getIcono());
 
-		Peon peonN6 = new Peon(ColorPieza.NEGRO, 5, 1);
 		getCasillas()[peonN6.getX()][peonN6.getY()] = new JButton(peonN6.getIcono());
 
-		Peon peonN7 = new Peon(ColorPieza.NEGRO, 6, 1);
 		getCasillas()[peonN7.getX()][peonN7.getY()] = new JButton(peonN7.getIcono());
 
-		Peon peonN8 = new Peon(ColorPieza.NEGRO, 7, 1);
 		getCasillas()[peonN8.getX()][peonN8.getY()] = new JButton(peonN8.getIcono());
 
-		Torre torreBI = new Torre(ColorPieza.BLANCO, 0, 7);
+		
 		getCasillas()[torreBI.getX()][torreBI.getY()] = new JButton(torreBI.getIcono());
 
-		Caballo caballoBI = new Caballo(ColorPieza.BLANCO, 1, 7);
 		getCasillas()[caballoBI.getX()][caballoBI.getY()] = new JButton(caballoBI.getIcono());
 
-		Alfil alfilBI = new Alfil(ColorPieza.BLANCO, 2, 7);
 		getCasillas()[alfilBI.getX()][alfilBI.getY()] = new JButton(alfilBI.getIcono());
 
-		Reina reinaB = new Reina(ColorPieza.BLANCO, 3, 7);
 		getCasillas()[reinaB.getX()][reinaB.getY()] = new JButton(reinaB.getIcono());
 
-		Rey reyB = new Rey(ColorPieza.BLANCO, 4, 7);
 		getCasillas()[reyB.getX()][reyB.getY()] = new JButton(reyB.getIcono());
 
-		Alfil alfilBD = new Alfil(ColorPieza.BLANCO, 5, 7);
 		getCasillas()[alfilBD.getX()][alfilBD.getY()] = new JButton(alfilBD.getIcono());
 
-		Caballo caballoBD = new Caballo(ColorPieza.BLANCO, 6, 7);
 		getCasillas()[caballoBD.getX()][caballoBD.getY()] = new JButton(caballoBD.getIcono());
 
-		Torre torreBD = new Torre(ColorPieza.BLANCO, 7, 7);
 		getCasillas()[torreBD.getX()][torreBD.getY()] = new JButton(torreBD.getIcono());
-
-		Peon peonB1 = new Peon(ColorPieza.BLANCO, 0, 6);
+		
 		getCasillas()[peonB1.getX()][peonB1.getY()] = new JButton(peonB1.getIcono());
-
-		Peon peonB2 = new Peon(ColorPieza.BLANCO, 1, 6);
+		
 		getCasillas()[peonB2.getX()][peonB2.getY()] = new JButton(peonB2.getIcono());
-
-		Peon peonB3 = new Peon(ColorPieza.BLANCO, 2, 6);
+		
 		getCasillas()[peonB3.getX()][peonB3.getY()] = new JButton(peonB3.getIcono());
-
-		Peon peonB4 = new Peon(ColorPieza.BLANCO, 3, 6);
+		
 		getCasillas()[peonB4.getX()][peonB4.getY()] = new JButton(peonB4.getIcono());
-
-		Peon peonB5 = new Peon(ColorPieza.BLANCO, 4, 6);
+		
 		getCasillas()[peonB5.getX()][peonB5.getY()] = new JButton(peonB5.getIcono());
-
-		Peon peonB6 = new Peon(ColorPieza.BLANCO, 5, 6);
+		
 		getCasillas()[peonB6.getX()][peonB6.getY()] = new JButton(peonB6.getIcono());
-
-		Peon peonB7 = new Peon(ColorPieza.BLANCO, 6, 6);
+		
 		getCasillas()[peonB7.getX()][peonB7.getY()] = new JButton(peonB7.getIcono());
-
-		Peon peonB8 = new Peon(ColorPieza.BLANCO, 7, 6);
+		
 		getCasillas()[peonB8.getX()][peonB8.getY()] = new JButton(peonB8.getIcono());
 
 		// Crear y añadir componentes del tablero

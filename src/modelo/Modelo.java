@@ -379,6 +379,23 @@ public class Modelo
 			ex.printStackTrace();
 		}
 	} 
+	
+	public void movimientoCaballo(Caballo caballo) {
+		int i, j, x, y;
+		i = Math.abs(caballo.getX() - x);
+		j = Math.abs(caballo.getY() - y);
+
+		if ((i == 1) && (j == 2))
+		{
+			
+		}
+		if ((i == 1) && (j == 2))
+		{
+
+		}
+	}
+	
+	
 
 	public String iconoPieza(JButton casilla) {
 		Torre torreN = new Torre(ColorPieza.NEGRO, 0, 0);
