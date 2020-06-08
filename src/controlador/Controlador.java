@@ -71,6 +71,7 @@ public class Controlador implements WindowListener, ActionListener
 						for (j = 0; j < 8; j++)
 						{
 							objVista.getCasillas()[i][j].setBorder(sinBorde);
+							
 						}
 					}
 					objVista.getCasillas()[x][y].setBorder(bordeRojo);
@@ -80,6 +81,14 @@ public class Controlador implements WindowListener, ActionListener
 					System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Pieza seleccionada: "
 							+ objModelo.iconoPieza(objVista.getCasillas()[x][y]) + " en " + objModelo.numeroLetra(y)
 							+ "" + (8 - x) + "]");
+				/*	if(objModelo.iconoPieza(objVista.getCasillas()[x][y]) == "Caballo") {
+						if(objVista.caballoNI.getX() == x && objVista.caballoNI.getY() == y) {
+							objModelo.movimiento(objVista.caballoNI);
+						}
+						else if(objVista.caballoND.getX() == x && objVista.caballoND.getY() == y) {
+							objModelo.movimiento(objVista.caballoNI);
+						}
+					}*/
 				}
 			}
 		}

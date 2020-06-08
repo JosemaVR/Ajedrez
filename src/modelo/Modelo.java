@@ -417,9 +417,11 @@ public class Modelo
 				|| casilla.getIcon().toString() == reyB.getIcono().toString()) {
 			res = "Rey";
 		}
-		else if(casilla.getIcon().toString() == peonN.getIcono().toString() 
-				|| casilla.getIcon().toString() == peonB.getIcono().toString()) {
-			res = "Peon";
+		else if(casilla.getIcon().toString() == peonN.getIcono().toString()) {
+			res = "Peon Negro";
+		}
+		else if(casilla.getIcon().toString() == peonB.getIcono().toString()) {
+			res = "Peon Blanco";
 		}
 		return res;
 	}
