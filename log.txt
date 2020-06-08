@@ -2758,3 +2758,1119 @@ INFO: [Pieza seleccionada: Caballo en B5]
 jun. 08, 2020 4:57:42 P. M. modelo.Modelo escribirLog
 INFO: [Pieza seleccionada: Vacío en C3] 
 
+jun. 08, 2020 5:14:52 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 5:14:54 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 5:14:55 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 5:14:56 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 5:14:57 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:14:58 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:14:59 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D4] 
+
+jun. 08, 2020 5:15:00 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:15:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 5:15:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B3] 
+
+jun. 08, 2020 5:15:04 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 5:15:05 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:15:06 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D6] 
+
+jun. 08, 2020 5:15:18 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jun. 08, 2020 5:15:19 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:15:20 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:15:20 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:15:21 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 5:15:22 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B3] 
+
+jun. 08, 2020 5:15:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A5] 
+
+jun. 08, 2020 5:15:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A5] 
+
+jun. 08, 2020 5:15:24 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 5:15:25 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 5:15:27 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:16:18 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:16:19 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:16:19 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:16:20 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C7] 
+
+jun. 08, 2020 5:16:43 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D5] 
+
+jun. 08, 2020 5:16:44 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E7] 
+
+jun. 08, 2020 5:16:45 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C8] 
+
+jun. 08, 2020 5:16:46 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A7] 
+
+jun. 08, 2020 5:16:47 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en A5] 
+
+jun. 08, 2020 5:16:47 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en B5] 
+
+jun. 08, 2020 5:16:48 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A7] 
+
+jun. 08, 2020 5:16:48 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:16:50 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D6] 
+
+jun. 08, 2020 5:16:50 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B7] 
+
+jun. 08, 2020 5:16:51 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D8] 
+
+jun. 08, 2020 5:16:53 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E6] 
+
+jun. 08, 2020 5:16:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en G7] 
+
+jun. 08, 2020 5:16:55 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E8] 
+
+jun. 08, 2020 5:16:55 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en E6] 
+
+jun. 08, 2020 5:16:56 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D6] 
+
+jun. 08, 2020 5:50:37 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 5:50:39 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 5:50:41 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 5:50:42 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 5:50:43 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:50:44 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:50:44 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:50:45 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:50:46 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon Blanco en E2] 
+
+jun. 08, 2020 5:50:47 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:50:47 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Reina en D1] 
+
+jun. 08, 2020 5:50:48 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:50:49 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 5:50:50 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 5:50:50 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 5:50:51 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon Blanco en C2] 
+
+jun. 08, 2020 5:50:52 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 5:50:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C4] 
+
+jun. 08, 2020 5:50:55 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A5] 
+
+jun. 08, 2020 5:50:57 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 5:50:58 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E5] 
+
+jun. 08, 2020 5:50:59 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C4] 
+
+jun. 08, 2020 5:51:00 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E3] 
+
+jun. 08, 2020 5:51:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon Blanco en C2] 
+
+jun. 08, 2020 5:53:59 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 5:54:00 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 5:54:01 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 5:54:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 5:54:03 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 5:54:04 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:54:05 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 5:54:06 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 5:54:07 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C4] 
+
+jun. 08, 2020 5:54:08 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A5] 
+
+jun. 08, 2020 5:54:10 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B3] 
+
+jun. 08, 2020 5:54:11 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 6:08:52 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:08:52 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:08:53 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:08:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 6:09:51 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:09:52 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:09:53 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:09:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 6:47:17 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:47:19 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:47:19 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:47:49 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:47:50 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:47:51 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:47:52 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Torre en A8] 
+
+jun. 08, 2020 6:47:58 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:48:00 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:48:02 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:48:23 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:48:24 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:48:25 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:48:26 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 6:48:27 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 6:50:09 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:50:10 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:50:11 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:50:12 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 6:57:37 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:57:38 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:57:39 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:57:40 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 6:57:41 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C3] 
+
+jun. 08, 2020 6:57:42 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 6:57:42 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C3] 
+
+jun. 08, 2020 6:59:05 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 6:59:07 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 6:59:07 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 6:59:08 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:00:15 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:00:16 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:00:17 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:00:18 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:00:19 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C3] 
+
+jun. 08, 2020 7:01:20 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:01:22 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:01:23 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:01:24 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:01:58 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:01:59 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:02:01 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:02:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:02:50 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:02:51 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:02:52 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:02:53 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:06:50 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:06:51 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:06:52 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:06:53 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:09:32 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:09:33 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:09:33 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:09:35 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:10:02 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:10:04 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:10:05 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:10:12 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:10:14 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:10:15 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:10:16 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:10:16 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 7:11:01 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:11:01 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:11:02 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:11:03 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:11:03 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 7:11:18 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jun. 08, 2020 7:11:21 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:11:21 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:11:22 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:11:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:13:20 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:13:21 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:13:22 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:13:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:13:39 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:13:41 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Paco] 
+
+jun. 08, 2020 7:13:43 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paloma] 
+
+jun. 08, 2020 7:14:33 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:14:35 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Paco] 
+
+jun. 08, 2020 7:14:36 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Pepe] 
+
+jun. 08, 2020 7:14:37 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:14:37 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon en D2] 
+
+jun. 08, 2020 7:14:39 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:14:40 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A3] 
+
+jun. 08, 2020 7:17:30 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:17:31 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:17:32 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:17:32 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:17:34 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 7:17:35 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 7:17:36 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 7:17:38 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jun. 08, 2020 7:17:39 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A5] 
+
+jun. 08, 2020 7:17:40 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:17:42 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B3] 
+
+jun. 08, 2020 7:17:44 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:24:53 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:24:55 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:24:57 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:24:58 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:25:00 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 7:25:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 7:25:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 7:25:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 7:25:03 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 7:25:04 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 7:25:05 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 7:25:08 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en B5] 
+
+jun. 08, 2020 7:25:09 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 7:25:13 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 7:25:50 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:25:51 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:25:52 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:25:53 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:25:55 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 7:25:56 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 7:25:56 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 7:25:57 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 7:25:59 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 7:26:00 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E5] 
+
+jun. 08, 2020 7:26:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 7:26:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 7:26:04 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en B3] 
+
+jun. 08, 2020 7:26:05 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D3] 
+
+jun. 08, 2020 7:26:05 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 7:26:06 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C5] 
+
+jun. 08, 2020 7:26:07 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 7:26:09 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B3] 
+
+jun. 08, 2020 7:26:11 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E5] 
+
+jun. 08, 2020 7:26:12 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:26:14 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en F3] 
+
+jun. 08, 2020 7:26:16 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E6] 
+
+jun. 08, 2020 7:26:19 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 7:26:21 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en G5] 
+
+jun. 08, 2020 7:26:22 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E6] 
+
+jun. 08, 2020 7:26:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E6] 
+
+jun. 08, 2020 7:26:25 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E6] 
+
+jun. 08, 2020 7:26:28 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en F3] 
+
+jun. 08, 2020 7:26:30 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:26:35 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en G5] 
+
+jun. 08, 2020 7:26:37 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en F7] 
+
+jun. 08, 2020 7:26:38 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en F7] 
+
+jun. 08, 2020 7:27:28 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:27:29 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:27:30 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:27:31 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 7:29:22 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:29:23 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:29:24 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:30:09 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:30:10 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:30:10 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:30:30 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:30:31 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:30:32 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:31:03 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:31:04 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:31:05 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:31:06 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon en B2] 
+
+jun. 08, 2020 7:31:12 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:31:15 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Paco] 
+
+jun. 08, 2020 7:31:17 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Pepe] 
+
+jun. 08, 2020 7:31:47 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:31:49 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:31:49 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:31:51 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:31:52 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 7:31:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 7:31:56 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A6] 
+
+jun. 08, 2020 7:31:57 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A4] 
+
+jun. 08, 2020 7:31:59 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:32:00 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon en B7] 
+
+jun. 08, 2020 7:32:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en B5] 
+
+jun. 08, 2020 7:32:01 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:32:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 7:32:06 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A6] 
+
+jun. 08, 2020 7:32:07 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D5] 
+
+jun. 08, 2020 7:32:09 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:32:12 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en F4] 
+
+jun. 08, 2020 7:32:13 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E6] 
+
+jun. 08, 2020 7:32:13 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D3] 
+
+jun. 08, 2020 7:32:15 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E6] 
+
+jun. 08, 2020 7:32:17 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jun. 08, 2020 7:32:20 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:32:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C2] 
+
+jun. 08, 2020 7:32:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jun. 08, 2020 7:32:25 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jun. 08, 2020 7:32:26 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D6] 
+
+jun. 08, 2020 7:32:26 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jun. 08, 2020 7:32:28 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D6] 
+
+jun. 08, 2020 7:32:29 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 7:32:30 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jun. 08, 2020 7:32:30 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E5] 
+
+jun. 08, 2020 7:32:31 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:32:32 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D3] 
+
+jun. 08, 2020 7:32:34 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en F2] 
+
+jun. 08, 2020 7:34:15 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 7:34:16 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 7:34:18 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 7:34:19 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 7:34:20 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 7:34:21 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 7:34:22 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 7:34:23 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jun. 08, 2020 7:34:24 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jun. 08, 2020 7:34:25 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:34:26 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D3] 
+
+jun. 08, 2020 7:34:27 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 7:34:28 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D3] 
+
+jun. 08, 2020 7:34:29 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en B3] 
+
+jun. 08, 2020 8:13:21 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:13:22 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:13:23 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 8:13:24 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 8:13:25 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 8:13:26 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 8:13:27 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A6] 
+
+jun. 08, 2020 8:13:28 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A4] 
+
+jun. 08, 2020 8:13:30 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 8:13:31 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A4] 
+
+jun. 08, 2020 8:14:27 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:14:28 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:14:29 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 8:14:30 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 8:14:31 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 8:14:32 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 8:14:33 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A6] 
+
+jun. 08, 2020 8:14:34 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A4] 
+
+jun. 08, 2020 8:16:07 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:16:08 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:16:08 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 8:16:09 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 8:16:10 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 8:16:11 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 8:16:12 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en B5] 
+
+jun. 08, 2020 8:16:13 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 8:16:14 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A4] 
+
+jun. 08, 2020 8:16:16 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 8:16:19 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B6] 
+
+jun. 08, 2020 8:16:20 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 8:16:21 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D5] 
+
+jun. 08, 2020 8:16:22 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 8:16:22 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 8:16:24 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D6] 
+
+jun. 08, 2020 8:16:24 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B5] 
+
+jun. 08, 2020 8:17:25 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:17:29 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:17:31 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 8:17:32 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon en B7] 
+
+jun. 08, 2020 8:27:27 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:27:28 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:27:28 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 8:27:29 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 8:27:31 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 8:27:34 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:27:36 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:27:38 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 8:27:45 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:27:46 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:27:47 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 08, 2020 8:27:48 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 08, 2020 8:27:49 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 8:27:50 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C5] 
+
+jun. 08, 2020 8:27:50 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C6] 
+
+jun. 08, 2020 8:27:51 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 08, 2020 8:27:52 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 08, 2020 8:27:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 8:27:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C4] 
+
+jun. 08, 2020 8:27:55 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D4] 
+
+jun. 08, 2020 8:27:56 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 08, 2020 8:27:57 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A4] 
+
+jun. 08, 2020 8:27:58 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D4] 
+
+jun. 08, 2020 8:27:59 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 08, 2020 8:28:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C4] 
+
+jun. 08, 2020 8:28:02 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en C5] 
+
+jun. 08, 2020 8:28:03 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D4] 
+
+jun. 08, 2020 8:28:04 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D3] 
+
+jun. 08, 2020 8:28:05 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en G8] 
+
+jun. 08, 2020 8:28:16 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 08, 2020 8:28:19 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 08, 2020 8:28:21 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Pedro] 
+
