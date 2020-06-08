@@ -1,5 +1,5 @@
 package modelo;
 
 public enum ColorPieza {
-	BLANCO, NEGRO;
+	BLANCO, NEGRO, VACIO;
 }

@@ -13,10 +13,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 import java.util.Random;
 import java.util.logging.FileHandler;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
@@ -380,19 +378,34 @@ public class Modelo
 		}
 	} 
 	
-	public void movimientoCaballo(Caballo caballo) {
-		int i, j, x, y;
-		i = Math.abs(caballo.getX() - x);
-		j = Math.abs(caballo.getY() - y);
+	public Integer[][] movimientoCaballo(Caballo caballo) {
+		Integer[][] i = new Integer[8][2];
 
-		if ((i == 1) && (j == 2))
-		{
-			
-		}
-		if ((i == 1) && (j == 2))
-		{
+		i[0][0] = caballo.getX()+1;
+		i[0][1] = caballo.getY()+2;
 
-		}
+		i[1][0] = caballo.getX()-1;
+		i[1][1] = caballo.getY()+2;
+
+		i[2][0] = caballo.getX()+1;
+		i[2][1] = caballo.getY()-2;
+
+		i[3][0] = caballo.getX()-1;
+		i[3][1] = caballo.getY()-2;
+
+		i[4][0] = caballo.getX()+2;
+		i[4][1] = caballo.getY()+1;
+
+		i[5][0] = caballo.getX()-2;
+		i[5][1] = caballo.getY()+1;
+
+		i[6][0] = caballo.getX()+2;
+		i[6][1] = caballo.getY()-1;
+		
+		i[7][0] = caballo.getX()-2;
+		i[7][1] = caballo.getY()-1;
+		
+		return i;
 	}
 	
 	
@@ -532,5 +545,23 @@ public class Modelo
 			System.out.println("error 2");
 			e.printStackTrace();
 		}
+	}
+
+	public ColorPieza colorPieza(JButton casilla) {
+		ColorPieza res = ColorPieza.VACIO;
+		if(casilla.getIcon() == null) {
+			res = ColorPieza.VACIO;
+		}
+		else {
+			if(casilla.getIcon().toString().contains("negr")) {
+				System.out.println(casilla.getIcon().toString());
+				res = ColorPieza.NEGRO;
+			}
+			else if(casilla.getIcon().toString().contains("blanc")) {
+				System.out.println(casilla.getIcon().toString());
+				res = ColorPieza.BLANCO;
+			}
+		}
+		return res;
 	}
 }

@@ -20,7 +20,14 @@ public class Rey {
 		this.x = x;
 		this.y = y;
 	}
-
+	
+	public Rey() {
+		this.color = null;
+		this.x = 0;
+		this.y = 0;
+		this.icono = null;
+	}
+	
 	public ColorPieza getColor() {
 		return color;
 	}

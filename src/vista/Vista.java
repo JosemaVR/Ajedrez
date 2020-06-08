@@ -168,27 +168,27 @@ public class Vista extends JFrame
 	public Rey reyN = new Rey(ColorPieza.NEGRO, 4, 0);
 	public Rey reyB = new Rey(ColorPieza.BLANCO, 4, 7);
 	
-	public Peon peonN1 = new Peon(ColorPieza.NEGRO, 0, 1);
-	public Peon peonN2 = new Peon(ColorPieza.NEGRO, 1, 1);
-	public Peon peonN3 = new Peon(ColorPieza.NEGRO, 2, 1);
-	public Peon peonN4 = new Peon(ColorPieza.NEGRO, 3, 1);
-	public Peon peonN5 = new Peon(ColorPieza.NEGRO, 4, 1);
-	public Peon peonN6 = new Peon(ColorPieza.NEGRO, 5, 1);
-	public Peon peonN7 = new Peon(ColorPieza.NEGRO, 6, 1);
-	public Peon peonN8 = new Peon(ColorPieza.NEGRO, 7, 1);
-	public Peon peonB1 = new Peon(ColorPieza.BLANCO, 0, 6);
-	public Peon peonB2 = new Peon(ColorPieza.BLANCO, 1, 6);
-	public Peon peonB3 = new Peon(ColorPieza.BLANCO, 2, 6);
-	public Peon peonB4 = new Peon(ColorPieza.BLANCO, 3, 6);
-	public Peon peonB5 = new Peon(ColorPieza.BLANCO, 4, 6);
-	public Peon peonB6 = new Peon(ColorPieza.BLANCO, 5, 6);
-	public Peon peonB7 = new Peon(ColorPieza.BLANCO, 6, 6);
-	public Peon peonB8 = new Peon(ColorPieza.BLANCO, 7, 6);
+	public Peon peonN1 = new Peon();
+	public Peon peonN2 = new Peon();
+	public Peon peonN3 = new Peon();
+	public Peon peonN4 = new Peon();
+	public Peon peonN5 = new Peon();
+	public Peon peonN6 = new Peon();
+	public Peon peonN7 = new Peon();
+	public Peon peonN8 = new Peon();
+	public Peon peonB1 = new Peon();
+	public Peon peonB2 = new Peon();
+	public Peon peonB3 = new Peon();
+	public Peon peonB4 = new Peon();
+	public Peon peonB5 = new Peon();
+	public Peon peonB6 = new Peon();
+	public Peon peonB7 = new Peon();
+	public Peon peonB8 = new Peon();
 	
-	public Caballo caballoNI = new Caballo(ColorPieza.NEGRO, 1, 0);
-	public Caballo caballoND = new Caballo(ColorPieza.NEGRO, 6, 0);
-	public Caballo caballoBD = new Caballo(ColorPieza.BLANCO, 6, 7);
-	public Caballo caballoBI = new Caballo(ColorPieza.BLANCO, 1, 7);
+	public Caballo caballoNI = new Caballo();
+	public Caballo caballoND = new Caballo();
+	public Caballo caballoBD = new Caballo();
+	public Caballo caballoBI = new Caballo();
 
 	public Vista()
 	{
@@ -205,7 +205,44 @@ public class Vista extends JFrame
 	//	mnClasificacion.add(getMniPartidas());
 		mnAyuda.add(getMniAyuda());
 
-
+		torreNI = new Torre(ColorPieza.NEGRO, 0, 0);
+		torreND = new Torre(ColorPieza.NEGRO, 7, 0);
+		torreBI = new Torre(ColorPieza.BLANCO, 0, 7);
+		torreBD = new Torre(ColorPieza.BLANCO, 7, 7);
+		
+		alfilNI = new Alfil(ColorPieza.NEGRO, 2, 0);
+		alfilND = new Alfil(ColorPieza.NEGRO, 5, 0);
+		alfilBI = new Alfil(ColorPieza.BLANCO, 2, 7);
+		alfilBD = new Alfil(ColorPieza.BLANCO, 5, 7);
+		
+		reinaN = new Reina(ColorPieza.NEGRO, 3, 0);
+		reinaB = new Reina(ColorPieza.BLANCO, 3, 7);
+		
+		reyN = new Rey(ColorPieza.NEGRO, 4, 0);
+		reyB = new Rey(ColorPieza.BLANCO, 4, 7);
+		
+		peonN1 = new Peon(ColorPieza.NEGRO, 0, 1);
+		peonN2 = new Peon(ColorPieza.NEGRO, 1, 1);
+		peonN3 = new Peon(ColorPieza.NEGRO, 2, 1);
+		peonN4 = new Peon(ColorPieza.NEGRO, 3, 1);
+		peonN5 = new Peon(ColorPieza.NEGRO, 4, 1);
+		peonN6 = new Peon(ColorPieza.NEGRO, 5, 1);
+		peonN7 = new Peon(ColorPieza.NEGRO, 6, 1);
+		peonN8 = new Peon(ColorPieza.NEGRO, 7, 1);
+		peonB1 = new Peon(ColorPieza.BLANCO, 0, 6);
+		peonB2 = new Peon(ColorPieza.BLANCO, 1, 6);
+		peonB3 = new Peon(ColorPieza.BLANCO, 2, 6);
+		peonB4 = new Peon(ColorPieza.BLANCO, 3, 6);
+		peonB5 = new Peon(ColorPieza.BLANCO, 4, 6);
+		peonB6 = new Peon(ColorPieza.BLANCO, 5, 6);
+		peonB7 = new Peon(ColorPieza.BLANCO, 6, 6);
+		peonB8 = new Peon(ColorPieza.BLANCO, 7, 6);
+		
+		caballoNI = new Caballo(ColorPieza.NEGRO, 1, 0);
+		caballoND = new Caballo(ColorPieza.NEGRO, 6, 0);
+		caballoBD = new Caballo(ColorPieza.BLANCO, 6, 7);
+		caballoBI = new Caballo(ColorPieza.BLANCO, 1, 7);
+		
 		setSize(300, 150);
 		setLocationRelativeTo(null);
 		setVisible(true);

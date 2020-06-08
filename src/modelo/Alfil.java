@@ -21,6 +21,13 @@ public class Alfil {
 		this.y = y;
 	}
 
+	public Alfil() {
+		this.color = null;
+		this.x = 0;
+		this.y = 0;
+		this.icono = null;
+	}
+	
 	public ColorPieza getColor() {
 		return color;
 	}
