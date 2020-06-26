@@ -3874,3 +3874,78 @@ INFO: [Elegido jugador blancas: Pepe]
 jun. 08, 2020 8:28:21 P. M. modelo.Modelo escribirLog
 INFO: [Elegido jugador negras: Pedro] 
 
+jun. 15, 2020 9:19:44 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 15, 2020 9:20:11 A. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Paco] 
+
+jun. 15, 2020 9:20:13 A. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Pedro] 
+
+jun. 15, 2020 9:20:17 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 15, 2020 9:20:19 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 15, 2020 9:20:24 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 15, 2020 9:20:26 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 15, 2020 9:20:28 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jun. 15, 2020 9:20:30 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en A5] 
+
+jun. 15, 2020 9:20:31 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 15, 2020 9:20:37 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en G1] 
+
+jun. 15, 2020 9:28:22 A. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jun. 15, 2020 9:28:23 A. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jun. 15, 2020 9:28:24 A. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jun. 15, 2020 9:28:25 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jun. 15, 2020 9:28:26 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jun. 15, 2020 9:28:27 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jun. 15, 2020 9:28:28 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jun. 15, 2020 9:28:29 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jun. 15, 2020 9:28:30 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jun. 15, 2020 9:28:33 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 15, 2020 9:28:35 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D3] 
+
+jun. 15, 2020 9:28:36 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jun. 15, 2020 9:28:36 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B3] 
+
+jun. 15, 2020 9:28:44 A. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
