@@ -18,12 +18,14 @@ import modelo.Pieza;
 import modelo.TipoPieza;
 import vista.Vista;
 import vista.VistaClasificacion;
+import vista.VistaNuevoJugador;
 
 public class Controlador implements WindowListener, ActionListener
 {
 	public Vista objVista;
 	public Modelo objModelo;
 	public VistaClasificacion objClasificacion;
+	public VistaNuevoJugador objNuevoJugador;
 	Ayuda objAyuda;
 	Integer i, j;
 	Border bordeRojo = BorderFactory.createLineBorder(Color.red);
@@ -51,8 +53,8 @@ public class Controlador implements WindowListener, ActionListener
 		objVista.btnEmpezar.addActionListener(this);
 		objVista.btnCancelar.addActionListener(this);
 		objVista.btnCancelar1.addActionListener(this);
-		objVista.btnCrearNuevoJugador.addActionListener(this);
-		objVista.btnVolverNuevoJugador.addActionListener(this);
+//		objVista.btnCrearNuevoJugador.addActionListener(this);
+//		objVista.btnVolverNuevoJugador.addActionListener(this);
 
 		for (i = 0; i < 8; i++)
 		{
@@ -72,6 +74,12 @@ public class Controlador implements WindowListener, ActionListener
 		objClasificacion.addWindowListener(this);
 	}
 	
+	public Controlador (Modelo objModelo, VistaNuevoJugador objNuevoJugador) {
+		this.objNuevoJugador = objNuevoJugador;
+		this.objModelo = objModelo;
+		
+		objNuevoJugador.addWindowListener(this);
+	}
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
@@ -341,14 +349,11 @@ public class Controlador implements WindowListener, ActionListener
 					+ objVista.choJugador1.getSelectedItem().split("-")[1] + "]");
 		} else if (fuente.equals(objVista.getMniNuevoJugador()))
 		{
-			// objVista.setVisible(false);
-			objVista.frmElegirJugador1.setVisible(false);
-			objVista.frmElegirJugador2.setVisible(false);
-			objVista.frmNuevoJugador.setVisible(true);
-			objVista.frmTablero.setVisible(false);
-			objVista.getFrmAyuda().setVisible(false);
-			objModelo.escribirLog("Abriendo creación de usuario");
-			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Abriendo creación de usuario]");
+			objNuevoJugador = new VistaNuevoJugador();
+			objModelo.crearJugador(objNuevoJugador.txtNombreNuevoJugador);
+			objModelo.escribirLog("Nuevo jugador creado");
+			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Nuevo jugador creado]");
+			
 		} else if (fuente.equals(objVista.btnEmpezar))
 		{
 			turno = 1;
@@ -377,19 +382,20 @@ public class Controlador implements WindowListener, ActionListener
 			objVista.getFrmAyuda().setVisible(false);
 			objModelo.escribirLog("Cancelando partida");
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Cancelando partida]");
-		} else if (fuente.equals(objVista.btnCrearNuevoJugador))
+		} else if (fuente.equals(objNuevoJugador.btnCrearNuevoJugador))
 		{
 			objVista.frmElegirJugador2.setVisible(false);
 			objVista.getFrmAyuda().setVisible(false);
-			objModelo.crearJugador(objVista.txtNombreNuevoJugador);
+			objModelo.crearJugador(objNuevoJugador.txtNombreNuevoJugador);
 			objModelo.escribirLog("Nuevo jugador creado");
 			System.out.println("[" + LocalDate.now() + "][" + LocalTime.now() + "][Nuevo jugador creado]");
-		} else if (fuente.equals(objVista.btnVolverNuevoJugador))
+		
+		} else if (fuente.equals(objNuevoJugador.btnVolverNuevoJugador))
 		{
 
 			objVista.frmElegirJugador1.setVisible(false);
 			objVista.frmElegirJugador2.setVisible(false);
-			objVista.frmNuevoJugador.setVisible(false);
+			//objVista.frmNuevoJugador.setVisible(false);
 			objVista.frmTablero.setVisible(false);
 			objVista.getFrmAyuda().setVisible(false);
 			objVista.choJugador1.removeAll();

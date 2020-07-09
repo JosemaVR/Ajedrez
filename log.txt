@@ -4075,3 +4075,12 @@ INFO: [Elegido jugador negras: Paco]
 jul. 09, 2020 5:00:04 P. M. modelo.Modelo escribirLog
 INFO: [Pieza seleccionada: Peon en B2] 
 
+jul. 09, 2020 5:09:18 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jul. 09, 2020 5:32:26 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo creación de usuario] 
+
+jul. 09, 2020 5:38:50 P. M. modelo.Modelo escribirLog
+INFO: [Nuevo jugador creado] 
+
