@@ -35,7 +35,7 @@ public class Vista extends JFrame
 	
 	public JFrame frmElegirJugador1 = new JFrame();
 	public JFrame frmElegirJugador2 = new JFrame();
-	public JFrame frmNuevoJugador = new JFrame();
+	//public JFrame frmNuevoJugador = new JFrame();
 	public JFrame frmAyuda = new JFrame();
 	public JFrame frmTablero = new JFrame();
 
@@ -61,7 +61,7 @@ public class Vista extends JFrame
 	JLabel lblSeleccionColor = new JLabel("Seleccionar color");
 	JLabel lblLimiTiempo = new JLabel("Límite de tiempo");
 	JLabel lblNombre = new JLabel("Nombre");
-	JLabel lblNuevoJugador = new JLabel("Nombre nuevo jugador");
+	//JLabel lblNuevoJugador = new JLabel("Nombre nuevo jugador");
 	
 
 	JPanel pnlNuevaPartida1 = new JPanel();
@@ -80,15 +80,15 @@ public class Vista extends JFrame
 	public JButton btnCancelar1 = new JButton("Cancelar");
 	public JButton btnMostrar = new JButton("Mostrar");
 	public JButton btnVolver = new JButton("Volver");
-	public JButton btnCrearNuevoJugador = new JButton("Crear");
-	public JButton btnVolverNuevoJugador = new JButton("Crear partida");
+//	public JButton btnCrearNuevoJugador = new JButton("Crear");
+//	public JButton btnVolverNuevoJugador = new JButton("Crear partida");
 	// TextFields Menú Principal
 	JTextField txtNombre = new JTextField("",10);
 	JTextField txtNombreJ1 = new JTextField("",10);
 	JTextField txtNombreJ2 = new JTextField("",10);
 	JTextField txtTipoPartida = new JTextField("",10);
 	JTextField txtSeleccionColor = new JTextField("",10);
-	public JTextField txtNombreNuevoJugador = new JTextField("",10);
+	//public JTextField txtNombreNuevoJugador = new JTextField("",10);
 	// CheckBox Menú Principal
 	boolean selected = false;
 
@@ -423,16 +423,16 @@ public class Vista extends JFrame
 		
 //		dlgNuevoJugador.setLayout(new GridLayout(2,2));
 //		dlgNuevoJugador.setTitle("Crear nuevo Jugador");
-		frmNuevoJugador.setLayout(new FlowLayout());
-		frmNuevoJugador.setTitle("Crear nuevo Jugador");
-		frmNuevoJugador.add(lblNuevoJugador);
-		frmNuevoJugador.add(txtNombreNuevoJugador);
-		frmNuevoJugador.add(btnCrearNuevoJugador);
-		frmNuevoJugador.add(btnVolverNuevoJugador);
-		frmNuevoJugador.setSize(300, 150);
-		frmNuevoJugador.setVisible(false);
-		frmNuevoJugador.setResizable(false);
-		frmNuevoJugador.setLocationRelativeTo(null);
+//		frmNuevoJugador.setLayout(new FlowLayout());
+//		frmNuevoJugador.setTitle("Crear nuevo Jugador");
+//		frmNuevoJugador.add(lblNuevoJugador);
+//		frmNuevoJugador.add(txtNombreNuevoJugador);
+//		frmNuevoJugador.add(btnCrearNuevoJugador);
+//		frmNuevoJugador.add(btnVolverNuevoJugador);
+//		frmNuevoJugador.setSize(300, 150);
+//		frmNuevoJugador.setVisible(false);
+//		frmNuevoJugador.setResizable(false);
+//		frmNuevoJugador.setLocationRelativeTo(null);
 		
 		
 		
@@ -508,16 +508,6 @@ public class Vista extends JFrame
 
 	public JMenuItem getMniAyuda() {
 		return mniAyuda;
-	}
-
-	public JFrame getFrmNuevoJugador()
-	{
-		return frmNuevoJugador;
-	}
-
-	public void setFrmNuevoJugador(JFrame frmNuevoJugador)
-	{
-		this.frmNuevoJugador = frmNuevoJugador;
 	}
 
 	public void setMniAyuda(JMenuItem mniAyuda) {
