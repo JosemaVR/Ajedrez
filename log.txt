@@ -3949,3 +3949,129 @@ INFO: [Pieza seleccionada: Caballo en B3]
 jun. 15, 2020 9:28:44 A. M. modelo.Modelo escribirLog
 INFO: [Pieza seleccionada: Caballo en C5] 
 
+jul. 06, 2020 4:39:40 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jul. 06, 2020 4:39:42 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jul. 06, 2020 4:39:44 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jul. 06, 2020 4:39:46 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B1] 
+
+jul. 06, 2020 4:39:48 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B8] 
+
+jul. 06, 2020 4:39:49 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C3] 
+
+jul. 06, 2020 4:39:50 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C6] 
+
+jul. 06, 2020 4:39:52 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jul. 06, 2020 4:39:53 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D6] 
+
+jul. 06, 2020 4:39:53 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jul. 06, 2020 4:39:54 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jul. 06, 2020 4:39:55 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Vacío en D3] 
+
+jul. 06, 2020 4:39:56 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en B4] 
+
+jul. 06, 2020 4:39:57 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D6] 
+
+jul. 06, 2020 4:39:59 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en D3] 
+
+jul. 06, 2020 4:39:59 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en C5] 
+
+jul. 06, 2020 4:40:00 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en E4] 
+
+jul. 06, 2020 4:40:03 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Caballo en G8] 
+
+jul. 09, 2020 4:45:08 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:45:18 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:45:46 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:47:26 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:48:10 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:48:18 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:49:11 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:49:16 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:51:13 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:54:14 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:54:36 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:54:50 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:55:02 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:55:15 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:55:29 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:55:43 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:55:56 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:56:19 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:56:39 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:57:00 P. M. modelo.Modelo escribirLog
+INFO: [Visualizando clasificación de jugadores] 
+
+jul. 09, 2020 4:59:57 P. M. modelo.Modelo escribirLog
+INFO: [Abriendo nueva partida] 
+
+jul. 09, 2020 5:00:01 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador blancas: Pepe] 
+
+jul. 09, 2020 5:00:02 P. M. modelo.Modelo escribirLog
+INFO: [Elegido jugador negras: Paco] 
+
+jul. 09, 2020 5:00:04 P. M. modelo.Modelo escribirLog
+INFO: [Pieza seleccionada: Peon en B2] 
+
