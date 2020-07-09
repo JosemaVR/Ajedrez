@@ -207,20 +207,28 @@ public class Modelo
 		Integer[][] i = new Integer[8][2];
 		i[0][0] = caballo.getX()+1;
 		i[0][1] = caballo.getY()+2;
+		
 		i[1][0] = caballo.getX()-1;
 		i[1][1] = caballo.getY()+2;
+		
 		i[2][0] = caballo.getX()+1;
 		i[2][1] = caballo.getY()-2;
+		
 		i[3][0] = caballo.getX()-1;
 		i[3][1] = caballo.getY()-2;
+		
 		i[4][0] = caballo.getX()+2;
 		i[4][1] = caballo.getY()+1;
+		
 		i[5][0] = caballo.getX()-2;
 		i[5][1] = caballo.getY()+1;
+		
 		i[6][0] = caballo.getX()+2;
 		i[6][1] = caballo.getY()-1;
+		
 		i[7][0] = caballo.getX()-2;
 		i[7][1] = caballo.getY()-1;
+		
 		return i;
 	}
 

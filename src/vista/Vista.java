@@ -7,13 +7,11 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.TextArea;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -39,11 +37,10 @@ public class Vista extends JFrame
 	public JFrame frmElegirJugador2 = new JFrame();
 	public JFrame frmNuevoJugador = new JFrame();
 	public JFrame frmAyuda = new JFrame();
-	public JFrame frmClasificacionJugador = new JFrame();
 	public JFrame frmTablero = new JFrame();
 
-	JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
-	JDialog dlgNuevoJugador = new JDialog(frmInicio, "Crear Jugador");
+	//JDialog dlgNuevaPartida = new JDialog(frmInicio, "Crear Partida");
+	//JDialog dlgNuevoJugador = new JDialog(frmInicio, "Crear Jugador");
 	JMenuBar barraMenu = new JMenuBar();
 	JMenu mnJugar = new JMenu("Jugar");
 	JMenu mnClasificacion = new JMenu("Clasificación");
@@ -138,9 +135,6 @@ public class Vista extends JFrame
 	// Colores
 	public Color colorNegro = new Color(173, 113, 0); // Casillas marron oscuro
 	public Color colorBlanco = new Color(227, 194, 102);// Casillas amarillo crema
-
-	//TextArea para consulta de jugadores
-	public TextArea txtAreaConsultaJugadores = new TextArea(20,40);
 
 	public char letra = 'A';
 	JLabel lblLetra;
@@ -425,13 +419,6 @@ public class Vista extends JFrame
 		frmElegirJugador2.setLocationRelativeTo(null);
 		frmElegirJugador2.setResizable(true);
 
-		getFrmClasificacionJugador().setTitle("Clasificación de jugadores");
-		getFrmClasificacionJugador().setSize(600, 600);
-		getFrmClasificacionJugador().setResizable(false);
-		getFrmClasificacionJugador().setLocationRelativeTo(null);
-		getFrmClasificacionJugador().setVisible(false);
-		getFrmClasificacionJugador().add(getTxtAreaConsultaJugadores());
-
 		//Layout Crear nuevo jugador
 		
 //		dlgNuevoJugador.setLayout(new GridLayout(2,2));
@@ -551,21 +538,5 @@ public class Vista extends JFrame
 
 	public void setFrmAyuda(JFrame frmAyuda) {
 		this.frmAyuda = frmAyuda;
-	}
-
-	public JFrame getFrmClasificacionJugador() {
-		return frmClasificacionJugador;
-	}
-
-	public void setFrmClasificacionJugador(JFrame frmClasificacionJugador) {
-		this.frmClasificacionJugador = frmClasificacionJugador;
-	}
-
-	public TextArea getTxtAreaConsultaJugadores() {
-		return txtAreaConsultaJugadores;
-	}
-
-	public void setTxtAreaConsultaJugadores(TextArea txtAreaConsultaJugadores) {
-		this.txtAreaConsultaJugadores = txtAreaConsultaJugadores;
 	}
 }
